@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Execution &mdash; CNeuroML  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contribution" href="Contribution.html" />
+    <link rel="prev" title="Installation" href="Installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CNeuroML
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#on-a-linux-machine">On a Linux machine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#run-a-python-script">Run a python script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-a-notebook">Run a notebook</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#on-a-slurm-cluster">On a Slurm cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Run a python script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-jupyter-lab">Run Jupyter-lab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Contribution.html">Contribution</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CNeuroML</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Execution</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Execution.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="execution">
+<span id="id1"></span><h1>Execution<a class="headerlink" href="#execution" title="Permalink to this heading"></a></h1>
+<section id="on-a-linux-machine">
+<span id="execution-on-a-linux-machine"></span><h2>On a Linux machine<a class="headerlink" href="#on-a-linux-machine" title="Permalink to this heading"></a></h2>
+<section id="run-a-python-script">
+<h3>Run a python script<a class="headerlink" href="#run-a-python-script" title="Permalink to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Example of a simple MNIST training run</span>
+<span class="gp">$ </span>podman<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">CNEUROML_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span>-w<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span>cneuroml:deps_only-all_deps-latest<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3<span class="w"> </span>-m<span class="w"> </span>cneuroml.train.dl<span class="w"> </span><span class="nv">experiment</span><span class="o">=</span>visual/tabular/classification/mnist/mlp
+</pre></div>
+</div>
+</section>
+<section id="run-a-notebook">
+<h3>Run a notebook<a class="headerlink" href="#run-a-notebook" title="Permalink to this heading"></a></h3>
+<p>From your own machine create a SSH tunnel to the running machine.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Fill in the appropriate values</span>
+<span class="gp">$ </span>ssh<span class="w"> </span>USER@ADDRESS<span class="w"> </span>-NL<span class="w"> </span><span class="m">8888</span>:localhost:8888
+</pre></div>
+</div>
+<p>Run the lab.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>podman<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">CNEUROML_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span>-w<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="w"> </span>cneuroml:deps_only-all_deps-latest<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>jupyter-lab<span class="w"> </span>--allow-root<span class="w"> </span>--ip<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8888</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="on-a-slurm-cluster">
+<span id="execution-on-a-slurm-cluster"></span><h2>On a Slurm cluster<a class="headerlink" href="#on-a-slurm-cluster" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3>Run a python script<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Activate the previously installed virtual environment.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>
+<span class="gp">$ </span>.<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>/venv/bin/activate
+</pre></div>
+</div>
+<p>Run the library.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Example of a simple MNIST training run</span>
+<span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>cneuroml.train.dl<span class="w"> </span><span class="nv">experiment</span><span class="o">=</span>visual/tabular/classification/mnist/mlp_beluga
+</pre></div>
+</div>
+</section>
+<section id="run-jupyter-lab">
+<h3>Run Jupyter-lab<a class="headerlink" href="#run-jupyter-lab" title="Permalink to this heading"></a></h3>
+<p>From your own machine create a SSH tunnel to the compute node.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Fill in the appropriate values</span>
+<span class="gp">$ </span>sshuttle<span class="w"> </span>--dns<span class="w"> </span>-Nr<span class="w"> </span>USER@ADDRESS:8888
+</pre></div>
+</div>
+<p>Run the lab.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Fill in the appropriate values</span>
+<span class="gp">$ </span>salloc<span class="w"> </span>--account<span class="o">=</span>ACCOUNT<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;module load podman; \</span>
+<span class="s2">    nvidia-ctk cdi generate --output=/var/tmp/cdi/nvidia.yaml; \</span>
+<span class="s2">    mkdir -p </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">; \</span>
+<span class="s2">    cp </span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/containers.tar </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/.; \</span>
+<span class="s2">    tar -xf </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/containers.tar -C </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/.; \</span>
+<span class="s2">    podman run -w </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="s2"> -v </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span><span class="s2"> \</span>
+<span class="s2">    cneuroml:deps_only-all_deps-latest jupyter-lab --allow-root --ip </span><span class="k">$(</span>hostname<span class="w"> </span>-f<span class="k">)</span><span class="s2"> --port 8888&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Contribution.html" class="btn btn-neutral float-right" title="Contribution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The CNeuroML Authors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
