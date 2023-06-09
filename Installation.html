@@ -97,12 +97,12 @@
            <div itemprop="articleBody">
              
   <section id="installation">
-<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <p>Below are full installation steps (catered towards Ubuntu &amp; Slurm users) so as
 to maximize CNeuroML’s reproducibility across platforms, utilizing container
 technology Podman.</p>
 <section id="common-to-all-machines">
-<span id="installation-common-to-all-machines"></span><h2>Common to all machines<a class="headerlink" href="#common-to-all-machines" title="Permalink to this heading"></a></h2>
+<h2>Common to all machines<a class="headerlink" href="#common-to-all-machines" title="Permalink to this heading"></a></h2>
 <section id="setup-the-repository">
 <h3>1. Setup the repository<a class="headerlink" href="#setup-the-repository" title="Permalink to this heading"></a></h3>
 <p>Move to the desired containing folder.</p>
@@ -114,6 +114,11 @@ technology Podman.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:courtois-neuromod/cneuroml.git
 </pre></div>
 </div>
+<p>If you haven’t already, enable <code class="docutils literal notranslate"><span class="pre">autoSetupRemote</span></code> to not have to specify
+a <code class="docutils literal notranslate"><span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">&lt;BRANCH_NAME&gt;</span></code> flag when pushing/pulling to the repository.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
 <p>Define a persisting <code class="docutils literal notranslate"><span class="pre">CNEUROML_PATH</span></code> user-variable on your system.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\nCNEUROML_PATH=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="s2">/cneuroml&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
@@ -122,12 +127,12 @@ technology Podman.</p>
 </section>
 </section>
 <section id="on-a-linux-machine">
-<span id="installation-on-a-linux-machine"></span><h2>On a Linux machine<a class="headerlink" href="#on-a-linux-machine" title="Permalink to this heading"></a></h2>
+<h2>On a Linux machine<a class="headerlink" href="#on-a-linux-machine" title="Permalink to this heading"></a></h2>
 <section id="install-the-nvidia-driver">
 <h3>1. Install the NVIDIA driver<a class="headerlink" href="#install-the-nvidia-driver" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html">Official installation guide</a>.</p>
+<p><a class="reference external" href="https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html">Official NVIDIA driver installation guide</a>.</p>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Example (latest version as of Apr 2023)</span>
 <span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nvidia-driver-525
@@ -138,7 +143,7 @@ technology Podman.</p>
 <h3>2. Install Podman<a class="headerlink" href="#install-podman" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://podman.io/getting-started/installation">Official installation guide</a>.</p>
+<p><a class="reference external" href="https://podman.io/getting-started/installation">Official Podman installation guide</a>.</p>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>podman
 </pre></div>
@@ -146,11 +151,10 @@ technology Podman.</p>
 </section>
 <section id="install-the-nvidia-container-toolkit">
 <h3>3. Install the NVIDIA Container Toolkit<a class="headerlink" href="#install-the-nvidia-container-toolkit" title="Permalink to this heading"></a></h3>
-<p>Follow the Ubuntu section of the following <cite>installation guide
-&lt;https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#id12&gt;_</cite>.</p>
+<p>Follow the Ubuntu section of the following <a class="reference external" href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#id12">installation gudide</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#id9">Official installation guide</a>.</p>
+<p><a class="reference external" href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#id9">Official NVIDIA Container Toolkit installation guide</a>.</p>
 </div>
 </section>
 <section id="pull-the-podman-image">
@@ -161,7 +165,7 @@ technology Podman.</p>
 </section>
 </section>
 <section id="on-a-slurm-cluster">
-<span id="installation-on-a-slurm-cluster"></span><h2>On a Slurm cluster<a class="headerlink" href="#on-a-slurm-cluster" title="Permalink to this heading"></a></h2>
+<h2>On a Slurm cluster<a class="headerlink" href="#on-a-slurm-cluster" title="Permalink to this heading"></a></h2>
 <section id="install-the-experiment-manager-packages">
 <h3>1. Install the experiment manager packages<a class="headerlink" href="#install-the-experiment-manager-packages" title="Permalink to this heading"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>python/3.10

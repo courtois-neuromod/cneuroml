@@ -77,7 +77,7 @@
            <div itemprop="articleBody">
              
   <section id="common-to-all-machines">
-<span id="installation-common-to-all-machines"></span><h1>Common to all machines<a class="headerlink" href="#common-to-all-machines" title="Permalink to this heading"></a></h1>
+<h1>Common to all machines<a class="headerlink" href="#common-to-all-machines" title="Permalink to this heading"></a></h1>
 <section id="setup-the-repository">
 <h2>1. Setup the repository<a class="headerlink" href="#setup-the-repository" title="Permalink to this heading"></a></h2>
 <p>Move to the desired containing folder.</p>
@@ -87,6 +87,11 @@
 </div>
 <p>Clone the repository.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:courtois-neuromod/cneuroml.git
+</pre></div>
+</div>
+<p>If you haven’t already, enable <code class="docutils literal notranslate"><span class="pre">autoSetupRemote</span></code> to not have to specify
+a <code class="docutils literal notranslate"><span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">&lt;BRANCH_NAME&gt;</span></code> flag when pushing/pulling to the repository.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
 </pre></div>
 </div>
 <p>Define a persisting <code class="docutils literal notranslate"><span class="pre">CNEUROML_PATH</span></code> user-variable on your system.</p>

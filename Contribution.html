@@ -52,7 +52,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Execution.html">Execution</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Contribution</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#making-sure-the-code-doesn-t-break">Making sure the code doesn’t break</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#optional-setting-up-vscode">(Optional) Setting up VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-tests-locally">Running tests locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-vscode">Setting up VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#git-github-workflow-for-contributing">Git/GitHub workflow for contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#freezing-the-repositories-for-publication">Freezing the repositories for publication</a></li>
 </ul>
@@ -86,57 +87,109 @@
   <section id="contribution">
 <span id="id1"></span><h1>Contribution<a class="headerlink" href="#contribution" title="Permalink to this heading"></a></h1>
 <p>Link to the GitHub repository: <a class="reference external" href="https://github.com/courtois-neuromod/cneuroml">https://github.com/courtois-neuromod/cneuroml</a>.</p>
-<p>The main branch is protected meaning that contributions happen through pull
-requests rather than direct pushes.</p>
+<p>The main branch is protected meaning that contributions happen through
+pull requests rather than direct pushes.</p>
 <section id="making-sure-the-code-doesn-t-break">
 <h2>Making sure the code doesn’t break<a class="headerlink" href="#making-sure-the-code-doesn-t-break" title="Permalink to this heading"></a></h2>
-<p>In order for a pull request to be accepted, it will need to pass a number
-of common and standard checks that ensure that the code is of high quality and
-does not break the existing code base.</p>
+<p>In order for any pull request to go through, it will need to pass a number of
+common and standard checks that ensure that the code is of high quality and
+does not break any portion of the existing code base.</p>
 <p>Those checks are:</p>
 <ul class="simple">
-<li><p>Making sure that your Python code is properly linted &amp; PEP8 compliant. To do
-so, we make use of <strong>black</strong> (79 lines for code, 72 for comments) and <strong>ruff</strong>.</p></li>
-<li><p>Making sure that your Python code passes all of the unit tests. If
-they do not, it means that your code is breaking a portion of the existing code
-base.</p></li>
+<li><p>Making sure that the Python code follows a clean common format and is
+PEP8 compliant. In order to do so we make use of the following libraries:</p>
+<ul>
+<li><p>Formatting: <a class="reference external" href="https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html">black</a>
+(79 lines for code, 72 for comments)</p></li>
+<li><p>Linting: <a class="reference external" href="https://beta.ruff.rs/docs/tutorial/#getting-started">ruff</a>
+(all rules that don’t create conflicts with existing libraries)</p></li>
+<li><p>Type checking: <a class="reference external" href="https://mypy.readthedocs.io/en/stable/getting_started.html">mypy</a>
+(strict)</p></li>
+</ul>
+</li>
+<li><p>Making sure that the Python code passes all of the existing tests. If
+they do not, it means that your code is breaking a portion of the
+code base. We currently only make use of unit tests (leveraging <a class="reference external" href="https://docs.pytest.org/en/7.3.x/getting-started.html">pytest</a>) but will most likely develop
+tests with broader coverage.</p></li>
+<li><p>Making sure that the reST documentation files are formatted and linted
+(using <a class="reference external" href="https://github.com/PyCQA/doc8">doc8</a> 79 lines).</p></li>
+<li><p>Making sure that the YAML files are formatted and linted
+(using <a class="reference external" href="https://yamllint.readthedocs.io/en/stable/quickstart.html#running-yamllint">yamllint</a>).</p></li>
 <li><p>Making sure that there are no trailing whitespaces and that all files,
 regardless of the extension end with a newline.</p></li>
-<li><p>If any change is made to the <strong>pipreqs</strong> or <strong>docker</strong> folder, that the
+<li><p>If any change is made to the <code class="docutils literal notranslate"><span class="pre">pyreqs/</span></code> or <code class="docutils literal notranslate"><span class="pre">containers/</span></code> folder, that the
 Docker/Podman image can still be built.</p></li>
-<li><p>If any change is made to the <strong>docs</strong> or <strong>cneuroml</strong> folder, that the</p></li>
+<li><p>If any change is made to the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> or <code class="docutils literal notranslate"><span class="pre">cneuroml/</span></code> folder, that the
+documentation can still be built and pushed to Github Pages.</p></li>
 </ul>
-<p>documentation can still be built and pushed to ReadTheDocs.</p>
-<p>In order to facilitate the contribution process, we therefore suggest that you
-install &amp; setup <strong>black</strong>, <strong>ruff</strong> and <strong>pre-commit</strong>.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>
-<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>black<span class="o">[</span>jupyter<span class="o">]</span><span class="w"> </span>ruff<span class="w"> </span>pre-commit
+</section>
+<section id="running-tests-locally">
+<h2>Running tests locally<a class="headerlink" href="#running-tests-locally" title="Permalink to this heading"></a></h2>
+<p>Rather than having to wait for the CI (continuous integration) tests to run on
+GitHub, you can run some of the tests locally (the ones that are fast to
+check). The most common way to do so is through the
+<a class="reference external" href="https://pre-commit.com/#quick-start">pre-commit</a> library, which will run
+some tests upon each <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command, preventing the commit from going
+through if the tests fail.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>black<span class="o">[</span>jupyter<span class="o">]</span><span class="w"> </span>ruff<span class="w"> </span>mypy<span class="w"> </span>doc8<span class="w"> </span>yamllint<span class="w"> </span>pre-commit
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>
 <span class="gp">$ </span>pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
-<p>From now on, <strong>git commit</strong> will automatically make sure that your code is
-properly linted and that there are no trailing whitespaces or missing newlines.
-To disable this behaviour, you can instead run <strong>git commit –no-verify</strong>.</p>
+<p>From now on, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> commands in this repository will automatically make
+sure that all important files are functional and well formatted.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To disable this behaviour (for instance when you’re commiting to a
+dev/local branch and don’t want to deal with formatting / code validity,
+you can instead run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--no-verify</span></code>.</p>
+</div>
 </section>
-<section id="optional-setting-up-vscode">
-<h2>(Optional) Setting up VSCode<a class="headerlink" href="#optional-setting-up-vscode" title="Permalink to this heading"></a></h2>
-<p>To use Ruff in VSCode, install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff">official extension</a>.</p>
-<p>In order to make sure that your files are properly formatted on save, make sure
-the following is present in your <strong>~/.config/Code/User/settings.json</strong> file.???</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;[python]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;editor.formatOnType&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;editor.codeActionsOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;source.organizeImports&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="p">},</span>
-<span class="nt">&quot;python.formatting.provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
-<span class="nt">&quot;python.formatting.blackArgs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;--config=pyproject.toml&quot;</span>
-<span class="p">],</span>
-<span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<section id="setting-up-vscode">
+<h2>Setting up VSCode<a class="headerlink" href="#setting-up-vscode" title="Permalink to this heading"></a></h2>
+<p>Rather than being welcomed to a red wave of errors and warnings every time you
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, we suggest that you set up your editor to notify you of any
+issues before you commit.</p>
+<p>On VSCode, this means installing the following extensions:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">ms-python.python</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter">ms-python.black-formatter</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff">charliermarsh.ruff</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext">lextudio.restructuredtext</a>
+(<code class="docutils literal notranslate"><span class="pre">doc8</span></code> enabler, make sure you followed the previous section)</p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=fnando.linter">fnando.linter</a>
+(<code class="docutils literal notranslate"><span class="pre">yamllint</span></code> enabler, make sure you followed the previous section)</p></li>
+</ul>
+<p>And here are the settings to insert into your
+<code class="docutils literal notranslate"><span class="pre">~/.config/Code/User/settings.json</span></code> file.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="c1">// Ruff</span>
 <span class="nt">&quot;ruff.args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="s2">&quot;--config=pyproject.toml&quot;</span>
 <span class="p">],</span>
+<span class="c1">// Black</span>
+<span class="nt">&quot;black-formatter.args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;--config=pyproject.toml&quot;</span>
+<span class="p">],</span>
+<span class="c1">// Black + Ruff</span>
+<span class="nt">&quot;[python]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;editor.defaultFormatter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ms-python.black-formatter&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;editor.codeActionsOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;source.organizeImports&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">},</span>
+<span class="c1">// MyPy</span>
+<span class="nt">&quot;python.linting.mypyEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;python.linting.mypyArgs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;--config-file=pyproject.toml&quot;</span>
+<span class="p">],</span>
+<span class="c1">// ReStructuredText</span>
+<span class="nt">&quot;esbonio.sphinx.buildDir&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/docs/_build/html&quot;</span><span class="p">,</span>
+<span class="nt">&quot;esbonio.sphinx.confDir&quot;</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/docs&quot;</span><span class="p">,</span>
+<span class="nt">&quot;esbonio.sphinx.srcDir&quot;</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/docs&quot;</span><span class="p">,</span>
+<span class="nt">&quot;restructuredtext.linter.doc8.executablePath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/max/.local/bin/doc8&quot;</span><span class="p">,</span>
+<span class="nt">&quot;restructuredtext.syntaxHighlighting.disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="c1">// Miscellaneous</span>
 <span class="nt">&quot;files.insertFinalNewline&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="nt">&quot;files.trimTrailingWhitespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 </pre></div>
@@ -149,21 +202,22 @@ the following is present in your <strong>~/.config/Code/User/settings.json</stro
 </pre></div>
 </div>
 <p>Create a new branch for your contribution.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
-<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;BRANCH_NAME&gt;
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+<span class="gp">$ </span>git<span class="w"> </span>pull
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;YOUR_BRANCH_NAME&gt;
 </pre></div>
 </div>
 <p>Make your changes, commit them and push them to the remote repository.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>.
 <span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;COMMIT_MESSAGE&gt;&quot;</span>
-<span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;BRANCH_NAME&gt;
+<span class="gp">$ </span>git<span class="w"> </span>push
 </pre></div>
 </div>
 <p>Now, create a pull request on GitHub, once it is approved, delete your branch
 and pull the changes to your local repository.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>main
 <span class="gp">$ </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
-<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;BRANCH_NAME&gt;
+<span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;YOUR_BRANCH_NAME&gt;
 </pre></div>
 </div>
 </section>
