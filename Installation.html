@@ -119,6 +119,17 @@ a <code class="docutils literal notranslate"><span class="pre">-u</span> <span c
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
 </pre></div>
 </div>
+<p>Make sure your git version is at least 2.37 to take advantage of the
+<code class="docutils literal notranslate"><span class="pre">push.autoSetupRemote</span></code> feature.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>If not, you can update it with the following command.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:git-core/ppa<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git
+</pre></div>
+</div>
 <p>Define a persisting <code class="docutils literal notranslate"><span class="pre">CNEUROML_PATH</span></code> user-variable on your system.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\nCNEUROML_PATH=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="s2">/cneuroml&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
@@ -151,7 +162,7 @@ a <code class="docutils literal notranslate"><span class="pre">-u</span> <span c
 </section>
 <section id="install-the-nvidia-container-toolkit">
 <h3>3. Install the NVIDIA Container Toolkit<a class="headerlink" href="#install-the-nvidia-container-toolkit" title="Permalink to this heading"></a></h3>
-<p>Follow the Ubuntu section of the following <a class="reference external" href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#id12">installation gudide</a>.</p>
+<p>Follow the Ubuntu section of the following <a class="reference external" href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#id12">installation guide</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#id9">Official NVIDIA Container Toolkit installation guide</a>.</p>
