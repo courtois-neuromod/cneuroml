@@ -1,0 +1,11 @@
+:py:mod:`cneuroml.app`
+======================
+
+.. py:module:: cneuroml.app
+
+.. autoapi-nested-parse::
+
+   Application component of the CNeuroML library.
+
+
+

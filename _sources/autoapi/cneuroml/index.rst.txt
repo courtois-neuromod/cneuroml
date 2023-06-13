@@ -1,0 +1,22 @@
+:py:mod:`cneuroml`
+==================
+
+.. py:module:: cneuroml
+
+.. autoapi-nested-parse::
+
+   The CNeuroML library.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   app/index.rst
+   dl/index.rst
+   ne/index.rst
+
+

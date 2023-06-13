@@ -1,0 +1,224 @@
+:py:mod:`cneuroml.dl.base`
+==========================
+
+.. py:module:: cneuroml.dl.base
+
+.. autoapi-nested-parse::
+
+   Base Deep Learning Module.
+
+   This module contains elements common to more than one Deep Learning
+   component in the CNeuroML library.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   datamodule/index.rst
+   datamodule_test/index.rst
+   litmodule/index.rst
+   litmodule_test/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.dl.base.BaseDataModule
+   cneuroml.dl.base.BaseLitModule
+
+
+
+
+.. py:class:: BaseDataModule(data_dir: str, per_device_batch_size: int = 1, per_device_num_workers: int = 0, device_type: Literal[cpu, gpu] = 'gpu')
+
+
+   Bases: :py:obj:`lightning.pytorch.LightningDataModule`
+
+   The Base DataModule class.
+
+   Subclasses should implement any of the following attributes that
+   are to be utilized:
+   - train_data (torch.utils.data.Dataset): Training dataset.
+   - val_data (torch.utils.data.Dataset): Validation dataset.
+   - test_data (torch.utils.data.Dataset): Testing dataset.
+   - predict_data (torch.utils.data.Dataset): Prediction dataset.
+
+   .. attribute:: data_dir
+
+      Path to the data directory.
+
+      :type: str
+
+   .. attribute:: per_device_batch_size
+
+      Per-device number of samples to
+      load per iteration.
+
+      :type: int
+
+   .. attribute:: per_device_num_workers
+
+      Number of CPU processes to use
+      for data loading (0 means that the data will be loaded by
+      each main process)
+
+      :type: int
+
+   .. attribute:: pin_memory
+
+      Whether to copy tensors into device pinned
+      memory before returning them (recommended if using GPU).
+
+      :type: bool
+
+   .. py:method:: load_state_dict(state_dict: dict[str, int]) -> None
+
+      Loads an existing state (for now: a defined batch size).
+
+      :param state_dict: State dict to load.
+
+
+   .. py:method:: state_dict() -> dict[str, int]
+
+      Returns the DM's state (for now: the defined batch size).
+
+      :returns: The data module's state.
+
+
+   .. py:method:: train_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the train dataloader.
+
+      Asserts that the 'train_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the train dataset and previously defined attributes.
+
+      :returns: The train dataloader.
+
+      :raises AttributeError: If 'train_data' is not defined.
+
+
+   .. py:method:: val_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the val dataloader.
+
+      Asserts that the 'val_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the val dataset and previously defined attributes.
+
+      :returns: The val dataloader.
+
+      :raises AttributeError: If 'val_data' is not defined.
+
+
+   .. py:method:: test_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the test dataloader.
+
+      Asserts that the 'test_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the test dataset and previously defined attributes.
+
+      :returns: The test dataloader.
+
+      :raises AttributeError: If 'test_data' is not defined.
+
+
+   .. py:method:: predict_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the predict dataloader.
+
+      Asserts that the 'predict_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the predict dataset and previously defined attributes.
+
+      :returns: The predict dataloader.
+
+      :raises AttributeError: If 'predict_data' is not defined.
+
+
+
+.. py:class:: BaseLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+
+
+   Bases: :py:obj:`lightning.pytorch.LightningModule`
+
+   Base LitModule.
+
+   Interfaces with the abstract pl.LightningModule methods.
+   Subclasses should implement the 'step' method.
+
+   .. attribute:: nnmodule
+
+      The PyTorch network module.
+
+      :type: nn.Module
+
+   .. attribute:: optimizer
+
+      The PyTorch optimizer.
+
+      :type: torch.optim.Optimizer
+
+   .. attribute:: scheduler
+
+      The PyTorch
+      scheduler.
+
+      :type: torch.optim.lr_scheduler.LRScheduler
+
+   .. py:method:: step(batch: torch.Tensor | tuple[torch.Tensor], stage: Literal[train, val, test]) -> jaxtyping.Float[torch.Tensor, ]
+      :abstractmethod:
+
+      Step method common to all stages.
+
+      :param batch: Input data batch (images/sound/language/...).
+      :param stage: Current stage (train/val/test).
+
+      :returns: The loss.
+
+
+   .. py:method:: training_step(batch: torch.Tensor | tuple[torch.Tensor]) -> jaxtyping.Float[torch.Tensor, ]
+
+      Training step method.
+
+      :param batch: Input data batch (images/sound/language/...).
+
+      :returns: The loss.
+
+
+   .. py:method:: validation_step(batch: torch.Tensor | tuple[torch.Tensor]) -> jaxtyping.Float[torch.Tensor, ]
+
+      Validation step method.
+
+      :param batch: Input data batch (images/sound/language/...).
+
+      :returns: The loss.
+
+
+   .. py:method:: test_step(batch: torch.Tensor | tuple[torch.Tensor]) -> jaxtyping.Float[torch.Tensor, ]
+
+      Test step method.
+
+      :param batch: Input data batch (images/sound/language/...).
+
+      :returns: The loss.
+
+
+   .. py:method:: configure_optimizers() -> tuple[list[torch.optim.Optimizer], list[torch.optim.lr_scheduler.LRScheduler]]
+
+      Configure the scheduler and optimizer.
+
+      :returns: The optimizer and scheduler objects.
+
+
+

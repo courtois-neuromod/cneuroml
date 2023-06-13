@@ -1,0 +1,133 @@
+:py:mod:`cneuroml.dl.base.datamodule`
+=====================================
+
+.. py:module:: cneuroml.dl.base.datamodule
+
+.. autoapi-nested-parse::
+
+   Base Lightning DataModule.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.dl.base.datamodule.BaseDataModule
+
+
+
+
+.. py:class:: BaseDataModule(data_dir: str, per_device_batch_size: int = 1, per_device_num_workers: int = 0, device_type: Literal[cpu, gpu] = 'gpu')
+
+
+   Bases: :py:obj:`lightning.pytorch.LightningDataModule`
+
+   The Base DataModule class.
+
+   Subclasses should implement any of the following attributes that
+   are to be utilized:
+   - train_data (torch.utils.data.Dataset): Training dataset.
+   - val_data (torch.utils.data.Dataset): Validation dataset.
+   - test_data (torch.utils.data.Dataset): Testing dataset.
+   - predict_data (torch.utils.data.Dataset): Prediction dataset.
+
+   .. attribute:: data_dir
+
+      Path to the data directory.
+
+      :type: str
+
+   .. attribute:: per_device_batch_size
+
+      Per-device number of samples to
+      load per iteration.
+
+      :type: int
+
+   .. attribute:: per_device_num_workers
+
+      Number of CPU processes to use
+      for data loading (0 means that the data will be loaded by
+      each main process)
+
+      :type: int
+
+   .. attribute:: pin_memory
+
+      Whether to copy tensors into device pinned
+      memory before returning them (recommended if using GPU).
+
+      :type: bool
+
+   .. py:method:: load_state_dict(state_dict: dict[str, int]) -> None
+
+      Loads an existing state (for now: a defined batch size).
+
+      :param state_dict: State dict to load.
+
+
+   .. py:method:: state_dict() -> dict[str, int]
+
+      Returns the DM's state (for now: the defined batch size).
+
+      :returns: The data module's state.
+
+
+   .. py:method:: train_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the train dataloader.
+
+      Asserts that the 'train_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the train dataset and previously defined attributes.
+
+      :returns: The train dataloader.
+
+      :raises AttributeError: If 'train_data' is not defined.
+
+
+   .. py:method:: val_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the val dataloader.
+
+      Asserts that the 'val_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the val dataset and previously defined attributes.
+
+      :returns: The val dataloader.
+
+      :raises AttributeError: If 'val_data' is not defined.
+
+
+   .. py:method:: test_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the test dataloader.
+
+      Asserts that the 'test_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the test dataset and previously defined attributes.
+
+      :returns: The test dataloader.
+
+      :raises AttributeError: If 'test_data' is not defined.
+
+
+   .. py:method:: predict_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
+
+      Returns the predict dataloader.
+
+      Asserts that the 'predict_data' (torch.utils.data.Dataset)
+      attribute is defined before returning a new dataloader built
+      using the predict dataset and previously defined attributes.
+
+      :returns: The predict dataloader.
+
+      :raises AttributeError: If 'predict_data' is not defined.
+
+
+

@@ -1,0 +1,11 @@
+:py:mod:`cneuroml.ne`
+=====================
+
+.. py:module:: cneuroml.ne
+
+.. autoapi-nested-parse::
+
+   Neuroevolution component of the CNeuroML library.
+
+
+

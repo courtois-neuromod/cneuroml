@@ -7,6 +7,7 @@
   <title>Contribution &mdash; CNeuroML  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -22,6 +23,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="autoapi/index.html" />
     <link rel="prev" title="Execution" href="Execution.html" /> 
 </head>
 
@@ -51,13 +53,15 @@
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Execution.html">Execution</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Contribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#developping-locally">Developping locally</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#making-sure-the-code-doesn-t-break">Making sure the code doesn’t break</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-tests-locally">Running tests locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-locally">Testing locally</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-vscode">Setting up VSCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#git-github-workflow-for-contributing">Git/GitHub workflow for contributing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#freezing-the-repositories-for-publication">Freezing the repositories for publication</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
 </ul>
 
         </div>
@@ -86,11 +90,33 @@
              
   <section id="contribution">
 <span id="id1"></span><h1>Contribution<a class="headerlink" href="#contribution" title="Permalink to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to have completed the installation steps before moving to
+this section.</p>
+</div>
 <p>Link to the GitHub repository: <a class="reference external" href="https://github.com/courtois-neuromod/cneuroml">https://github.com/courtois-neuromod/cneuroml</a>.</p>
-<p>The main branch is protected meaning that contributions happen through
-pull requests rather than direct pushes.</p>
+<section id="developping-locally">
+<h2>Developping locally<a class="headerlink" href="#developping-locally" title="Permalink to this heading"></a></h2>
+<p>In order to develop locally, you will need to install the development
+dependencies. This can be done by running the following commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>
+<span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="gp">$ </span>.<span class="w"> </span>venv/bin/activate
+<span class="gp">$ </span><span class="c1"># Install OpenMPI if it&#39;s not already installed</span>
+<span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libopenmpi-dev
+<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--extra-index-url<span class="w"> </span>https://download.pytorch.org/whl/cpu<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>dev<span class="o">]</span>
+</pre></div>
+</div>
+<p>You now have all the dependencies needed to develop locally (do note that
+these libraries and their version are not meant for actually running the
+code, to do so it is preferable to work with containers for reproducibility
+purposes).</p>
+</section>
 <section id="making-sure-the-code-doesn-t-break">
 <h2>Making sure the code doesn’t break<a class="headerlink" href="#making-sure-the-code-doesn-t-break" title="Permalink to this heading"></a></h2>
+<p>The main branch is protected meaning that contributions happen through
+pull requests rather than direct pushes.</p>
 <p>In order for any pull request to go through, it will need to pass a number of
 common and standard checks that ensure that the code is of high quality and
 does not break any portion of the existing code base.</p>
@@ -106,10 +132,10 @@ PEP8 compliant. In order to do so we make use of the following libraries:</p>
 <li><p>Type checking: <a class="reference external" href="https://mypy.readthedocs.io/en/stable/getting_started.html">mypy</a> (strict)</p></li>
 </ul>
 </li>
-<li><p>Making sure that the Python code passes all of the existing tests. If
+<li><p>Making sure that the Python code passes all of the existing unit-tests. If
 they do not, it means that your code is breaking a portion of the
-code base. We currently only make use of unit tests (leveraging <a class="reference external" href="https://docs.pytest.org/en/7.3.x/getting-started.html">pytest</a>) but will most
-likely develop tests with broader coverage.</p></li>
+code base. We currently only make use of unit-tests (leveraging <a class="reference external" href="https://docs.pytest.org/en/7.3.x/getting-started.html">pytest</a>) but will most
+likely eventually develop tests with broader purposes.</p></li>
 <li><p>Making sure that the reST documentation files are formatted and linted
 (using <a class="reference external" href="https://github.com/PyCQA/doc8">doc8</a> 79 lines).</p></li>
 <li><p>Making sure that the YAML files are formatted and linted
@@ -122,16 +148,18 @@ Docker/Podman image can still be built.</p></li>
 documentation can still be built and pushed to Github Pages.</p></li>
 </ul>
 </section>
-<section id="running-tests-locally">
-<h2>Running tests locally<a class="headerlink" href="#running-tests-locally" title="Permalink to this heading"></a></h2>
-<p>Rather than having to wait for the CI (continuous integration) tests to run on
-GitHub, you can run some of the tests locally (the ones that are fast to
-check). The most common way to do so is through the
-<a class="reference external" href="https://pre-commit.com/#quick-start">pre-commit</a> library, which will run
-some tests upon each <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command, preventing the commit from going
-through if the tests fail.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>black<span class="o">[</span>jupyter<span class="o">]</span><span class="w"> </span>ruff<span class="w"> </span>mypy<span class="w"> </span>doc8<span class="w"> </span>yamllint<span class="w"> </span>pre-commit
-<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>
+<section id="testing-locally">
+<h2>Testing locally<a class="headerlink" href="#testing-locally" title="Permalink to this heading"></a></h2>
+<p>Rather than having to wait for the GitHub CI (continuous integration) tests to
+finish verifying your code, you can run some of the tests locally.</p>
+<p><strong>Fast Tests (sub 1 second)</strong></p>
+<p>Formatting and linting tests are quick to run. The most common way to execute
+them is through pre-commit hooks. We use the
+<a class="reference external" href="https://pre-commit.com/#quick-start">pre-commit</a> library, which after being
+installed runs formatting and linting tests upon each <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command,
+preventing the commit from going through if the tests fail.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>
+<span class="gp">$ </span>.<span class="w"> </span>venv/bin/activate
 <span class="gp">$ </span>pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
@@ -143,21 +171,31 @@ sure that all important files are functional and well formatted.</p>
 dev/local branch and don’t want to deal with formatting / code validity,
 you can instead run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--no-verify</span></code>.</p>
 </div>
+<p><strong>Slow Tests</strong></p>
+<p>Unit-tests and typecheck tests are slower, hence not suitable to run upon each
+commit. However they are pretty useful to save time right before merging your
+branch. To run those tests, you can use the following commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROML_PATH</span><span class="si">}</span>
+<span class="gp">$ </span>.<span class="w"> </span>venv/bin/activate
+<span class="gp">$ </span>pytest<span class="w"> </span>cneuroml
+<span class="gp">$ </span>mypy<span class="w"> </span>--strict<span class="w"> </span>cneuroml
+</pre></div>
+</div>
 </section>
 <section id="setting-up-vscode">
 <h2>Setting up VSCode<a class="headerlink" href="#setting-up-vscode" title="Permalink to this heading"></a></h2>
 <p>Rather than being welcomed to a red wave of errors and warnings every time you
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, we suggest that you set up your editor to notify you of any
-issues before you commit.</p>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> or run the slow tests, we suggest that you set up your editor to
+notify you of any issues before you commit.</p>
 <p>On VSCode, this means installing the following extensions:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">ms-python.python</a></p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter">ms-python.black-formatter</a></p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff">charliermarsh.ruff</a></p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext">lextudio.restructuredtext</a>
-(<code class="docutils literal notranslate"><span class="pre">doc8</span></code> enabler, make sure you followed the previous section)</p></li>
+(<code class="docutils literal notranslate"><span class="pre">doc8</span></code> enabler)</p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=fnando.linter">fnando.linter</a>
-(<code class="docutils literal notranslate"><span class="pre">yamllint</span></code> enabler, make sure you followed the previous section)</p></li>
+(<code class="docutils literal notranslate"><span class="pre">yamllint</span></code> enabler)</p></li>
 </ul>
 <p>And here are the settings to insert into your
 <code class="docutils literal notranslate"><span class="pre">~/.config/Code/User/settings.json</span></code> file.</p>
@@ -191,7 +229,19 @@ issues before you commit.</p>
 <span class="c1">// Miscellaneous</span>
 <span class="nt">&quot;files.insertFinalNewline&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="nt">&quot;files.trimTrailingWhitespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="c1">// Pylance</span>
+<span class="nt">&quot;python.analysis.ignore&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;/**&quot;</span>
+<span class="p">],</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pylance throws some incorrect errors with pytest and is otherwise
+redundant due to using mypy, so we suggest disabling its analysis
+(even though the setting is called <code class="docutils literal notranslate"><span class="pre">python.analysis.ignore</span></code>, it actually
+only applies to Pylance). We suggest not uninstalling it, as it is
+has other useful features like syntax highlighting.</p>
 </div>
 </section>
 <section id="git-github-workflow-for-contributing">
@@ -212,6 +262,17 @@ issues before you commit.</p>
 <span class="gp">$ </span>git<span class="w"> </span>push
 </pre></div>
 </div>
+<p>If you are done with your contribution, you can create a pull request on
+GitHub. If new changes have been introducted to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch while you
+were working on your development branch, you will need to update your branch
+with the latest changes from <code class="docutils literal notranslate"><span class="pre">main</span></code>, you can do so by running the following
+commands.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+<span class="gp">$ </span>git<span class="w"> </span>pull
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;YOUR_BRANCH_NAME&gt;
+<span class="gp">$ </span>git<span class="w"> </span>rebase<span class="w"> </span>main
+</pre></div>
+</div>
 <p>Now, create a pull request on GitHub, once it is approved, delete your branch
 and pull the changes to your local repository.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>main
@@ -223,7 +284,8 @@ and pull the changes to your local repository.</p>
 <section id="freezing-the-repositories-for-publication">
 <h2>Freezing the repositories for publication<a class="headerlink" href="#freezing-the-repositories-for-publication" title="Permalink to this heading"></a></h2>
 <p>For your code to remain reproducible after publication, we suggest that you
-create a new branch or fork the repository. TODO: Add pruning instructions.</p>
+create a new branch or fork the repository.</p>
+<p>TODO: Add pruning instructions.</p>
 </section>
 </section>
 
@@ -232,6 +294,7 @@ create a new branch or fork the repository. TODO: Add pruning instructions.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Execution.html" class="btn btn-neutral float-left" title="Execution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="autoapi/index.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

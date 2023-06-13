@@ -1,0 +1,133 @@
+:py:mod:`cneuroml.dl.base.litmodule_test`
+=========================================
+
+.. py:module:: cneuroml.dl.base.litmodule_test
+
+.. autoapi-nested-parse::
+
+   Tests for the Base Lightning Module.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.dl.base.litmodule_test.GenericLitModule
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.dl.base.litmodule_test.nnmodule
+   cneuroml.dl.base.litmodule_test.optimizer_partial
+   cneuroml.dl.base.litmodule_test.scheduler_partial
+   cneuroml.dl.base.litmodule_test.test_constructor
+   cneuroml.dl.base.litmodule_test.litmodule
+   cneuroml.dl.base.litmodule_test.test_training_step
+   cneuroml.dl.base.litmodule_test.test_validation_step
+   cneuroml.dl.base.litmodule_test.test_test_step
+   cneuroml.dl.base.litmodule_test.test_configure_optimizers
+
+
+
+.. py:function:: nnmodule() -> torch.nn.Module
+
+   Instantiates and returns a generic PyTorch network module.
+
+   :returns: A generic PyTorch network module.
+
+
+.. py:function:: optimizer_partial() -> functools.partial[torch.optim.Optimizer]
+
+   Returns a generic PyTorch optimizer.
+
+   :returns: A generic PyTorch optimizer partial.
+
+
+.. py:function:: scheduler_partial() -> functools.partial[torch.optim.lr_scheduler.LRScheduler]
+
+   Returns a generic PyTorch scheduler.
+
+   :returns: A generic PyTorch scheduler partial.
+
+
+.. py:class:: GenericLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+
+
+   Bases: :py:obj:`cneuroml.dl.base.BaseLitModule`
+
+   Generic Lightning Module.
+
+   Attributes:
+   nnmodule (nn.Module): The PyTorch network module.
+   optimizer (torch.optim.Optimizer): The PyTorch optimizer.
+   scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch
+       scheduler.
+
+   .. py:method:: step(batch: torch.Tensor | tuple[torch.Tensor], stage: Literal[train, val, test]) -> jaxtyping.Float[torch.Tensor, ]
+
+      Step method common to all stages.
+
+      :param batch: Input data batch (images/sound/language/...).
+      :param stage: Current stage (train/val/test).
+
+      :returns: The loss.
+
+
+
+.. py:function:: test_constructor(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> None
+
+   Test constructor.
+
+   :param nnmodule: A generic PyTorch network module.
+   :param optimizer_partial: A generic PyTorch optimizer partial.
+   :param scheduler_partial: A generic PyTorch scheduler partial.
+
+
+.. py:function:: litmodule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> cneuroml.dl.base.BaseLitModule
+
+   Instantiates and returns a generic Lightning Module.
+
+   :param nnmodule: A generic PyTorch network module.
+   :param optimizer_partial: A generic PyTorch optimizer partial.
+   :param scheduler_partial: A generic PyTorch scheduler partial.
+
+   :returns: A generic Lightning Module.
+
+
+.. py:function:: test_training_step(litmodule: GenericLitModule) -> None
+
+   Test training_step.
+
+   :param litmodule: A generic Lightning Module.
+
+
+.. py:function:: test_validation_step(litmodule: GenericLitModule) -> None
+
+   Test validation_step.
+
+   :param litmodule: A generic litmodule.
+
+
+.. py:function:: test_test_step(litmodule: GenericLitModule) -> None
+
+   Test test_step.
+
+   :param litmodule: A generic litmodule.
+
+
+.. py:function:: test_configure_optimizers(litmodule: GenericLitModule) -> None
+
+   Test configure_optimizers.
+
+   :param litmodule: A generic litmodule.
+
+
