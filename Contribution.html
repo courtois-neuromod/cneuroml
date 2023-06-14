@@ -105,7 +105,8 @@ dependencies. This can be done by running the following commands:</p>
 <span class="gp">$ </span>.<span class="w"> </span>venv/bin/activate
 <span class="gp">$ </span><span class="c1"># Install OpenMPI if it&#39;s not already installed</span>
 <span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libopenmpi-dev
-<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--extra-index-url<span class="w"> </span>https://download.pytorch.org/whl/cpu<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>dev<span class="o">]</span>
+<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>--extra-index-url<span class="w"> </span>https://download.pytorch.org/whl/cpu<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-e<span class="w"> </span>.<span class="o">[</span>dev<span class="o">]</span>
 </pre></div>
 </div>
 <p>You now have all the dependencies needed to develop locally (do note that

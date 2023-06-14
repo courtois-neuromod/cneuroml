@@ -72,6 +72,12 @@ Functions
    scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch
        scheduler.
 
+   Constructor, calls parent constructor and handles arguments.
+
+   :param nnmodule: The PyTorch network module.
+   :param optimizer_partial: The partial PyTorch optimizer.
+   :param scheduler_partial: The partial PyTorch scheduler.
+
    .. py:method:: step(batch: torch.Tensor | tuple[torch.Tensor], stage: Literal[train, val, test]) -> jaxtyping.Float[torch.Tensor, ]
 
       Step method common to all stages.

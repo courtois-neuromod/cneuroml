@@ -188,6 +188,16 @@ scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
 <blockquote>
 <div><p>scheduler.</p>
 </div></blockquote>
+<p>Constructor, calls parent constructor and handles arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nnmodule</strong> – The PyTorch network module.</p></li>
+<li><p><strong>optimizer_partial</strong> – The partial PyTorch optimizer.</p></li>
+<li><p><strong>scheduler_partial</strong> – The partial PyTorch scheduler.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.GenericLitModule.step">
 <span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="pre">train</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">val</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">test</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">jaxtyping.Float</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.GenericLitModule.step" title="Permalink to this definition"></a></dt>

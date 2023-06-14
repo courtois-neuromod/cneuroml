@@ -111,13 +111,13 @@
 <td><p>Testing instantiation with non-default arguments.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.datamodule" title="cneuroml.dl.base.datamodule_test.datamodule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datamodule</span></code></a>(→ cneuroml.dl.base.BaseDataModule)</p></td>
-<td><p>Instantiates and returns a generic BaseDataModule.</p></td>
+<td><p>Instantiates and returns a generic <code class="docutils literal notranslate"><span class="pre">BaseDataModule</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_load_state_dict" title="cneuroml.dl.base.datamodule_test.test_load_state_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_load_state_dict</span></code></a>(→ None)</p></td>
-<td><p>Test load_state_dict.</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">load_state_dict</span></code> method.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_state_dict" title="cneuroml.dl.base.datamodule_test.test_state_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_state_dict</span></code></a>(→ None)</p></td>
-<td><p>Test state_dict.</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> method.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.dataset" title="cneuroml.dl.base.datamodule_test.dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataset</span></code></a>(→ torch.utils.data.Dataset[torch.Tensor])</p></td>
 <td><p>Instantiates and returns a generic PyTorch Dataset.</p></td>
@@ -126,19 +126,31 @@
 <td><p>Instantiates and returns a generic PyTorch DataLoader.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_train_dataloader_correct_values" title="cneuroml.dl.base.datamodule_test.test_train_dataloader_correct_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_train_dataloader_correct_values</span></code></a>(→ None)</p></td>
-<td><p>Test 'train_dataloader' behaviour.</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">train_dataloader</span></code> behaviour.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_val_dataloader_correct_values" title="cneuroml.dl.base.datamodule_test.test_val_dataloader_correct_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_val_dataloader_correct_values</span></code></a>(→ None)</p></td>
-<td><p>Test 'val_dataloader' behaviour.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_train_dataloader_missing_data" title="cneuroml.dl.base.datamodule_test.test_train_dataloader_missing_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_train_dataloader_missing_data</span></code></a>(→ None)</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">train_dataloader</span></code> behaviour with missing attribute.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_val_dataloader_correct_values" title="cneuroml.dl.base.datamodule_test.test_val_dataloader_correct_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_val_dataloader_correct_values</span></code></a>(→ None)</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">val_dataloader</span></code> behaviour.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_val_dataloader_missing_data" title="cneuroml.dl.base.datamodule_test.test_val_dataloader_missing_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_val_dataloader_missing_data</span></code></a>(→ None)</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">val_dataloader</span></code> behaviour with missing attribute.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_test_dataloader_correct_values" title="cneuroml.dl.base.datamodule_test.test_test_dataloader_correct_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_test_dataloader_correct_values</span></code></a>(→ None)</p></td>
-<td><p>Test 'test_dataloader' behaviour.</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">test_dataloader</span></code> behaviour.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.dataloader2" title="cneuroml.dl.base.datamodule_test.dataloader2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataloader2</span></code></a>(→ torch.utils.data.DataLoader[torch.Tensor])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_test_dataloader_missing_data" title="cneuroml.dl.base.datamodule_test.test_test_dataloader_missing_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_test_dataloader_missing_data</span></code></a>(→ None)</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">test_dataloader</span></code> behaviour with missing attribute.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.dataloader2" title="cneuroml.dl.base.datamodule_test.dataloader2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataloader2</span></code></a>(→ torch.utils.data.DataLoader[torch.Tensor])</p></td>
 <td><p>Instantiates and returns a generic PyTorch DataLoader.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_predict_dataloader_correct_values" title="cneuroml.dl.base.datamodule_test.test_predict_dataloader_correct_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_predict_dataloader_correct_values</span></code></a>(→ None)</p></td>
-<td><p>Test 'predict_dataloader' behaviour.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_predict_dataloader_correct_values" title="cneuroml.dl.base.datamodule_test.test_predict_dataloader_correct_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_predict_dataloader_correct_values</span></code></a>(→ None)</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">predict_dataloader</span></code> behaviour.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.datamodule_test.test_predict_dataloader_missing_data" title="cneuroml.dl.base.datamodule_test.test_predict_dataloader_missing_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_predict_dataloader_missing_data</span></code></a>(→ None)</p></td>
+<td><p>Testing <code class="docutils literal notranslate"><span class="pre">predict_dataloader</span></code> behaviour with missing attribute.</p></td>
 </tr>
 </tbody>
 </table>
@@ -157,10 +169,10 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.datamodule">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">datamodule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.datamodule" title="Permalink to this definition"></a></dt>
-<dd><p>Instantiates and returns a generic BaseDataModule.</p>
+<dd><p>Instantiates and returns a generic <code class="docutils literal notranslate"><span class="pre">BaseDataModule</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A generic BaseDataModule.</p>
+<dd class="field-odd"><p>A generic <code class="docutils literal notranslate"><span class="pre">BaseDataModule</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -168,7 +180,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_load_state_dict">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_load_state_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_load_state_dict" title="Permalink to this definition"></a></dt>
-<dd><p>Test load_state_dict.</p>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">load_state_dict</span></code> method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>datamodule</strong> – A generic datamodule.</p>
@@ -179,7 +191,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_state_dict">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_state_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_state_dict" title="Permalink to this definition"></a></dt>
-<dd><p>Test state_dict.</p>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>datamodule</strong> – A generic datamodule.</p>
@@ -218,7 +230,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_train_dataloader_correct_values">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_train_dataloader_correct_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataloader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.DataLoader</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_train_dataloader_correct_values" title="Permalink to this definition"></a></dt>
-<dd><p>Test ‘train_dataloader’ behaviour.</p>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">train_dataloader</span></code> behaviour.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -226,6 +238,22 @@
 <li><p><strong>dataset</strong> – A generic dataset with random values.</p></li>
 <li><p><strong>dataloader</strong> – A generic dataloader.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_train_dataloader_missing_data">
+<span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_train_dataloader_missing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_train_dataloader_missing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">train_dataloader</span></code> behaviour with missing attribute.</p>
+<p>Missing <code class="docutils literal notranslate"><span class="pre">train_data</span></code> attribute should raise an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>
+exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datamodule</strong> – A generic datamodule.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AttributeError" title="(in Python v3.11)"><strong>AttributeError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">train_data</span></code> is not set.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -233,7 +261,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_val_dataloader_correct_values">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_val_dataloader_correct_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataloader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.DataLoader</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_val_dataloader_correct_values" title="Permalink to this definition"></a></dt>
-<dd><p>Test ‘val_dataloader’ behaviour.</p>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">val_dataloader</span></code> behaviour.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -246,9 +274,25 @@
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_val_dataloader_missing_data">
+<span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_val_dataloader_missing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_val_dataloader_missing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">val_dataloader</span></code> behaviour with missing attribute.</p>
+<p>Missing <code class="docutils literal notranslate"><span class="pre">val_data</span></code> attribute should raise an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>
+exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datamodule</strong> – A generic datamodule.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AttributeError" title="(in Python v3.11)"><strong>AttributeError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">val_data</span></code> is not set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_test_dataloader_correct_values">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_test_dataloader_correct_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataloader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.DataLoader</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_test_dataloader_correct_values" title="Permalink to this definition"></a></dt>
-<dd><p>Test ‘test_dataloader’ behaviour.</p>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">test_dataloader</span></code> behaviour.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -256,6 +300,22 @@
 <li><p><strong>dataset</strong> – A generic dataset with random values.</p></li>
 <li><p><strong>dataloader</strong> – A generic dataloader.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_test_dataloader_missing_data">
+<span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_test_dataloader_missing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_test_dataloader_missing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">test_dataloader</span></code> behaviour with missing attribute.</p>
+<p>Missing <code class="docutils literal notranslate"><span class="pre">test_data</span></code> attribute should raise an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>
+exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datamodule</strong> – A generic datamodule.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AttributeError" title="(in Python v3.11)"><strong>AttributeError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">test_data</span></code> is not set.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -280,7 +340,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_predict_dataloader_correct_values">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_predict_dataloader_correct_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataloader2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.utils.data.DataLoader</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_predict_dataloader_correct_values" title="Permalink to this definition"></a></dt>
-<dd><p>Test ‘predict_dataloader’ behaviour.</p>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">predict_dataloader</span></code> behaviour.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -288,6 +348,22 @@
 <li><p><strong>dataset</strong> – A generic dataset with random values.</p></li>
 <li><p><strong>dataloader2</strong> – A generic dataloader.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cneuroml.dl.base.datamodule_test.test_predict_dataloader_missing_data">
+<span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.datamodule_test.</span></span><span class="sig-name descname"><span class="pre">test_predict_dataloader_missing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datamodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseDataModule" title="cneuroml.dl.base.BaseDataModule"><span class="pre">cneuroml.dl.base.BaseDataModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule_test.test_predict_dataloader_missing_data" title="Permalink to this definition"></a></dt>
+<dd><p>Testing <code class="docutils literal notranslate"><span class="pre">predict_dataloader</span></code> behaviour with missing attribute.</p>
+<p>Missing <code class="docutils literal notranslate"><span class="pre">predict_data</span></code> attribute should raise an
+<code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datamodule</strong> – A generic datamodule.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AttributeError" title="(in Python v3.11)"><strong>AttributeError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">predict_data</span></code> is not set.</p>
 </dd>
 </dl>
 </dd></dl>

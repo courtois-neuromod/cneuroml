@@ -47,10 +47,15 @@ Classes
 
    Subclasses should implement any of the following attributes that
    are to be utilized:
-   - train_data (torch.utils.data.Dataset): Training dataset.
-   - val_data (torch.utils.data.Dataset): Validation dataset.
-   - test_data (torch.utils.data.Dataset): Testing dataset.
-   - predict_data (torch.utils.data.Dataset): Prediction dataset.
+
+   - ``train_data`` (``torch.utils.data.Dataset``): Training dataset.
+
+   - ``val_data`` (``torch.utils.data.Dataset``): Validation dataset.
+
+   - ``test_data`` (``torch.utils.data.Dataset``): Testing dataset.
+
+   - ``predict_data`` (``torch.utils.data.Dataset``): Prediction
+       dataset.
 
    .. attribute:: data_dir
 
@@ -79,6 +84,16 @@ Classes
       memory before returning them (recommended if using GPU).
 
       :type: bool
+
+   Constructor, calls parent constructor and stores arguments.
+
+   :param data_dir: Path to the data directory.
+   :param per_device_batch_size: Per-device number of samples to load
+   :param per iteration.:
+   :param per_device_num_workers: Number of CPU processes to use for
+                                  data loading (0 means that the data will be loaded by
+                                  each main process)
+   :param device_type: The compute device type to use (cpu or gpu).
 
    .. py:method:: load_state_dict(state_dict: dict[str, int]) -> None
 
@@ -175,6 +190,12 @@ Classes
       scheduler.
 
       :type: torch.optim.lr_scheduler.LRScheduler
+
+   Constructor, calls parent constructor and handles arguments.
+
+   :param nnmodule: The PyTorch network module.
+   :param optimizer_partial: The partial PyTorch optimizer.
+   :param scheduler_partial: The partial PyTorch scheduler.
 
    .. py:method:: step(batch: torch.Tensor | tuple[torch.Tensor], stage: Literal[train, val, test]) -> jaxtyping.Float[torch.Tensor, ]
       :abstractmethod:

@@ -115,11 +115,17 @@
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">lightning.pytorch.LightningDataModule</span></code></p>
 <p>The Base DataModule class.</p>
 <p>Subclasses should implement any of the following attributes that
-are to be utilized:
-- train_data (torch.utils.data.Dataset): Training dataset.
-- val_data (torch.utils.data.Dataset): Validation dataset.
-- test_data (torch.utils.data.Dataset): Testing dataset.
-- predict_data (torch.utils.data.Dataset): Prediction dataset.</p>
+are to be utilized:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">train_data</span></code> (<code class="docutils literal notranslate"><span class="pre">torch.utils.data.Dataset</span></code>): Training dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">val_data</span></code> (<code class="docutils literal notranslate"><span class="pre">torch.utils.data.Dataset</span></code>): Validation dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test_data</span></code> (<code class="docutils literal notranslate"><span class="pre">torch.utils.data.Dataset</span></code>): Testing dataset.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">predict_data</span></code> (<code class="docutils literal notranslate"><span class="pre">torch.utils.data.Dataset</span></code>): Prediction</dt><dd><p>dataset.</p>
+</dd>
+</dl>
+</li>
+</ul>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule.BaseDataModule.data_dir">
 <span class="sig-name descname"><span class="pre">data_dir</span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule.BaseDataModule.data_dir" title="Permalink to this definition"></a></dt>
@@ -168,6 +174,20 @@ memory before returning them (recommended if using GPU).</p>
 </dl>
 </dd></dl>
 
+<p>Constructor, calls parent constructor and stores arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_dir</strong> – Path to the data directory.</p></li>
+<li><p><strong>per_device_batch_size</strong> – Per-device number of samples to load</p></li>
+<li><p><strong>iteration.</strong> (<em>per</em>) – </p></li>
+<li><p><strong>per_device_num_workers</strong> – Number of CPU processes to use for
+data loading (0 means that the data will be loaded by
+each main process)</p></li>
+<li><p><strong>device_type</strong> – The compute device type to use (cpu or gpu).</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="cneuroml.dl.base.datamodule.BaseDataModule.load_state_dict">
 <span class="sig-name descname"><span class="pre">load_state_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.datamodule.BaseDataModule.load_state_dict" title="Permalink to this definition"></a></dt>
