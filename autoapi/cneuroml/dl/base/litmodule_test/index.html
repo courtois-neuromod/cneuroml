@@ -115,41 +115,41 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.nnmodule" title="cneuroml.dl.base.litmodule_test.nnmodule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nnmodule</span></code></a>(→ torch.nn.Module)</p></td>
-<td><p>Instantiates and returns a generic PyTorch network module.</p></td>
+<td><p>Instantiates and returns a generic <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> object.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.optimizer_partial" title="cneuroml.dl.base.litmodule_test.optimizer_partial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optimizer_partial</span></code></a>(...)</p></td>
-<td><p>Returns a generic PyTorch optimizer.</p></td>
+<td><p>Returns a generic <code class="docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code> partial object.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.scheduler_partial" title="cneuroml.dl.base.litmodule_test.scheduler_partial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler_partial</span></code></a>(...)</p></td>
-<td><p>Returns a generic PyTorch scheduler.</p></td>
+<td><p>Returns a generic PyTorch <code class="docutils literal notranslate"><span class="pre">LRScheduler</span></code> partial object.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.test_constructor" title="cneuroml.dl.base.litmodule_test.test_constructor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_constructor</span></code></a>(→ None)</p></td>
 <td><p>Test constructor.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.litmodule" title="cneuroml.dl.base.litmodule_test.litmodule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">litmodule</span></code></a>(→ cneuroml.dl.base.BaseLitModule)</p></td>
-<td><p>Instantiates and returns a generic Lightning Module.</p></td>
+<td><p>Instantiates and returns a generic <code class="docutils literal notranslate"><span class="pre">BaseLitModule</span></code> object.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.test_training_step" title="cneuroml.dl.base.litmodule_test.test_training_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_training_step</span></code></a>(→ None)</p></td>
-<td><p>Test training_step.</p></td>
+<td><p>Test <code class="docutils literal notranslate"><span class="pre">training_step</span></code> method.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.test_validation_step" title="cneuroml.dl.base.litmodule_test.test_validation_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_validation_step</span></code></a>(→ None)</p></td>
-<td><p>Test validation_step.</p></td>
+<td><p>Test <code class="docutils literal notranslate"><span class="pre">validation_step</span></code> method.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.test_test_step" title="cneuroml.dl.base.litmodule_test.test_test_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_test_step</span></code></a>(→ None)</p></td>
-<td><p>Test test_step.</p></td>
+<td><p>Test <code class="docutils literal notranslate"><span class="pre">test_step</span></code> method.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.test_configure_optimizers" title="cneuroml.dl.base.litmodule_test.test_configure_optimizers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_configure_optimizers</span></code></a>(→ None)</p></td>
-<td><p>Test configure_optimizers.</p></td>
+<td><p>Test <code class="docutils literal notranslate"><span class="pre">configure_optimizers</span></code> method.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.nnmodule">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">nnmodule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">torch.nn.Module</span></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.nnmodule" title="Permalink to this definition"></a></dt>
-<dd><p>Instantiates and returns a generic PyTorch network module.</p>
+<dd><p>Instantiates and returns a generic <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A generic PyTorch network module.</p>
+<dd class="field-odd"><p>A generic <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -157,10 +157,10 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.optimizer_partial">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">optimizer_partial</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">functools.partial</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.optim.Optimizer</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.optimizer_partial" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a generic PyTorch optimizer.</p>
+<dd><p>Returns a generic <code class="docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code> partial object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A generic PyTorch optimizer partial.</p>
+<dd class="field-odd"><p>A generic <code class="docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code> partial object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -168,10 +168,14 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.scheduler_partial">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">scheduler_partial</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">functools.partial</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.optim.lr_scheduler.LRScheduler</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.scheduler_partial" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a generic PyTorch scheduler.</p>
+<dd><p>Returns a generic PyTorch <code class="docutils literal notranslate"><span class="pre">LRScheduler</span></code> partial object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A generic PyTorch scheduler partial.</p>
+<dd class="field-odd"><p><dl class="simple">
+<dt>A generic <code class="docutils literal notranslate"><span class="pre">torch.optim.lr_scheduler.LRScheduler</span></code> partial</dt><dd><p>object.</p>
+</dd>
+</dl>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -182,19 +186,23 @@
 <dd><p>Bases: <a class="reference internal" href="../index.html#cneuroml.dl.base.BaseLitModule" title="cneuroml.dl.base.BaseLitModule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cneuroml.dl.base.BaseLitModule</span></code></a></p>
 <p>Generic Lightning Module.</p>
 <p>Attributes:
-nnmodule (nn.Module): The PyTorch network module.
-optimizer (torch.optim.Optimizer): The PyTorch optimizer.
-scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
+nnmodule (<code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code>): The PyTorch network module.
+optimizer (<code class="docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code>): The PyTorch optimizer.
+scheduler (<code class="docutils literal notranslate"><span class="pre">torch.optim.lr_scheduler.LRScheduler</span></code>): The PyTorch</p>
 <blockquote>
 <div><p>scheduler.</p>
 </div></blockquote>
-<p>Constructor, calls parent constructor and handles arguments.</p>
+<p>Constructor.</p>
+<p>Calls parent constructor and handles arguments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nnmodule</strong> – The PyTorch network module.</p></li>
-<li><p><strong>optimizer_partial</strong> – The partial PyTorch optimizer.</p></li>
-<li><p><strong>scheduler_partial</strong> – The partial PyTorch scheduler.</p></li>
+<li><p><strong>nnmodule</strong> – The <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> object.</p></li>
+<li><p><strong>optimizer_partial</strong> – The <code class="docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code> partial
+object.</p></li>
+<li><p><strong>scheduler_partial</strong> – The
+<code class="docutils literal notranslate"><span class="pre">torch.optim.lr_scheduler.LRScheduler</span></code> partial
+object.</p></li>
 </ul>
 </dd>
 </dl>
@@ -224,9 +232,11 @@ scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nnmodule</strong> – A generic PyTorch network module.</p></li>
-<li><p><strong>optimizer_partial</strong> – A generic PyTorch optimizer partial.</p></li>
-<li><p><strong>scheduler_partial</strong> – A generic PyTorch scheduler partial.</p></li>
+<li><p><strong>nnmodule</strong> – A generic <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> object.</p></li>
+<li><p><strong>optimizer_partial</strong> – A generic <code class="docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code> partial
+object.</p></li>
+<li><p><strong>scheduler_partial</strong> – A generic
+<code class="docutils literal notranslate"><span class="pre">torch.optim.lr_scheduler.LRScheduler</span></code> partial object.</p></li>
 </ul>
 </dd>
 </dl>
@@ -235,17 +245,19 @@ scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.litmodule">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">litmodule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnmodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.nn.Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_partial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">functools.partial</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.optim.Optimizer</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler_partial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">functools.partial</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.optim.lr_scheduler.LRScheduler</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../index.html#cneuroml.dl.base.BaseLitModule" title="cneuroml.dl.base.BaseLitModule"><span class="pre">cneuroml.dl.base.BaseLitModule</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.litmodule" title="Permalink to this definition"></a></dt>
-<dd><p>Instantiates and returns a generic Lightning Module.</p>
+<dd><p>Instantiates and returns a generic <code class="docutils literal notranslate"><span class="pre">BaseLitModule</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nnmodule</strong> – A generic PyTorch network module.</p></li>
-<li><p><strong>optimizer_partial</strong> – A generic PyTorch optimizer partial.</p></li>
-<li><p><strong>scheduler_partial</strong> – A generic PyTorch scheduler partial.</p></li>
+<li><p><strong>nnmodule</strong> – A generic <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> object.</p></li>
+<li><p><strong>optimizer_partial</strong> – A generic <code class="docutils literal notranslate"><span class="pre">torch.optim.Optimizer</span></code> partial
+object.</p></li>
+<li><p><strong>scheduler_partial</strong> – A generic
+<code class="docutils literal notranslate"><span class="pre">torch.optim.lr_scheduler.LRScheduler</span></code> partial object.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A generic Lightning Module.</p>
+<dd class="field-even"><p>A generic <code class="docutils literal notranslate"><span class="pre">BaseLitModule</span></code> object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -253,10 +265,10 @@ scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.test_training_step">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">test_training_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">litmodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.GenericLitModule" title="cneuroml.dl.base.litmodule_test.GenericLitModule"><span class="pre">GenericLitModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.test_training_step" title="Permalink to this definition"></a></dt>
-<dd><p>Test training_step.</p>
+<dd><p>Test <code class="docutils literal notranslate"><span class="pre">training_step</span></code> method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>litmodule</strong> – A generic Lightning Module.</p>
+<dd class="field-odd"><p><strong>litmodule</strong> – A generic <code class="docutils literal notranslate"><span class="pre">BaseLitModule</span></code> object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -264,10 +276,10 @@ scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.test_validation_step">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">test_validation_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">litmodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.GenericLitModule" title="cneuroml.dl.base.litmodule_test.GenericLitModule"><span class="pre">GenericLitModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.test_validation_step" title="Permalink to this definition"></a></dt>
-<dd><p>Test validation_step.</p>
+<dd><p>Test <code class="docutils literal notranslate"><span class="pre">validation_step</span></code> method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>litmodule</strong> – A generic litmodule.</p>
+<dd class="field-odd"><p><strong>litmodule</strong> – A generic <code class="docutils literal notranslate"><span class="pre">BaseLitModule</span></code> object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -275,10 +287,10 @@ scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.test_test_step">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">test_test_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">litmodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.GenericLitModule" title="cneuroml.dl.base.litmodule_test.GenericLitModule"><span class="pre">GenericLitModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.test_test_step" title="Permalink to this definition"></a></dt>
-<dd><p>Test test_step.</p>
+<dd><p>Test <code class="docutils literal notranslate"><span class="pre">test_step</span></code> method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>litmodule</strong> – A generic litmodule.</p>
+<dd class="field-odd"><p><strong>litmodule</strong> – A generic <code class="docutils literal notranslate"><span class="pre">BaseLitModule</span></code> object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -286,10 +298,10 @@ scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cneuroml.dl.base.litmodule_test.test_configure_optimizers">
 <span class="sig-prename descclassname"><span class="pre">cneuroml.dl.base.litmodule_test.</span></span><span class="sig-name descname"><span class="pre">test_configure_optimizers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">litmodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cneuroml.dl.base.litmodule_test.GenericLitModule" title="cneuroml.dl.base.litmodule_test.GenericLitModule"><span class="pre">GenericLitModule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuroml.dl.base.litmodule_test.test_configure_optimizers" title="Permalink to this definition"></a></dt>
-<dd><p>Test configure_optimizers.</p>
+<dd><p>Test <code class="docutils literal notranslate"><span class="pre">configure_optimizers</span></code> method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>litmodule</strong> – A generic litmodule.</p>
+<dd class="field-odd"><p><strong>litmodule</strong> – A generic <code class="docutils literal notranslate"><span class="pre">BaseLitModule</span></code> object.</p>
 </dd>
 </dl>
 </dd></dl>

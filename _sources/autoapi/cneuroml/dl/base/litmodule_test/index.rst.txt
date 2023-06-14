@@ -40,23 +40,26 @@ Functions
 
 .. py:function:: nnmodule() -> torch.nn.Module
 
-   Instantiates and returns a generic PyTorch network module.
+   Instantiates and returns a generic ``torch.nn.Module`` object.
 
-   :returns: A generic PyTorch network module.
+   :returns: A generic ``torch.nn.Module`` object.
 
 
 .. py:function:: optimizer_partial() -> functools.partial[torch.optim.Optimizer]
 
-   Returns a generic PyTorch optimizer.
+   Returns a generic ``torch.optim.Optimizer`` partial object.
 
-   :returns: A generic PyTorch optimizer partial.
+   :returns: A generic ``torch.optim.Optimizer`` partial object.
 
 
 .. py:function:: scheduler_partial() -> functools.partial[torch.optim.lr_scheduler.LRScheduler]
 
-   Returns a generic PyTorch scheduler.
+   Returns a generic PyTorch ``LRScheduler`` partial object.
 
-   :returns: A generic PyTorch scheduler partial.
+   :returns:
+
+             A generic ``torch.optim.lr_scheduler.LRScheduler`` partial
+                 object.
 
 
 .. py:class:: GenericLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
@@ -67,16 +70,21 @@ Functions
    Generic Lightning Module.
 
    Attributes:
-   nnmodule (nn.Module): The PyTorch network module.
-   optimizer (torch.optim.Optimizer): The PyTorch optimizer.
-   scheduler (torch.optim.lr_scheduler.LRScheduler): The PyTorch
+   nnmodule (``torch.nn.Module``): The PyTorch network module.
+   optimizer (``torch.optim.Optimizer``): The PyTorch optimizer.
+   scheduler (``torch.optim.lr_scheduler.LRScheduler``): The PyTorch
        scheduler.
 
-   Constructor, calls parent constructor and handles arguments.
+   Constructor.
 
-   :param nnmodule: The PyTorch network module.
-   :param optimizer_partial: The partial PyTorch optimizer.
-   :param scheduler_partial: The partial PyTorch scheduler.
+   Calls parent constructor and handles arguments.
+
+   :param nnmodule: The ``torch.nn.Module`` object.
+   :param optimizer_partial: The ``torch.optim.Optimizer`` partial
+                             object.
+   :param scheduler_partial: The
+                             ``torch.optim.lr_scheduler.LRScheduler`` partial
+                             object.
 
    .. py:method:: step(batch: torch.Tensor | tuple[torch.Tensor], stage: Literal[train, val, test]) -> jaxtyping.Float[torch.Tensor, ]
 
@@ -93,47 +101,51 @@ Functions
 
    Test constructor.
 
-   :param nnmodule: A generic PyTorch network module.
-   :param optimizer_partial: A generic PyTorch optimizer partial.
-   :param scheduler_partial: A generic PyTorch scheduler partial.
+   :param nnmodule: A generic ``torch.nn.Module`` object.
+   :param optimizer_partial: A generic ``torch.optim.Optimizer`` partial
+                             object.
+   :param scheduler_partial: A generic
+                             ``torch.optim.lr_scheduler.LRScheduler`` partial object.
 
 
 .. py:function:: litmodule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> cneuroml.dl.base.BaseLitModule
 
-   Instantiates and returns a generic Lightning Module.
+   Instantiates and returns a generic ``BaseLitModule`` object.
 
-   :param nnmodule: A generic PyTorch network module.
-   :param optimizer_partial: A generic PyTorch optimizer partial.
-   :param scheduler_partial: A generic PyTorch scheduler partial.
+   :param nnmodule: A generic ``torch.nn.Module`` object.
+   :param optimizer_partial: A generic ``torch.optim.Optimizer`` partial
+                             object.
+   :param scheduler_partial: A generic
+                             ``torch.optim.lr_scheduler.LRScheduler`` partial object.
 
-   :returns: A generic Lightning Module.
+   :returns: A generic ``BaseLitModule`` object.
 
 
 .. py:function:: test_training_step(litmodule: GenericLitModule) -> None
 
-   Test training_step.
+   Test ``training_step`` method.
 
-   :param litmodule: A generic Lightning Module.
+   :param litmodule: A generic ``BaseLitModule`` object.
 
 
 .. py:function:: test_validation_step(litmodule: GenericLitModule) -> None
 
-   Test validation_step.
+   Test ``validation_step`` method.
 
-   :param litmodule: A generic litmodule.
+   :param litmodule: A generic ``BaseLitModule`` object.
 
 
 .. py:function:: test_test_step(litmodule: GenericLitModule) -> None
 
-   Test test_step.
+   Test ``test_step`` method.
 
-   :param litmodule: A generic litmodule.
+   :param litmodule: A generic ``BaseLitModule`` object.
 
 
 .. py:function:: test_configure_optimizers(litmodule: GenericLitModule) -> None
 
-   Test configure_optimizers.
+   Test ``configure_optimizers`` method.
 
-   :param litmodule: A generic litmodule.
+   :param litmodule: A generic ``BaseLitModule`` object.
 
 

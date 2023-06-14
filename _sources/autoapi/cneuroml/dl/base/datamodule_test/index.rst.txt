@@ -5,7 +5,7 @@
 
 .. autoapi-nested-parse::
 
-   Testing for base datamodule.
+   Test for base datamodule.
 
 
 
@@ -18,7 +18,7 @@ Functions
 
 .. autoapisummary::
 
-   cneuroml.dl.base.datamodule_test.test_instantiate_generic_datamodule
+   cneuroml.dl.base.datamodule_test.test_instantiate_datamodule_default_arguments
    cneuroml.dl.base.datamodule_test.test_instantiate_datamodule_non_default_arguments
    cneuroml.dl.base.datamodule_test.datamodule
    cneuroml.dl.base.datamodule_test.test_load_state_dict
@@ -31,93 +31,93 @@ Functions
    cneuroml.dl.base.datamodule_test.test_val_dataloader_missing_data
    cneuroml.dl.base.datamodule_test.test_test_dataloader_correct_values
    cneuroml.dl.base.datamodule_test.test_test_dataloader_missing_data
-   cneuroml.dl.base.datamodule_test.dataloader2
+   cneuroml.dl.base.datamodule_test.dataloader_predict
    cneuroml.dl.base.datamodule_test.test_predict_dataloader_correct_values
    cneuroml.dl.base.datamodule_test.test_predict_dataloader_missing_data
 
 
 
-.. py:function:: test_instantiate_generic_datamodule() -> None
+.. py:function:: test_instantiate_datamodule_default_arguments() -> None
 
-   Testing instantiation with a generic datamodule.
+   Test instantiation with default arguments.
 
 
 .. py:function:: test_instantiate_datamodule_non_default_arguments() -> None
 
-   Testing instantiation with non-default arguments.
+   Test instantiation with non-default arguments.
 
 
 .. py:function:: datamodule() -> cneuroml.dl.base.BaseDataModule
 
-   Instantiates and returns a generic ``BaseDataModule``.
+   Instantiates and returns a generic ``BaseDataModule`` object.
 
-   :returns: A generic ``BaseDataModule``.
+   :returns: A generic ``BaseDataModule`` object.
 
 
 .. py:function:: test_load_state_dict(datamodule: cneuroml.dl.base.BaseDataModule) -> None
 
-   Testing ``load_state_dict`` method.
+   Test ``load_state_dict`` method.
 
-   :param datamodule: A generic datamodule.
+   :param datamodule: A generic ``BaseDataModule`` object.
 
 
 .. py:function:: test_state_dict(datamodule: cneuroml.dl.base.BaseDataModule) -> None
 
-   Testing ``state_dict`` method.
+   Test ``state_dict`` method.
 
-   :param datamodule: A generic datamodule.
+   :param datamodule: A generic ``BaseDataModule`` object.
 
 
 .. py:function:: dataset() -> torch.utils.data.Dataset[torch.Tensor]
 
-   Instantiates and returns a generic PyTorch Dataset.
+   Instantiates and returns a generic PyTorch ``Dataset`` object.
 
-   :returns: A generic PyTorch dataset.
+   :returns: A generic ``torch.utils.data.Dataset`` object.
 
 
 .. py:function:: dataloader(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor]) -> torch.utils.data.DataLoader[torch.Tensor]
 
-   Instantiates and returns a generic PyTorch DataLoader.
+   Instantiates and returns a generic PyTorch ``DataLoader`` object.
 
-   :param datamodule: A generic datamodule.
-   :param dataset: A generic dataset.
+   :param datamodule: A generic ``BaseDataModule`` object.
+   :param dataset: A generic ``torch.utils.data.Dataset`` object.
 
-   :returns: A generic PyTorch DataLoader.
+   :returns: A generic ``torch.utils.data.DataLoader`` object.
 
 
 .. py:function:: test_train_dataloader_correct_values(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor], dataloader: torch.utils.data.DataLoader[torch.Tensor]) -> None
 
-   Testing ``train_dataloader`` behaviour.
+   Test ``train_dataloader`` method behaviour.
 
-   :param datamodule: A generic datamodule.
-   :param dataset: A generic dataset with random values.
-   :param dataloader: A generic dataloader.
+   :param datamodule: A generic ``BaseDataModule`` object.
+   :param dataset: A generic ``torch.utils.data.Dataset`` object.
+   :param dataloader: A generic ``torch.utils.data.DataLoader`` object.
 
 
 .. py:function:: test_train_dataloader_missing_data(datamodule: cneuroml.dl.base.BaseDataModule) -> None
 
-   Testing ``train_dataloader`` behaviour with missing attribute.
+   Test ``train_dataloader`` method behaviour with missing data.
 
    Missing ``train_data`` attribute should raise an ``AttributeError``
    exception.
 
-   :param datamodule: A generic datamodule.
+   :param datamodule: A generic ``BaseDataModule`` object.
 
    :raises AttributeError: If ``train_data`` is not set.
 
 
 .. py:function:: test_val_dataloader_correct_values(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor], dataloader: torch.utils.data.DataLoader[torch.Tensor]) -> None
 
-   Testing ``val_dataloader`` behaviour.
+   Test ``val_dataloader`` method behaviour.
 
-   :param datamodule: A generic datamodule.
-   :param dataset: A generic dataset with random values.
-   :param dataloader: A generic dataloader.
+   :param datamodule: A generic ``BaseDataModule`` object.
+   :param dataset: A generic ``torch.utils.data.Dataset`` object.
+   :param dataloader: A generic ``torch.utils.data.DataLoader`` object.
 
 
 .. py:function:: test_val_dataloader_missing_data(datamodule: cneuroml.dl.base.BaseDataModule) -> None
 
-   Testing ``val_dataloader`` behaviour with missing attribute.
+   Test ``val_dataloader`` behaviour with missing attribute.
 
    Missing ``val_data`` attribute should raise an ``AttributeError``
    exception.
@@ -129,16 +129,16 @@ Functions
 
 .. py:function:: test_test_dataloader_correct_values(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor], dataloader: torch.utils.data.DataLoader[torch.Tensor]) -> None
 
-   Testing ``test_dataloader`` behaviour.
+   Test ``test_dataloader`` behaviour.
 
-   :param datamodule: A generic datamodule.
-   :param dataset: A generic dataset with random values.
-   :param dataloader: A generic dataloader.
+   :param datamodule: A generic ``BaseDataModule`` object.
+   :param dataset: A generic ``torch.utils.data.Dataset`` object.
+   :param dataloader: A generic ``torch.utils.data.DataLoader`` object.
 
 
 .. py:function:: test_test_dataloader_missing_data(datamodule: cneuroml.dl.base.BaseDataModule) -> None
 
-   Testing ``test_dataloader`` behaviour with missing attribute.
+   Test ``test_dataloader`` behaviour with missing attribute.
 
    Missing ``test_data`` attribute should raise an ``AttributeError``
    exception.
@@ -148,33 +148,34 @@ Functions
    :raises AttributeError: If ``test_data`` is not set.
 
 
-.. py:function:: dataloader2(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor]) -> torch.utils.data.DataLoader[torch.Tensor]
+.. py:function:: dataloader_predict(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor]) -> torch.utils.data.DataLoader[torch.Tensor]
 
-   Instantiates and returns a generic PyTorch DataLoader.
+   Instantiates and returns a generic PyTorch ``DataLoader`` object.
 
-   :param datamodule: A generic datamodule.
-   :param dataset: A generic dataset.
+   :param datamodule: A generic ``BaseDataModule`` object.
+   :param dataset: A generic ``torch.utils.data.Dataset`` object.
 
-   :returns: A generic PyTorch DataLoader.
+   :returns: A generic ``torch.utils.data.DataLoader`` object.
 
 
-.. py:function:: test_predict_dataloader_correct_values(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor], dataloader2: torch.utils.data.DataLoader[torch.Tensor]) -> None
+.. py:function:: test_predict_dataloader_correct_values(datamodule: cneuroml.dl.base.BaseDataModule, dataset: torch.utils.data.Dataset[torch.Tensor], dataloader_predict: torch.utils.data.DataLoader[torch.Tensor]) -> None
 
-   Testing ``predict_dataloader`` behaviour.
+   Test ``predict_dataloader`` behaviour.
 
-   :param datamodule: A generic datamodule.
-   :param dataset: A generic dataset with random values.
-   :param dataloader2: A generic dataloader.
+   :param datamodule: A generic ``BaseDataModule`` object.
+   :param dataset: A generic ``torch.utils.data.Dataset`` object.
+   :param dataloader_predict: A generic ``torch.utils.data.DataLoader``
+                              object.
 
 
 .. py:function:: test_predict_dataloader_missing_data(datamodule: cneuroml.dl.base.BaseDataModule) -> None
 
-   Testing ``predict_dataloader`` behaviour with missing attribute.
+   Test ``predict_dataloader`` method behaviour with missing data.
 
    Missing ``predict_data`` attribute should raise an
    ``AttributeError`` exception.
 
-   :param datamodule: A generic datamodule.
+   :param datamodule: A generic ``BaseDataModule`` object.
 
    :raises AttributeError: If ``predict_data`` is not set.
 

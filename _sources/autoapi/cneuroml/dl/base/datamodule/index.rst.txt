@@ -39,7 +39,7 @@ Classes
    - ``test_data`` (``torch.utils.data.Dataset``): Testing dataset.
 
    - ``predict_data`` (``torch.utils.data.Dataset``): Prediction
-       dataset.
+   dataset.
 
    .. attribute:: data_dir
 
@@ -57,92 +57,98 @@ Classes
    .. attribute:: per_device_num_workers
 
       Number of CPU processes to use
-      for data loading (0 means that the data will be loaded by
-      each main process)
+      for data loading (``0`` means that the data will be loaded
+      by each main process)
 
       :type: int
 
    .. attribute:: pin_memory
 
       Whether to copy tensors into device pinned
-      memory before returning them (recommended if using GPU).
+      memory before returning them (is set to ``True`` if using
+      GPUs).
 
       :type: bool
 
-   Constructor, calls parent constructor and stores arguments.
+   Constructor.
+
+   Calls parent constructor and stores arguments.
 
    :param data_dir: Path to the data directory.
    :param per_device_batch_size: Per-device number of samples to load
-   :param per iteration.:
+                                 per iteration.
    :param per_device_num_workers: Number of CPU processes to use for
-                                  data loading (0 means that the data will be loaded by
-                                  each main process)
-   :param device_type: The compute device type to use (cpu or gpu).
+                                  data loading (``0`` means that the data will be loaded
+                                  by each main process)
+   :param device_type: The compute device type to use (``cpu`` or
+                       ``gpu``).
 
    .. py:method:: load_state_dict(state_dict: dict[str, int]) -> None
 
-      Loads an existing state (for now: a defined batch size).
+      Loads an existing ``state_dict``.
 
-      :param state_dict: State dict to load.
+      Currently this is only used to load the
+      ``per_device_batch_size``.
+
+      :param state_dict: The state dictionary to load.
 
 
    .. py:method:: state_dict() -> dict[str, int]
 
-      Returns the DM's state (for now: the defined batch size).
+      Returns this datamodule's ``state_dict``.
 
-      :returns: The data module's state.
+      Currently this is only used to save the
+      ``per_device_batch_size``.
+
+      :returns: A copy of this datamodule's state dictionary.
 
 
    .. py:method:: train_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
 
-      Returns the train dataloader.
+      Returns the train ``torch.utils.data.DataLoader`` object.
 
-      Asserts that the 'train_data' (torch.utils.data.Dataset)
-      attribute is defined before returning a new dataloader built
-      using the train dataset and previously defined attributes.
+      Builds and returns a new ``torch.utils.data.DataLoader`` object
+      using ``train_data`` and previously defined attributes.
 
-      :returns: The train dataloader.
+      :returns: The training ``torch.utils.data.DataLoader`` object.
 
-      :raises AttributeError: If 'train_data' is not defined.
+      :raises AttributeError: If ``train_data`` is not defined.
 
 
    .. py:method:: val_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
 
-      Returns the val dataloader.
+      Returns the val ``torch.utils.data.DataLoader`` object.
 
-      Asserts that the 'val_data' (torch.utils.data.Dataset)
-      attribute is defined before returning a new dataloader built
-      using the val dataset and previously defined attributes.
+      Builds and returns a new ``torch.utils.data.DataLoader`` object
+      using ``val_data`` and previously defined attributes.
 
-      :returns: The val dataloader.
+      :returns: The validation ``torch.utils.data.DataLoader`` object.
 
-      :raises AttributeError: If 'val_data' is not defined.
+      :raises AttributeError: If ``val_data`` is not defined.
 
 
    .. py:method:: test_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
 
-      Returns the test dataloader.
+      Returns the test ``torch.utils.data.DataLoader`` object.
 
-      Asserts that the 'test_data' (torch.utils.data.Dataset)
-      attribute is defined before returning a new dataloader built
-      using the test dataset and previously defined attributes.
+      Builds and returns a new ``torch.utils.data.DataLoader`` object
+      using ``test_data`` and previously defined attributes.
 
-      :returns: The test dataloader.
+      :returns: The testing ``torch.utils.data.DataLoader`` object.
 
-      :raises AttributeError: If 'test_data' is not defined.
+      :raises AttributeError: If ``test_data`` is not defined.
 
 
    .. py:method:: predict_dataloader() -> torch.utils.data.DataLoader[torch.Tensor]
 
-      Returns the predict dataloader.
+      Returns the predict ``torch.utils.data.DataLoader`` object.
 
-      Asserts that the 'predict_data' (torch.utils.data.Dataset)
-      attribute is defined before returning a new dataloader built
-      using the predict dataset and previously defined attributes.
+      Builds and returns a new ``torch.utils.data.DataLoader`` object
+      using ``predict_data`` and previously defined attributes.
 
-      :returns: The predict dataloader.
+      :returns: The prediction ``torch.utils.data.DataLoader`` object.
 
-      :raises AttributeError: If 'predict_data' is not defined.
+      :raises AttributeError: If ``predict_data`` is not defined.
 
 
 
