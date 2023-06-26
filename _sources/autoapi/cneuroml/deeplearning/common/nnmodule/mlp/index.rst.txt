@@ -1,0 +1,59 @@
+:py:mod:`cneuroml.deeplearning.common.nnmodule.mlp`
+===================================================
+
+.. py:module:: cneuroml.deeplearning.common.nnmodule.mlp
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.common.nnmodule.mlp.MLP
+
+
+
+
+.. py:class:: MLP(dims: list[int], activation_fn: type[torch.nn.Module] = nn.ReLU, p_dropout: float = 0.0)
+
+
+   Bases: :py:obj:`torch.nn.Module`
+
+   Multi-layer perceptron (MLP).
+
+   Allows for a variable number of layers, activation functions, and
+   dropout probability.
+
+   .. attribute:: model
+
+      The MLP model.
+
+   Calls parent constructor and initializes model.
+
+   :param dims: List of dimensions for each layer.
+   :param activation_fn: Activation function.
+   :param p_dropout: Dropout probability.
+
+   .. py:method:: forward(x: jaxtyping.Float[torch.Tensor,  batch_size *d_input]) -> jaxtyping.Float[torch.Tensor,  batch_size output_size]
+
+      Flattens input dimensions and pass through the model.
+
+      .. note::
+
+         This MLP isn't (yet?) suitable for cases where the output is
+         multidimensional.
+
+      :param x: .
+
+      :returns: The output vector batch.
+
+
+

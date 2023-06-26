@@ -1,0 +1,29 @@
+:py:mod:`cneuroml.deeplearning.common.lrscheduler.none_test`
+============================================================
+
+.. py:module:: cneuroml.deeplearning.common.lrscheduler.none_test
+
+.. autoapi-nested-parse::
+
+   Tests for base optimizer class.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.common.lrscheduler.none_test.test
+
+
+
+.. py:function:: test() -> None
+
+   .
+
+

@@ -1,0 +1,126 @@
+:py:mod:`cneuroml.deeplearning.common.litmodule`
+================================================
+
+.. py:module:: cneuroml.deeplearning.common.litmodule
+
+.. autoapi-nested-parse::
+
+   Lightning Modules.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   classification/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   base/index.rst
+   base_test/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.common.litmodule.BaseLitModule
+
+
+
+
+.. py:class:: BaseLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+
+
+   Bases: :py:obj:`lightning.pytorch.LightningModule`
+
+   .
+
+   Subclasses need to implement the ``step`` instance method.
+
+   .. attribute:: nnmodule
+
+      .
+
+      :type: ``nn.Module``
+
+   .. attribute:: optimizer
+
+      .
+
+      :type: ``Optimizer``
+
+   .. attribute:: scheduler
+
+      .
+
+      :type: ``LRScheduler``
+
+   .
+
+   Calls parent constructor, stores arguments, and instantiates
+   from partial functions.
+
+   :param nnmodule: A PyTorch ``nn.Module`` instance.
+   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
+   :param scheduler_partial: A PyTorch ``LRScheduler`` partial
+                             function.
+
+   .. py:method:: training_step(batch: jaxtyping.Float[torch.Tensor, ...] | tuple[jaxtyping.Float[torch.Tensor, ...], Ellipsis]) -> jaxtyping.Float[torch.Tensor, ...]
+
+      .
+
+      :param batch: .
+
+      :returns: The loss value(s).
+
+      :raises AttributeError: If the ``step`` instance method is not
+          callable.
+
+
+   .. py:method:: validation_step(batch: jaxtyping.Float[torch.Tensor, ...] | tuple[jaxtyping.Float[torch.Tensor, ], Ellipsis]) -> jaxtyping.Float[torch.Tensor, ]
+
+      .
+
+      :param batch: .
+
+      :returns: The loss value(s).
+
+      :raises AttributeError: If the ``step`` instance method is not
+          callable.
+
+
+   .. py:method:: test_step(batch: jaxtyping.Float[torch.Tensor, ...] | tuple[jaxtyping.Float[torch.Tensor, ], Ellipsis]) -> jaxtyping.Float[torch.Tensor, ]
+
+      .
+
+      :param batch: .
+
+      :returns: The loss value(s).
+
+      :raises AttributeError: If ``step`` instance method is not
+          callable.
+
+
+   .. py:method:: configure_optimizers() -> tuple[list[torch.optim.Optimizer], list[torch.optim.lr_scheduler.LRScheduler]]
+
+      .
+
+      :returns: A tuple containing the PyTorch ``Optimizer`` and
+                ``LRScheduler`` instance attributes (each nested in a
+                list).
+
+
+

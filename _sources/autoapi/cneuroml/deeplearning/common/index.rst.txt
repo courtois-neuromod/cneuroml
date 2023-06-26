@@ -1,0 +1,28 @@
+:py:mod:`cneuroml.deeplearning.common`
+======================================
+
+.. py:module:: cneuroml.deeplearning.common
+
+.. autoapi-nested-parse::
+
+   Deep Learning Common Module.
+
+   This module contains all Lightning datamodules, Lightning modules and
+   PyTorch modules that ought to be used by at least two or more Deep
+   Learning experiments.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   datamodule/index.rst
+   litmodule/index.rst
+   lrscheduler/index.rst
+   nnmodule/index.rst
+   optimizer/index.rst
+
+

@@ -1,0 +1,195 @@
+:py:mod:`cneuroml.deeplearning.common.litmodule.base_test`
+==========================================================
+
+.. py:module:: cneuroml.deeplearning.common.litmodule.base_test
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.common.litmodule.base_test.GenericLitModule
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.common.litmodule.base_test.nnmodule
+   cneuroml.deeplearning.common.litmodule.base_test.optimizer_partial
+   cneuroml.deeplearning.common.litmodule.base_test.scheduler_partial
+   cneuroml.deeplearning.common.litmodule.base_test.test_constructor
+   cneuroml.deeplearning.common.litmodule.base_test.litmodule
+   cneuroml.deeplearning.common.litmodule.base_test.litmodule_with_no_step_method
+   cneuroml.deeplearning.common.litmodule.base_test.test_training_step
+   cneuroml.deeplearning.common.litmodule.base_test.test_training_step_no_step_method
+   cneuroml.deeplearning.common.litmodule.base_test.test_validation_step
+   cneuroml.deeplearning.common.litmodule.base_test.test_validation_step_no_step_method
+   cneuroml.deeplearning.common.litmodule.base_test.test_test_step
+   cneuroml.deeplearning.common.litmodule.base_test.test_test_step_no_step_method
+   cneuroml.deeplearning.common.litmodule.base_test.test_configure_optimizers
+
+
+
+.. py:function:: nnmodule() -> torch.nn.Module
+
+   .
+
+   :returns: A generic PyTorch ``nn.Module`` instance.
+
+
+.. py:function:: optimizer_partial() -> functools.partial[torch.optim.Optimizer]
+
+   .
+
+   :returns: A generic PyTorch ``Optimizer`` partial function.
+
+
+.. py:function:: scheduler_partial() -> functools.partial[torch.optim.lr_scheduler.LRScheduler]
+
+   .
+
+   :returns: A generic PyTorch ``LRScheduler`` partial function.
+
+
+.. py:class:: GenericLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+
+
+   Bases: :py:obj:`cneuroml.deeplearning.common.litmodule.BaseLitModule`
+
+   .
+
+   .. attribute:: nnmodule
+
+      .
+
+      :type: ``nn.Module``
+
+   .. attribute:: optimizer
+
+      .
+
+      :type: ``Optimizer``
+
+   .. attribute:: scheduler
+
+      .
+
+      :type: ``LRScheduler``
+
+   .
+
+   Calls parent constructor, stores arguments, and instantiates
+   from partial functions.
+
+   :param nnmodule: A PyTorch ``nn.Module`` instance.
+   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
+   :param scheduler_partial: A PyTorch ``LRScheduler`` partial
+                             function.
+
+   .. py:method:: step(batch: torch.Tensor | tuple[torch.Tensor], stage: Literal[train, val, test]) -> jaxtyping.Float[torch.Tensor,  ]
+
+      Step method common to all stages.
+
+      :param batch: .
+      :param stage: .
+
+      :returns: The loss value.
+
+
+
+.. py:function:: test_constructor(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> None
+
+   .
+
+   :param nnmodule: A PyTorch ``nn.Module`` instance.
+   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
+   :param scheduler_partial: A PyTorch ``LRScheduler`` partial function.
+
+
+.. py:function:: litmodule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> cneuroml.deeplearning.common.litmodule.BaseLitModule
+
+   .
+
+   :param nnmodule: A PyTorch ``nn.Module`` instance.
+   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
+   :param scheduler_partial: A PyTorch ``LRScheduler`` partial function.
+
+   :returns: A generic ``LitModule`` instance.
+
+
+.. py:function:: litmodule_with_no_step_method(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> cneuroml.deeplearning.common.litmodule.BaseLitModule
+
+   .
+
+   This object is used to test the ``LitModule`` functionality
+   when the ``step`` instance method is not implemented.
+
+   :param nnmodule: A PyTorch ``nn.Module`` instance.
+   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
+   :param scheduler_partial: A PyTorch ``LRScheduler`` partial function.
+
+   :returns: A ``LitModule`` instance with no ``step`` instance method
+             implemented.
+
+
+.. py:function:: test_training_step(litmodule: GenericLitModule) -> None
+
+   .
+
+   :param litmodule: .
+
+
+.. py:function:: test_training_step_no_step_method(litmodule_with_no_step_method: cneuroml.deeplearning.common.litmodule.BaseLitModule) -> None
+
+   .
+
+   :param litmodule_with_no_step_method: .
+
+
+.. py:function:: test_validation_step(litmodule: GenericLitModule) -> None
+
+   .
+
+   :param litmodule: .
+
+
+.. py:function:: test_validation_step_no_step_method(litmodule_with_no_step_method: cneuroml.deeplearning.common.litmodule.BaseLitModule) -> None
+
+   .
+
+   :param litmodule_with_no_step_method: .
+
+
+.. py:function:: test_test_step(litmodule: GenericLitModule) -> None
+
+   .
+
+   :param litmodule: .
+
+
+.. py:function:: test_test_step_no_step_method(litmodule_with_no_step_method: cneuroml.deeplearning.common.litmodule.BaseLitModule) -> None
+
+   .
+
+   :param litmodule_with_no_step_method: .
+
+
+.. py:function:: test_configure_optimizers(litmodule: GenericLitModule) -> None
+
+   .
+
+   :param litmodule: .
+
+

@@ -1,0 +1,73 @@
+:py:mod:`cneuroml.deeplearning.common.datamodule.vision.mnist_test`
+===================================================================
+
+.. py:module:: cneuroml.deeplearning.common.datamodule.vision.mnist_test
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.common.datamodule.vision.mnist_test.config
+   cneuroml.deeplearning.common.datamodule.vision.mnist_test.test_constructor
+   cneuroml.deeplearning.common.datamodule.vision.mnist_test.datamodule
+   cneuroml.deeplearning.common.datamodule.vision.mnist_test.test_prepare_data
+   cneuroml.deeplearning.common.datamodule.vision.mnist_test.test_setup_fit
+   cneuroml.deeplearning.common.datamodule.vision.mnist_test.test_setup_test
+
+
+
+.. py:function:: config(tmp_path: pathlib.Path) -> cneuroml.deeplearning.common.datamodule.BaseDataModuleConfig
+
+   .
+
+   :returns: A generic ``BaseDataModuleConfig`` instance.
+
+
+.. py:function:: test_constructor(config: cneuroml.deeplearning.common.datamodule.BaseDataModuleConfig) -> None
+
+   .
+
+   :param config: .
+
+
+.. py:function:: datamodule(config: cneuroml.deeplearning.common.datamodule.BaseDataModuleConfig) -> cneuroml.deeplearning.common.datamodule.vision.MNISTDataModule
+
+   .
+
+   :param config: .
+
+   :returns: A generic ``MNISTDataModule`` instance.
+
+
+.. py:function:: test_prepare_data(datamodule: cneuroml.deeplearning.common.datamodule.vision.MNISTDataModule) -> None
+
+   .
+
+   :param datamodule: .
+
+
+.. py:function:: test_setup_fit(datamodule: cneuroml.deeplearning.common.datamodule.vision.MNISTDataModule) -> None
+
+   .
+
+   :param datamodule: .
+
+
+.. py:function:: test_setup_test(datamodule: cneuroml.deeplearning.common.datamodule.vision.MNISTDataModule) -> None
+
+   .
+
+   :param datamodule: .
+
+

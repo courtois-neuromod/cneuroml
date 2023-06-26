@@ -1,0 +1,89 @@
+:py:mod:`cneuroml.deeplearning.utils.lightning`
+===============================================
+
+.. py:module:: cneuroml.deeplearning.utils.lightning
+
+.. autoapi-nested-parse::
+
+   PyTorch Lightning utilities for the fitting process.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.utils.lightning.InitOptimParamsCheckpointConnector
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.utils.lightning.find_good_batch_size
+   cneuroml.deeplearning.utils.lightning.find_good_num_workers
+
+
+
+.. py:function:: find_good_batch_size(config: omegaconf.DictConfig) -> int
+
+   Finds an appropriate ``batch_size`` parameter.
+
+   This functionality makes the following, not always correct, but
+   generally reasonable assumptions:
+   - As long as the ``batch_size / dataset_size`` ratio remains small
+   (e.g. < 0.01 so as to benefit from the stochasticity of gradient
+   updates), running the same number of gradient updates with a larger
+   batch size will yield faster training than running the same number
+   of gradient updates with a smaller batch size.
+   - Loading data from disk to RAM is a larger bottleneck than loading
+   data from RAM to GPU VRAM.
+   - If you are training on multiple GPUs, each GPU has roughly the
+   same amount of VRAM.
+
+   :param config: Task configuration.
+
+   :returns: An estimated proper batch size.
+   :rtype: batch_size
+
+
+.. py:function:: find_good_num_workers(config: omegaconf.DictConfig, batch_size: int, max_num_data_passes: int = 500) -> int
+
+   Finds an appropriate `num_workers` parameter.
+
+   :param config: The task configuration.
+   :param batch_size: The estimated appropriate batch size.
+   :param max_num_data_passes: Maximum number of data passes to iterate
+                               through.
+
+   :returns: An estimated proper number of workers.
+   :rtype: num_workers
+
+
+.. py:class:: InitOptimParamsCheckpointConnector
+
+
+   Bases: :py:obj:`lightning.pytorch.trainer.connectors.checkpoint_connector._CheckpointConnector`
+
+   Initialized optimizer parameters Lightning checkpoint connector.
+
+   Makes use of the newly initialized optimizers' parameters rather
+   than the saved parameters. Useful for resuming training with
+   different optimizer parameters (e.g. with the PBT Hydra sweeper).
+
+   .. attribute:: trainer
+
+      The Lightning Trainer.
+
+   .. py:method:: restore_optimizers() -> None
+
+      Restore optimizers w/ initialized optimizers'parameters.
+
+
+

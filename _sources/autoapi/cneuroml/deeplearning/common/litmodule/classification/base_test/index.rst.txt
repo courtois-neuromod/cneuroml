@@ -1,0 +1,47 @@
+:py:mod:`cneuroml.deeplearning.common.litmodule.classification.base_test`
+=========================================================================
+
+.. py:module:: cneuroml.deeplearning.common.litmodule.classification.base_test
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuroml.deeplearning.common.litmodule.classification.base_test.test_constructor
+   cneuroml.deeplearning.common.litmodule.classification.base_test.litmodule
+   cneuroml.deeplearning.common.litmodule.classification.base_test.test_step
+
+
+
+.. py:function:: test_constructor(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> None
+
+   .
+
+   :param nnmodule: .
+   :param optimizer_partial: .
+   :param scheduler_partial: .
+
+
+.. py:function:: litmodule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler]) -> cneuroml.deeplearning.common.litmodule.classification.BaseClasssificationLitModule
+
+   .
+
+
+.. py:function:: test_step(litmodule: cneuroml.deeplearning.common.litmodule.classification.BaseClasssificationLitModule) -> None
+
+   .
+
+   :param litmodule: .
+
+

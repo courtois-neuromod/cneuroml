@@ -1,0 +1,20 @@
+:py:mod:`cneuroml.deeplearning.utils`
+=====================================
+
+.. py:module:: cneuroml.deeplearning.utils
+
+.. autoapi-nested-parse::
+
+   Deep Learning utilities.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   lightning/index.rst
+
+

@@ -15,8 +15,17 @@ Subpackages
    :titlesonly:
    :maxdepth: 3
 
-   app/index.rst
-   dl/index.rst
-   ne/index.rst
+   application/index.rst
+   deeplearning/index.rst
+   neuroevolution/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   conftest/index.rst
 
 
