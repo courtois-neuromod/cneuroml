@@ -1,0 +1,38 @@
+:py:mod:`cneuromax.utils.annotations`
+=====================================
+
+.. py:module:: cneuromax.utils.annotations
+
+.. autoapi-nested-parse::
+
+   Custom annotations for type checking.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: int_gt_0
+
+   
+
+.. py:data:: int_ge_0
+
+   
+
+.. py:data:: float_gt_0_lt_1
+
+   
+
+.. py:data:: str_cpu_or_gpu
+
+   
+
+.. py:data:: str_fit_or_test
+
+   
+
+.. py:data:: str_per_device_batch_size
+
+   
+

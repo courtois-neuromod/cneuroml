@@ -1,0 +1,145 @@
+:py:mod:`cneuromax.deeplearning.fitter`
+=======================================
+
+.. py:module:: cneuromax.deeplearning.fitter
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.fitter.Fitter
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.fitter.TORCH_COMPILE_MINIMUM_CUDA_VERSION
+
+
+.. py:data:: TORCH_COMPILE_MINIMUM_CUDA_VERSION
+   :value: 7
+
+   
+
+.. py:class:: Fitter(config: omegaconf.DictConfig)
+
+
+   Deep Learning Fitter.
+
+   This class is the main entry point of the Deep Learning module. It
+   acts as an interface between Hydra (configuration + launcher +
+   sweeper) and Lightning (trainer + logger + modules).
+
+   Note that this class will be instantiated by ``config.num_nodes`` x
+   ``config.num_gpus_per_node`` processes.
+
+   .. attribute:: config
+
+      The Hydra configuration.
+
+      :type: ``DictConfig``
+
+   .. attribute:: logger
+
+      .
+
+      :type: ``WandbLogger``
+
+   .. attribute:: trainer
+
+      .
+
+      :type: ``Trainer``
+
+   .. attribute:: litmodule
+
+      .
+
+      :type: ``BaseLitModule``
+
+   .. attribute:: datamodule
+
+      .
+
+      :type: ``BaseDataModule``
+
+   .
+
+   Transforms the Hydra configuration instructions into Lightning
+   objects, sets up hardware-dependent parameters and sets the
+   checkpoint path to resume training from (if applicable).
+
+   :param config: The Hydra configuration object.
+
+   .. py:method:: instantiate_lightning_objects() -> None
+
+      .
+
+      Instantiates:
+      - the W&B Logger (in offline mode if running on Slurm)
+      - the Lightning Trainer
+      - the Lightning Module (compiled if using CUDA 7.0+ GPUs)
+      - the Lightning DataModule
+
+
+   .. py:method:: set_batch_size_and_num_workers() -> None
+
+      .
+
+      If starting a new HPO run, finds and sets "good" ``batch_size``
+      and ``num_workers`` parameters.
+
+      See the ``find_good_batch_size`` and ``find_good_num_workers``
+      functions documentation for more details.
+
+      We make the assumption that if we are resuming from a checkpoint
+      created while running hyper-parameter optimization, we are
+      running on the same hardware configuration as was used to create
+      the checkpoint. Therefore, we do not need to once again look for
+      good ``batch_size`` and ``num_workers`` parameters.
+
+
+   .. py:method:: set_checkpoint_path() -> None
+
+      Sets the path to the checkpoint to resume training from.
+
+      Three cases are considered:
+      - if the ``config.load_path_hpo`` parameter is set, we are
+      resuming from a checkpoint created while running HPO. In this
+      case, we set the checkpoint path to the value of
+      ``config.load_path_hpo`` and use a custom checkpoint connector
+      to not override the new HPO config values.
+      - if the ``config.load_path`` parameter is set (but not
+      ``config.load_path_hpo``), we are resuming from a regular
+      checkpoint. In this case, we set the checkpoint path to the
+      value of ``config.load_path``.
+      - if neither ``config.load_path_hpo`` nor ``config.load_path``
+      are set, we are starting a new training run. In this case, we
+      set the checkpoint path to ``None``.
+
+
+   .. py:method:: fit() -> float
+
+      Fitting method.
+
+      Trains (or resumes training) the model, saves a checkpoint and
+      returns the final validation loss.
+
+      :returns: The final validation loss.
+
+
+

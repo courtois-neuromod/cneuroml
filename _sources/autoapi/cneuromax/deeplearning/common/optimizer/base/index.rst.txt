@@ -1,0 +1,70 @@
+:py:mod:`cneuromax.deeplearning.common.optimizer.base`
+======================================================
+
+.. py:module:: cneuromax.deeplearning.common.optimizer.base
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.optimizer.base.BaseOptimizerConfig
+
+
+
+
+.. py:class:: BaseOptimizerConfig
+
+
+   .
+
+   .. attribute:: _target_
+
+      Optimizer class needs to be specified in child class.
+
+   .. attribute:: _partial_
+
+      (Need model parameters for instantiation).
+
+   .. attribute:: lr
+
+      Learning rate.
+
+   .. attribute:: weight_decay
+
+      L2 penalty.
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: '???'
+
+      
+
+   .. py:attribute:: _partial_
+      :type: bool
+      :value: True
+
+      
+
+   .. py:attribute:: lr
+      :type: float
+      :value: 0.001
+
+      
+
+   .. py:attribute:: weight_decay
+      :type: float
+      :value: 0.01
+
+      
+
+

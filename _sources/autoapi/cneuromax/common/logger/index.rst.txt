@@ -1,0 +1,20 @@
+:py:mod:`cneuromax.common.logger`
+=================================
+
+.. py:module:: cneuromax.common.logger
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   wandb/index.rst
+
+

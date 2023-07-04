@@ -1,0 +1,22 @@
+:py:mod:`cneuromax.deeplearning.common.lrscheduler`
+===================================================
+
+.. py:module:: cneuromax.deeplearning.common.lrscheduler
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   base/index.rst
+   base_test/index.rst
+   none_test/index.rst
+
+

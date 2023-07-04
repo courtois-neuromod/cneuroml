@@ -1,0 +1,115 @@
+:py:mod:`cneuromax.deeplearning.common.datamodule.vision.mnist`
+===============================================================
+
+.. py:module:: cneuromax.deeplearning.common.datamodule.vision.mnist
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig
+   cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModule
+
+
+
+
+.. py:class:: MNISTDataModuleConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig`
+
+   .
+
+   .. attribute:: val_percentage
+
+      Percentage of the training dataset to use
+      for validation (value in ``]0, 1[``).
+
+   .. attribute:: train_val_split
+
+      The train/validation split (sums to ``1``).
+
+   .. attribute:: fit_dataset_mean
+
+      .
+
+   .. attribute:: fit_dataset_std
+
+      .
+
+   .. py:attribute:: val_percentage
+      :type: Annotated[float, beartype.vale.Is[lambda x: 0 < x < 1]]
+      :value: 0.1
+
+      
+
+   .. py:attribute:: train_val_split
+      :type: tuple[float, float]
+      :value: ()
+
+      
+
+   .. py:attribute:: fit_dataset_mean
+      :type: tuple[float]
+      :value: (0.1307,)
+
+      
+
+   .. py:attribute:: fit_dataset_std
+      :type: tuple[float]
+      :value: (0.3081,)
+
+      
+
+
+.. py:class:: MNISTDataModule(config: MNISTDataModuleConfig)
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModule`
+
+   .
+
+   .. attribute:: train_val_split
+
+      The train/validation
+      split (sums to ``1``).
+
+      :type: ``tuple[float, float]``
+
+   .. attribute:: transform
+
+      The ``torchvision`` dataset
+      transformations.
+
+      :type: ``transforms.Compose``
+
+   .
+
+   Calls parent constructor, type-hints the config, sets the
+   train/validation split and creates the dataset transform.
+
+   :param config: .
+
+   .. py:method:: prepare_data() -> None
+
+      Downloads the MNIST dataset.
+
+
+   .. py:method:: setup(stage: Annotated[str, beartype.vale.Is[lambda x: x in ('fit', 'test')]]) -> None
+
+      Creates the train/val/test datasets.
+
+      :param stage: ``"fit"`` or ``"test"``.
+
+
+

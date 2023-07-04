@@ -1,0 +1,106 @@
+:py:mod:`cneuromax.deeplearning.common.nnmodule`
+================================================
+
+.. py:module:: cneuromax.deeplearning.common.nnmodule
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   mlp/index.rst
+   mlp_test/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.nnmodule.MLP
+   cneuromax.deeplearning.common.nnmodule.MLPConfig
+
+
+
+
+.. py:class:: MLP(config: MLPConfig)
+
+
+   Bases: :py:obj:`torch.nn.Module`
+
+   Multi-layer perceptron (MLP).
+
+   Allows for a variable number of layers, activation functions, and
+   dropout probability.
+
+   .. attribute:: config
+
+      The `MLPConfig` instance.
+
+   .. attribute:: model
+
+      The MLP model.
+
+   Calls parent constructor, stores config & initializes model.
+
+   :param config: .
+
+   .. py:method:: forward(x: jaxtyping.Float[torch.Tensor,  batch_size *d_input]) -> jaxtyping.Float[torch.Tensor,  batch_size output_size]
+
+      Flattens input dimensions and pass through the model.
+
+      .. note::
+
+         This MLP isn't (yet?) suitable for cases where the output is
+         multidimensional.
+
+      :param x: .
+
+      :returns: The output vector batch.
+
+
+
+.. py:class:: MLPConfig
+
+
+   .
+
+   .. attribute:: dims
+
+      List of dimensions for each layer.
+
+   .. attribute:: activation_fn
+
+      Activation function.
+
+   .. attribute:: p_dropout
+
+      Dropout probability.
+
+   .. py:attribute:: dims
+      :type: list[int]
+
+      
+
+   .. py:attribute:: activation_fn
+      :type: type[torch.nn.Module]
+
+      
+
+   .. py:attribute:: p_dropout
+      :type: float
+      :value: 0.0
+
+      
+
+

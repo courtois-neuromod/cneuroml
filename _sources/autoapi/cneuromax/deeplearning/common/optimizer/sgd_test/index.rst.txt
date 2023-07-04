@@ -1,0 +1,42 @@
+:py:mod:`cneuromax.deeplearning.common.optimizer.sgd_test`
+==========================================================
+
+.. py:module:: cneuromax.deeplearning.common.optimizer.sgd_test
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.optimizer.sgd_test.test
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.optimizer.sgd_test.MOMENTUM
+
+
+.. py:data:: MOMENTUM
+   :value: 0
+
+   
+
+.. py:function:: test() -> None
+
+   .
+
+

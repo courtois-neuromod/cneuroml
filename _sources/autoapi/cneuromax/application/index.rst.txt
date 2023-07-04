@@ -1,0 +1,11 @@
+:py:mod:`cneuromax.application`
+===============================
+
+.. py:module:: cneuromax.application
+
+.. autoapi-nested-parse::
+
+   Application component of the cneuromax library.
+
+
+

@@ -1,0 +1,50 @@
+:py:mod:`cneuromax.deeplearning.common.lrscheduler.base`
+========================================================
+
+.. py:module:: cneuromax.deeplearning.common.lrscheduler.base
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.lrscheduler.base.BaseLRSchedulerConfig
+
+
+
+
+.. py:class:: BaseLRSchedulerConfig
+
+
+   .
+
+   .. attribute:: _partial_
+
+      Partial instantiation. Optimizer object required for
+      full instantiation.
+
+   .. attribute:: last_epoch
+
+      Index of the last epoch when resuming training.
+
+   .. py:attribute:: _partial_
+      :type: bool
+      :value: True
+
+      
+
+   .. py:attribute:: last_epoch
+      :type: int
+
+      
+
+

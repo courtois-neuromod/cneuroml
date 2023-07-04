@@ -1,0 +1,72 @@
+:py:mod:`cneuromax.deeplearning.experiment.mnist_classification.litmodule`
+==========================================================================
+
+.. py:module:: cneuromax.deeplearning.experiment.mnist_classification.litmodule
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule
+
+
+
+
+.. py:class:: MNISTClassificationLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.classification.BaseClasssificationLitModule`
+
+   .
+
+   .. attribute:: accuracy
+
+      The accuracy metric.
+
+      :type: ``torchmetrics.Accuracy``
+
+   .. attribute:: nnmodule
+
+      .
+
+      :type: ``nn.Module``
+
+   .. attribute:: optimizer
+
+      .
+
+      :type: ``Optimizer``
+
+   .. attribute:: scheduler
+
+      .
+
+      :type: ``LRScheduler``
+
+   Calls parent constructor.
+
+   :param nnmodule: A PyTorch ``nn.Module`` instance.
+   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
+   :param scheduler_partial: A PyTorch ``LRScheduler`` partial
+                             function.
+
+   .. py:method:: forward(x: jaxtyping.Float[torch.Tensor,  batch_size 1 28 28]) -> jaxtyping.Float[torch.Tensor,  batch_size 10]
+
+      Simple pass through the PyTorch ``nn.Module``.
+
+      :param x: The batched MNIST images.
+
+      :returns: The batched output logits.
+
+
+

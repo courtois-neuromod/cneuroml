@@ -1,0 +1,24 @@
+:py:mod:`cneuromax`
+===================
+
+.. py:module:: cneuromax
+
+.. autoapi-nested-parse::
+
+   The cneuromax library.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   application/index.rst
+   common/index.rst
+   deeplearning/index.rst
+   neuroevolution/index.rst
+   utils/index.rst
+
+

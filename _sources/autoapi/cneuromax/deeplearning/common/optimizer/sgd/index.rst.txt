@@ -1,0 +1,64 @@
+:py:mod:`cneuromax.deeplearning.common.optimizer.sgd`
+=====================================================
+
+.. py:module:: cneuromax.deeplearning.common.optimizer.sgd
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.optimizer.sgd.SGDConfig
+
+
+
+
+.. py:class:: SGDConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.optimizer.base.BaseOptimizerConfig`
+
+   https://pytorch.org/docs/stable/generated/torch.optim.SGD.html.
+
+   .. attribute:: _target_
+
+      Optimizer class.
+
+   .. attribute:: _partial_
+
+      (Need model parameters for instantiation).
+
+   .. attribute:: lr
+
+      Learning rate.
+
+   .. attribute:: weight_decay
+
+      L2 penalty.
+
+   .. attribute:: momentum
+
+      .
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'torch.optim.SGD'
+
+      
+
+   .. py:attribute:: momentum
+      :type: float
+      :value: 0
+
+      
+
+

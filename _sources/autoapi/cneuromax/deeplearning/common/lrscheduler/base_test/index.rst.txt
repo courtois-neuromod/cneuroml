@@ -1,0 +1,41 @@
+:py:mod:`cneuromax.deeplearning.common.lrscheduler.base_test`
+=============================================================
+
+.. py:module:: cneuromax.deeplearning.common.lrscheduler.base_test
+
+.. autoapi-nested-parse::
+
+   Tests for base optimizer class.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.lrscheduler.base_test.test
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.lrscheduler.base_test.LAST_EPOCH
+
+
+.. py:data:: LAST_EPOCH
+
+   
+
+.. py:function:: test() -> None
+
+   .
+
+

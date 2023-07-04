@@ -1,0 +1,53 @@
+:py:mod:`cneuromax.deeplearning.common.nnmodule.mlp_test`
+=========================================================
+
+.. py:module:: cneuromax.deeplearning.common.nnmodule.mlp_test
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.nnmodule.mlp_test.mlp_1
+   cneuromax.deeplearning.common.nnmodule.mlp_test.mlp_2
+   cneuromax.deeplearning.common.nnmodule.mlp_test.test_constructor
+   cneuromax.deeplearning.common.nnmodule.mlp_test.test_forward
+
+
+
+.. py:function:: mlp_1() -> cneuromax.deeplearning.common.nnmodule.MLP
+
+   .
+
+
+.. py:function:: mlp_2() -> cneuromax.deeplearning.common.nnmodule.MLP
+
+   .
+
+
+.. py:function:: test_constructor(mlp_1: cneuromax.deeplearning.common.nnmodule.MLP, mlp_2: cneuromax.deeplearning.common.nnmodule.MLP) -> None
+
+   Tests two different MLPs.
+
+   :param mlp_1: .
+   :param mlp_2: .
+
+
+.. py:function:: test_forward(mlp_1: cneuromax.deeplearning.common.nnmodule.MLP, mlp_2: cneuromax.deeplearning.common.nnmodule.MLP) -> None
+
+   .
+
+   :param mlp_1: .
+   :param mlp_2: .
+
+

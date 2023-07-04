@@ -1,0 +1,40 @@
+:py:mod:`cneuromax.common.logger.wandb`
+=======================================
+
+.. py:module:: cneuromax.common.logger.wandb
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.common.logger.wandb.WandbLoggerConfig
+
+
+
+
+.. py:class:: WandbLoggerConfig
+
+
+   .
+
+   .. py:attribute:: name
+      :type: str | None
+
+      
+
+   .. py:attribute:: project
+      :type: str | None
+
+      
+
+

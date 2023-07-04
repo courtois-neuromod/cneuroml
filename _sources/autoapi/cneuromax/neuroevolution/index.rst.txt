@@ -1,0 +1,11 @@
+:py:mod:`cneuromax.neuroevolution`
+==================================
+
+.. py:module:: cneuromax.neuroevolution
+
+.. autoapi-nested-parse::
+
+   Neuroevolution component of the cneuromax library.
+
+
+

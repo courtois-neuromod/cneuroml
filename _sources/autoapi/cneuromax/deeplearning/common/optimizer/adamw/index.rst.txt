@@ -1,0 +1,63 @@
+:py:mod:`cneuromax.deeplearning.common.optimizer.adamw`
+=======================================================
+
+.. py:module:: cneuromax.deeplearning.common.optimizer.adamw
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.optimizer.adamw.AdamWConfig
+
+
+
+
+.. py:class:: AdamWConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.optimizer.AdamConfig`
+
+   https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html.
+
+   .. attribute:: _target_
+
+      Optimizer class.
+
+   .. attribute:: _partial_
+
+      (Need model parameters for instantiation).
+
+   .. attribute:: lr
+
+      Learning rate.
+
+   .. attribute:: weight_decay
+
+      L2 penalty.
+
+   .. attribute:: betas
+
+      Exponential decay rate for the 1st & 2nd moment
+      estimates.
+
+   .. attribute:: eps
+
+      Small constant for numerical stability.
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'torch.optim.AdamW'
+
+      
+
+
