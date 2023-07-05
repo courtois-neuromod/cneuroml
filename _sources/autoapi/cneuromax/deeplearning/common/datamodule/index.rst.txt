@@ -59,11 +59,13 @@ Classes
 
       :type: ``BaseDataModuleConfig``
 
-   .. attribute:: dataset
+   .. attribute:: dataset (``dict[Literal["train", "val", "test", "predict"],
+
+      
+
+   .. attribute:: Dataset]``)
 
       .
-
-      :type: ``dict[Literal["train", "val", "test", "predict"],        Dataset]``
 
    .. attribute:: pin_memory
 

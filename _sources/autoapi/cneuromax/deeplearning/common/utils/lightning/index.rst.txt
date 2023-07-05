@@ -1,7 +1,7 @@
-:py:mod:`cneuromax.deeplearning.utils.lightning`
-================================================
+:py:mod:`cneuromax.deeplearning.common.utils.lightning`
+=======================================================
 
-.. py:module:: cneuromax.deeplearning.utils.lightning
+.. py:module:: cneuromax.deeplearning.common.utils.lightning
 
 .. autoapi-nested-parse::
 
@@ -17,7 +17,7 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.utils.lightning.InitOptimParamsCheckpointConnector
+   cneuromax.deeplearning.common.utils.lightning.InitOptimParamsCheckpointConnector
 
 
 
@@ -26,8 +26,8 @@ Functions
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.utils.lightning.find_good_batch_size
-   cneuromax.deeplearning.utils.lightning.find_good_num_workers
+   cneuromax.deeplearning.common.utils.lightning.find_good_batch_size
+   cneuromax.deeplearning.common.utils.lightning.find_good_num_workers
 
 
 

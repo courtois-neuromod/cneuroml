@@ -1,7 +1,7 @@
-:py:mod:`cneuromax.deeplearning.fitter`
-=======================================
+:py:mod:`cneuromax.deeplearning.common.fitter`
+==============================================
 
-.. py:module:: cneuromax.deeplearning.fitter
+.. py:module:: cneuromax.deeplearning.common.fitter
 
 .. autoapi-nested-parse::
 
@@ -17,7 +17,7 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.fitter.Fitter
+   cneuromax.deeplearning.common.fitter.Fitter
 
 
 
@@ -27,7 +27,7 @@ Attributes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.fitter.TORCH_COMPILE_MINIMUM_CUDA_VERSION
+   cneuromax.deeplearning.common.fitter.TORCH_COMPILE_MINIMUM_CUDA_VERSION
 
 
 .. py:data:: TORCH_COMPILE_MINIMUM_CUDA_VERSION

@@ -66,7 +66,7 @@ Classes
       Downloads the MNIST dataset.
 
 
-   .. py:method:: setup(stage: Annotated[str, beartype.vale.Is[lambda x: x == 'fit' or x == 'test']]) -> None
+   .. py:method:: setup(stage: cneuromax.deeplearning.common.utils.annotations.str_fit_test) -> None
 
       Creates the train/val/test datasets.
 
@@ -95,7 +95,7 @@ Classes
       .
 
    .. py:attribute:: val_percentage
-      :type: Annotated[float, beartype.vale.Is[lambda x: 0 < x < 1]]
+      :type: cneuromax.deeplearning.common.utils.annotations.float_gt0_lt1
       :value: 0.1
 
       

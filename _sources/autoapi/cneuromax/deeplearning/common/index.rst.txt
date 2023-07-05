@@ -24,5 +24,15 @@ Subpackages
    lrscheduler/index.rst
    nnmodule/index.rst
    optimizer/index.rst
+   utils/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   fitter/index.rst
 
 
