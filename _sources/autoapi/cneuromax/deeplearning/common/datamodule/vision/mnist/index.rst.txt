@@ -95,7 +95,7 @@ Classes
       Downloads the MNIST dataset.
 
 
-   .. py:method:: setup(stage: Annotated[str, beartype.vale.Is[lambda x: x in ['fit', 'test']]]) -> None
+   .. py:method:: setup(stage: Annotated[str, beartype.vale.Is[lambda x: x == 'fit' or x == 'test']]) -> None
 
       Creates the train/val/test datasets.
 

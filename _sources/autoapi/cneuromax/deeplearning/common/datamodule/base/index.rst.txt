@@ -137,7 +137,7 @@ Classes
 
       .
 
-      :type: ``dict[Literal["train", "val", "test", "predict"],            Dataset]``
+      :type: ``dict[Literal["train", "val", "test", "predict"],        Dataset]``
 
    .. attribute:: pin_memory
 
