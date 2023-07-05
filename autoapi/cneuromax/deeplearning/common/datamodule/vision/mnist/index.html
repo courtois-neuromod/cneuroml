@@ -297,7 +297,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1" title="cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float_gt0_lt1</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.str_fit_test" title="cneuromax.deeplearning.common.datamodule.vision.mnist.str_fit_test"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str_fit_test</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.str_is_fit_or_test" title="cneuromax.deeplearning.common.datamodule.vision.mnist.str_is_fit_or_test"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str_is_fit_or_test</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -305,12 +305,12 @@
 </div>
 <dl class="py data">
 <dt class="sig sig-object py" id="cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1">
-<span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.common.datamodule.vision.mnist.</span></span><span class="sig-name descname"><span class="pre">float_gt0_lt1</span></span><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.common.datamodule.vision.mnist.</span></span><span class="sig-name descname"><span class="pre">float_gt0_lt1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">TypeAlias</span></em><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.common.datamodule.vision.mnist.str_fit_test">
-<span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.common.datamodule.vision.mnist.</span></span><span class="sig-name descname"><span class="pre">str_fit_test</span></span><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.str_fit_test" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cneuromax.deeplearning.common.datamodule.vision.mnist.str_is_fit_or_test">
+<span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.common.datamodule.vision.mnist.</span></span><span class="sig-name descname"><span class="pre">str_is_fit_or_test</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">TypeAlias</span></em><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.str_is_fit_or_test" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -400,7 +400,7 @@ train/validation split and creates the dataset transform.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModule.setup">
-<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str_fit_test</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModule.setup" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str_is_fit_or_test</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModule.setup" title="Permalink to this definition">#</a></dt>
 <dd><p>Creates the train/val/test datasets.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -475,7 +475,7 @@ train/validation split and creates the dataset transform.</p>
 <li><a class="reference internal" href="#classes">Classes</a></li>
 <li><a class="reference internal" href="#attributes">Attributes</a><ul>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1"><code class="docutils literal notranslate"><span class="pre">float_gt0_lt1</span></code></a></li>
-<li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.str_fit_test"><code class="docutils literal notranslate"><span class="pre">str_fit_test</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.str_is_fit_or_test"><code class="docutils literal notranslate"><span class="pre">str_is_fit_or_test</span></code></a></li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig</span></code></a><ul>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.val_percentage"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.val_percentage</span></code></a></li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.fit_dataset_mean"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_mean</span></code></a></li>

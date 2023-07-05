@@ -29,14 +29,16 @@ Attributes
 .. autoapisummary::
 
    cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1
-   cneuromax.deeplearning.common.datamodule.vision.mnist.str_fit_test
+   cneuromax.deeplearning.common.datamodule.vision.mnist.str_is_fit_or_test
 
 
 .. py:data:: float_gt0_lt1
+   :type: TypeAlias
 
    
 
-.. py:data:: str_fit_test
+.. py:data:: str_is_fit_or_test
+   :type: TypeAlias
 
    
 
@@ -112,7 +114,7 @@ Attributes
       Downloads the MNIST dataset.
 
 
-   .. py:method:: setup(stage: str_fit_test) -> None
+   .. py:method:: setup(stage: str_is_fit_or_test) -> None
 
       Creates the train/val/test datasets.
 
