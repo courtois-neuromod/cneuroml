@@ -23,6 +23,23 @@ Classes
 
 
 
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1
+   cneuromax.deeplearning.common.datamodule.vision.mnist.str_fit_test
+
+
+.. py:data:: float_gt0_lt1
+
+   
+
+.. py:data:: str_fit_test
+
+   
+
 .. py:class:: MNISTDataModuleConfig
 
 
@@ -44,7 +61,7 @@ Classes
       .
 
    .. py:attribute:: val_percentage
-      :type: cneuromax.deeplearning.common.utils.annotations.float_gt0_lt1
+      :type: float_gt0_lt1
       :value: 0.1
 
       
@@ -95,7 +112,7 @@ Classes
       Downloads the MNIST dataset.
 
 
-   .. py:method:: setup(stage: cneuromax.deeplearning.common.utils.annotations.str_fit_test) -> None
+   .. py:method:: setup(stage: str_fit_test) -> None
 
       Creates the train/val/test datasets.
 

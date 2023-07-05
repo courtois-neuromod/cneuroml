@@ -19,6 +19,5 @@ Subpackages
    common/index.rst
    deeplearning/index.rst
    neuroevolution/index.rst
-   utils/index.rst
 
 

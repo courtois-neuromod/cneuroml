@@ -212,7 +212,6 @@
 </ul>
 </li>
 <li class="toctree-l5 has-children"><a class="reference internal" href="../utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.common.utils</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of cneuromax.deeplearning.common.utils</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l6"><a class="reference internal" href="../utils/annotations/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.common.utils.annotations</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="../utils/lightning/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.common.utils.lightning</span></code></a></li>
 </ul>
 </li>
@@ -230,11 +229,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../neuroevolution/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.neuroevolution</span></code></a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../utils/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.utils</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of cneuromax.utils</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../utils/annotations/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.utils.annotations</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../utils/test/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.utils.test</span></code></a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -339,13 +333,9 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">dataset</span> <span class="pre">(``dict[Literal[&quot;train&quot;,</span> <span class="pre">&quot;val&quot;,</span> <span class="pre">&quot;test&quot;,</span> <span class="pre">&quot;predict&quot;],</span></span></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Dataset]``)</span></span></dt>
-<dd><p>.</p>
+<span class="sig-name descname"><span class="pre">dataset</span> <span class="pre">(``</span></span></dt>
+<dd><p>dict[Literal[“train”, “val”, “test”, “predict”], Dataset]
+<a href="#id1"><span class="problematic" id="id2">``</span></a>): .</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -493,18 +483,18 @@ loaded by each device’s assigned CPU process)</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id1">
-<span class="sig-name descname"><span class="pre">per_device_batch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated[int,</span> <span class="pre">beartype.vale.Is[lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id1" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id2">
-<span class="sig-name descname"><span class="pre">per_device_num_workers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated[int,</span> <span class="pre">beartype.vale.Is[lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">0]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id2" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="id3">
-<span class="sig-name descname"><span class="pre">device_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated[str,</span> <span class="pre">beartype.vale.Is[lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">('cpu',</span> <span class="pre">'gpu')]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'gpu'</span></em><a class="headerlink" href="#id3" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">per_device_batch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated[int,</span> <span class="pre">beartype.vale.Is[lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#id3" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">per_device_num_workers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated[int,</span> <span class="pre">beartype.vale.Is[lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">0]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id4" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">device_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated[str,</span> <span class="pre">beartype.vale.Is[lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">('cpu',</span> <span class="pre">'gpu')]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'gpu'</span></em><a class="headerlink" href="#id5" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -538,23 +528,23 @@ loaded by each device’s assigned CPU process)</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id4">
-<span class="sig-name descname"><span class="pre">train</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id4" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id5">
-<span class="sig-name descname"><span class="pre">val</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id5" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="id6">
-<span class="sig-name descname"><span class="pre">test</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id6" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">train</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id6" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id7">
-<span class="sig-name descname"><span class="pre">predict</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id7" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">val</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id7" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">test</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id8" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">predict</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">torch.utils.data.Dataset</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#id9" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -640,9 +630,9 @@ loaded by each device’s assigned CPU process)</p>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig.per_device_num_workers"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.per_device_num_workers</span></code></a></li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig.device_type"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.device_type</span></code></a></li>
 <li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.data_dir</span></code></a></li>
-<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.per_device_batch_size</span></code></a></li>
-<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.per_device_num_workers</span></code></a></li>
-<li><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.device_type</span></code></a></li>
+<li><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.per_device_batch_size</span></code></a></li>
+<li><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.per_device_num_workers</span></code></a></li>
+<li><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">BaseDataModuleConfig.device_type</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.BaseDataset"><code class="docutils literal notranslate"><span class="pre">BaseDataset</span></code></a><ul>
@@ -650,10 +640,10 @@ loaded by each device’s assigned CPU process)</p>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.BaseDataset.val"><code class="docutils literal notranslate"><span class="pre">BaseDataset.val</span></code></a></li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.BaseDataset.test"><code class="docutils literal notranslate"><span class="pre">BaseDataset.test</span></code></a></li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.BaseDataset.predict"><code class="docutils literal notranslate"><span class="pre">BaseDataset.predict</span></code></a></li>
-<li><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">BaseDataset.train</span></code></a></li>
-<li><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">BaseDataset.val</span></code></a></li>
-<li><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">BaseDataset.test</span></code></a></li>
-<li><a class="reference internal" href="#id7"><code class="docutils literal notranslate"><span class="pre">BaseDataset.predict</span></code></a></li>
+<li><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">BaseDataset.train</span></code></a></li>
+<li><a class="reference internal" href="#id7"><code class="docutils literal notranslate"><span class="pre">BaseDataset.val</span></code></a></li>
+<li><a class="reference internal" href="#id8"><code class="docutils literal notranslate"><span class="pre">BaseDataset.test</span></code></a></li>
+<li><a class="reference internal" href="#id9"><code class="docutils literal notranslate"><span class="pre">BaseDataset.predict</span></code></a></li>
 </ul>
 </li>
 </ul>

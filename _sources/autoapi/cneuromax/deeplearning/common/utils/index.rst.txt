@@ -15,7 +15,6 @@ Submodules
    :titlesonly:
    :maxdepth: 1
 
-   annotations/index.rst
    lightning/index.rst
 
 
