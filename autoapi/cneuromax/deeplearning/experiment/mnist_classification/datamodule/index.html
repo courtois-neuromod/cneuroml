@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../../search.html" /><link rel="next" title="cneuromax.deeplearning.__main__" href="../../../__main__/index.html" /><link rel="prev" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule_test" href="../datamodule_test/index.html" />
+<link rel="index" title="Index" href="../../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../../search.html" /><link rel="next" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule_test" href="../datamodule_test/index.html" /><link rel="prev" title="cneuromax.deeplearning.experiment.mnist_classification" href="../index.html" />
 
     <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
-        <title>cneuromax.deeplearning.experiment.mnist_classification.litmodule - cneuromax documentation</title>
+        <title>cneuromax.deeplearning.experiment.mnist_classification.datamodule - cneuromax documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="../../../../../../_static/graphviz.css" />
@@ -215,9 +215,9 @@
 </li>
 <li class="toctree-l4 current has-children"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of cneuromax.deeplearning.experiment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l5 current has-children"><a class="reference internal" href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of cneuromax.deeplearning.experiment.mnist_classification</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l6"><a class="reference internal" href="../datamodule/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule</span></code></a></li>
+<li class="toctree-l6 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="../datamodule_test/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule_test</span></code></a></li>
-<li class="toctree-l6 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.litmodule</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="../litmodule/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.litmodule</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -264,8 +264,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-cneuromax.deeplearning.experiment.mnist_classification.litmodule">
-<span id="cneuromax-deeplearning-experiment-mnist-classification-litmodule"></span><h1><a class="reference internal" href="#module-cneuromax.deeplearning.experiment.mnist_classification.litmodule" title="cneuromax.deeplearning.experiment.mnist_classification.litmodule"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.litmodule</span></code></a><a class="headerlink" href="#module-cneuromax.deeplearning.experiment.mnist_classification.litmodule" title="Permalink to this heading">#</a></h1>
+          <section id="module-cneuromax.deeplearning.experiment.mnist_classification.datamodule">
+<span id="cneuromax-deeplearning-experiment-mnist-classification-datamodule"></span><h1><a class="reference internal" href="#module-cneuromax.deeplearning.experiment.mnist_classification.datamodule" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule</span></code></a><a class="headerlink" href="#module-cneuromax.deeplearning.experiment.mnist_classification.datamodule" title="Permalink to this heading">#</a></h1>
 <p>.</p>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
@@ -274,83 +274,137 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule" title="cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MNISTClassificationLitModule</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MNISTDataModuleConfig</span></code></a></p></td>
+<td><p><p>.</p>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MNISTDataModule</span></code></a></p></td>
 <td><p><p>.</p>
 </p></td>
 </tr>
 </tbody>
 </table>
 </div>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.float_is_gt0_lt1" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule.float_is_gt0_lt1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float_is_gt0_lt1</span></code></a></p></td>
+<td><p>Runtime typing annotation for a float in <code class="docutils literal notranslate"><span class="pre">]0,</span> <span class="pre">1[</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.str_is_fit_or_test" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule.str_is_fit_or_test"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str_is_fit_or_test</span></code></a></p></td>
+<td><p>Runtime typing annotation for a string in <code class="docutils literal notranslate"><span class="pre">(&quot;fit&quot;,</span> <span class="pre">&quot;test&quot;)</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.float_is_gt0_lt1">
+<span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule.</span></span><span class="sig-name descname"><span class="pre">float_is_gt0_lt1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">TypeAlias</span></em><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.float_is_gt0_lt1" title="Permalink to this definition">#</a></dt>
+<dd><p>Runtime typing annotation for a float in <code class="docutils literal notranslate"><span class="pre">]0,</span> <span class="pre">1[</span></code>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.str_is_fit_or_test">
+<span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule.</span></span><span class="sig-name descname"><span class="pre">str_is_fit_or_test</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">TypeAlias</span></em><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.str_is_fit_or_test" title="Permalink to this definition">#</a></dt>
+<dd><p>Runtime typing annotation for a string in <code class="docutils literal notranslate"><span class="pre">(&quot;fit&quot;,</span> <span class="pre">&quot;test&quot;)</span></code>.</p>
+</dd></dl>
+
 <dl class="py class">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.litmodule.</span></span><span class="sig-name descname"><span class="pre">MNISTClassificationLitModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnmodule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.nn.Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_partial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">functools.partial</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.optim.Optimizer</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler_partial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">functools.partial</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.optim.lr_scheduler.LRScheduler</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../../../common/litmodule/classification/index.html#cneuromax.deeplearning.common.litmodule.classification.BaseClasssificationLitModule" title="cneuromax.deeplearning.common.litmodule.classification.BaseClasssificationLitModule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cneuromax.deeplearning.common.litmodule.classification.BaseClasssificationLitModule</span></code></a></p>
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule.</span></span><span class="sig-name descname"><span class="pre">MNISTDataModuleConfig</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../common/datamodule/index.html#cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig" title="cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig</span></code></a></p>
 <p>.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.accuracy">
-<span class="sig-name descname"><span class="pre">accuracy</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.accuracy" title="Permalink to this definition">#</a></dt>
-<dd><p>The accuracy metric.</p>
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.val_percentage">
+<span class="sig-name descname"><span class="pre">val_percentage</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.val_percentage" title="Permalink to this definition">#</a></dt>
+<dd><p>Percentage of the training dataset to use
+for validation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.fit_dataset_mean">
+<span class="sig-name descname"><span class="pre">fit_dataset_mean</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.fit_dataset_mean" title="Permalink to this definition">#</a></dt>
+<dd><p>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.fit_dataset_std">
+<span class="sig-name descname"><span class="pre">fit_dataset_std</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.fit_dataset_std" title="Permalink to this definition">#</a></dt>
+<dd><p>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">val_percentage</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float_is_gt0_lt1</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.1</span></em><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">fit_dataset_mean</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0.1307,)</span></em><a class="headerlink" href="#id1" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">fit_dataset_std</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0.3081,)</span></em><a class="headerlink" href="#id2" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule.</span></span><span class="sig-name descname"><span class="pre">MNISTDataModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig" title="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig"><span class="pre">MNISTDataModuleConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../common/datamodule/index.html#cneuromax.deeplearning.common.datamodule.BaseDataModule" title="cneuromax.deeplearning.common.datamodule.BaseDataModule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cneuromax.deeplearning.common.datamodule.BaseDataModule</span></code></a></p>
+<p>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.train_val_split">
+<span class="sig-name descname"><span class="pre">train_val_split</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.train_val_split" title="Permalink to this definition">#</a></dt>
+<dd><p>The train/validation
+split (sums to <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">torchmetrics.Accuracy</span></code></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">tuple[float,</span> <span class="pre">float]</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.nnmodule">
-<span class="sig-name descname"><span class="pre">nnmodule</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.nnmodule" title="Permalink to this definition">#</a></dt>
-<dd><p>.</p>
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.transform" title="Permalink to this definition">#</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">torchvision</span></code> dataset
+transformations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">nn.Module</span></code></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">transforms.Compose</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.optimizer">
-<span class="sig-name descname"><span class="pre">optimizer</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.optimizer" title="Permalink to this definition">#</a></dt>
-<dd><p>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.scheduler">
-<span class="sig-name descname"><span class="pre">scheduler</span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.scheduler" title="Permalink to this definition">#</a></dt>
-<dd><p>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">LRScheduler</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>Calls parent constructor.</p>
+<p>.</p>
+<p>Calls parent constructor, type-hints the config, sets the
+train/val split and creates the dataset transform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>nnmodule</strong> – A PyTorch <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> instance.</p></li>
-<li><p><strong>optimizer_partial</strong> – A PyTorch <code class="docutils literal notranslate"><span class="pre">Optimizer</span></code> partial function.</p></li>
-<li><p><strong>scheduler_partial</strong> – A PyTorch <code class="docutils literal notranslate"><span class="pre">LRScheduler</span></code> partial
-function.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>config</strong> – <p>.</p>
+</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">x:</span> <span class="pre">jaxtyping.Float[torch.Tensor,</span>&#160; <span class="pre">batch_size</span> <span class="pre">1</span> <span class="pre">28</span> <span class="pre">28]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">jaxtyping.Float[torch.Tensor,</span>&#160; <span class="pre">batch_size</span> <span class="pre">10]</span></span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.forward" title="Permalink to this definition">#</a></dt>
-<dd><p>Simple pass through the PyTorch <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code>.</p>
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.prepare_data">
+<span class="sig-name descname"><span class="pre">prepare_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.prepare_data" title="Permalink to this definition">#</a></dt>
+<dd><p>Downloads the MNIST dataset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str_is_fit_or_test</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.setup" title="Permalink to this definition">#</a></dt>
+<dd><p>Creates the train/val/test datasets.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>x</strong> – The batched MNIST images.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The batched output logits.</p>
+<dd class="field-odd"><p><strong>stage</strong> – <p>.</p>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -366,23 +420,23 @@ function.</p></li>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../../__main__/index.html">
+          <a class="next-page" href="../datamodule_test/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.__main__</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule_test</span></code></div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../datamodule_test/index.html">
+          <a class="prev-page" href="../index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule_test</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification</span></code></div>
                 
               </div>
             </a>
@@ -416,15 +470,26 @@ function.</p></li>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.litmodule</span></code></a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cneuromax.deeplearning.experiment.mnist_classification.datamodule</span></code></a><ul>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
-<li><a class="reference internal" href="#classes">Classes</a><ul>
-<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule"><code class="docutils literal notranslate"><span class="pre">MNISTClassificationLitModule</span></code></a><ul>
-<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.accuracy"><code class="docutils literal notranslate"><span class="pre">MNISTClassificationLitModule.accuracy</span></code></a></li>
-<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.nnmodule"><code class="docutils literal notranslate"><span class="pre">MNISTClassificationLitModule.nnmodule</span></code></a></li>
-<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.optimizer"><code class="docutils literal notranslate"><span class="pre">MNISTClassificationLitModule.optimizer</span></code></a></li>
-<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.scheduler"><code class="docutils literal notranslate"><span class="pre">MNISTClassificationLitModule.scheduler</span></code></a></li>
-<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule.forward"><code class="docutils literal notranslate"><span class="pre">MNISTClassificationLitModule.forward()</span></code></a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.float_is_gt0_lt1"><code class="docutils literal notranslate"><span class="pre">float_is_gt0_lt1</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.str_is_fit_or_test"><code class="docutils literal notranslate"><span class="pre">str_is_fit_or_test</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig</span></code></a><ul>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.val_percentage"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.val_percentage</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.fit_dataset_mean"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_mean</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig.fit_dataset_std"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_std</span></code></a></li>
+<li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.val_percentage</span></code></a></li>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_mean</span></code></a></li>
+<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_std</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule"><code class="docutils literal notranslate"><span class="pre">MNISTDataModule</span></code></a><ul>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.train_val_split"><code class="docutils literal notranslate"><span class="pre">MNISTDataModule.train_val_split</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.transform"><code class="docutils literal notranslate"><span class="pre">MNISTDataModule.transform</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.prepare_data"><code class="docutils literal notranslate"><span class="pre">MNISTDataModule.prepare_data()</span></code></a></li>
+<li><a class="reference internal" href="#cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule.setup"><code class="docutils literal notranslate"><span class="pre">MNISTDataModule.setup()</span></code></a></li>
 </ul>
 </li>
 </ul>

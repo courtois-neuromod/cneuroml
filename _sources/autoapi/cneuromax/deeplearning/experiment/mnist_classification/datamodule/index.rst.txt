@@ -1,7 +1,7 @@
-:py:mod:`cneuromax.deeplearning.common.datamodule.vision.mnist`
-===============================================================
+:py:mod:`cneuromax.deeplearning.experiment.mnist_classification.datamodule`
+===========================================================================
 
-.. py:module:: cneuromax.deeplearning.common.datamodule.vision.mnist
+.. py:module:: cneuromax.deeplearning.experiment.mnist_classification.datamodule
 
 .. autoapi-nested-parse::
 
@@ -17,8 +17,8 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig
-   cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModule
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule
 
 
 
@@ -28,19 +28,19 @@ Attributes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.common.datamodule.vision.mnist.float_gt0_lt1
-   cneuromax.deeplearning.common.datamodule.vision.mnist.str_is_fit_or_test
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule.float_is_gt0_lt1
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule.str_is_fit_or_test
 
 
-.. py:data:: float_gt0_lt1
+.. py:data:: float_is_gt0_lt1
    :type: TypeAlias
 
-   ``TypeAlias`` for a float in ``]0, 1[``.
+   Runtime typing annotation for a float in ``]0, 1[``.
 
 .. py:data:: str_is_fit_or_test
    :type: TypeAlias
 
-   ``TypeAlias`` for a string in ``("fit", "test")``.
+   Runtime typing annotation for a string in ``("fit", "test")``.
 
 .. py:class:: MNISTDataModuleConfig
 
@@ -52,7 +52,7 @@ Attributes
    .. attribute:: val_percentage
 
       Percentage of the training dataset to use
-      for validation (float in ``]0, 1[``).
+      for validation.
 
    .. attribute:: fit_dataset_mean
 
@@ -63,7 +63,7 @@ Attributes
       .
 
    .. py:attribute:: val_percentage
-      :type: float_gt0_lt1
+      :type: float_is_gt0_lt1
       :value: 0.1
 
       
@@ -105,7 +105,7 @@ Attributes
    .
 
    Calls parent constructor, type-hints the config, sets the
-   train/validation split and creates the dataset transform.
+   train/val split and creates the dataset transform.
 
    :param config: .
 
@@ -118,7 +118,7 @@ Attributes
 
       Creates the train/val/test datasets.
 
-      :param stage: ``"fit"`` or ``"test"``.
+      :param stage: .
 
 
 

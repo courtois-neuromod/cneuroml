@@ -9,15 +9,6 @@
 
 
 
-Subpackages
------------
-.. toctree::
-   :titlesonly:
-   :maxdepth: 3
-
-   vision/index.rst
-
-
 Submodules
 ----------
 .. toctree::
@@ -77,14 +68,14 @@ Classes
 
    :param config: .
 
-   .. py:method:: load_state_dict(state_dict: dict[Annotated[str, beartype.vale.Is[lambda x: x in 'per_device_batch_size']], Annotated[int, beartype.vale.Is[lambda x: x > 0]]]) -> None
+   .. py:method:: load_state_dict(state_dict: dict[str_is_per_device_batch_size, int_is_gt0]) -> None
 
       Sets the instance's batch size from a dictionary value.
 
       :param state_dict: .
 
 
-   .. py:method:: state_dict() -> dict[Annotated[str, beartype.vale.Is[lambda x: x in 'per_device_batch_size']], Annotated[int, beartype.vale.Is[lambda x: x > 0]]]
+   .. py:method:: state_dict() -> dict[str_is_per_device_batch_size, int_is_gt0]
 
       .
 
@@ -157,8 +148,7 @@ Classes
 
    .. attribute:: device_type
 
-      The compute device type to use (``cpu`` or
-      ``gpu``).
+      The compute device type to use.
 
    .. py:attribute:: data_dir
       :type: str

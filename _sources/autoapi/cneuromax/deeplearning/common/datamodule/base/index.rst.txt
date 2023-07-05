@@ -24,6 +24,26 @@ Classes
 
 
 
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.datamodule.base.str_is_per_device_batch_size
+   cneuromax.deeplearning.common.datamodule.base.int_is_gt0
+
+
+.. py:data:: str_is_per_device_batch_size
+   :type: TypeAlias
+
+   Runtime typing annotation for a string in
+   ``("per_device_batch_size")``.
+
+.. py:data:: int_is_gt0
+   :type: TypeAlias
+
+   Runtime typing annotation for an integer greater than ``0``.
+
 .. py:class:: BaseDataset
 
 
@@ -88,8 +108,7 @@ Classes
 
    .. attribute:: device_type
 
-      The compute device type to use (``cpu`` or
-      ``gpu``).
+      The compute device type to use.
 
    .. py:attribute:: data_dir
       :type: str
@@ -151,14 +170,14 @@ Classes
 
    :param config: .
 
-   .. py:method:: load_state_dict(state_dict: dict[Annotated[str, beartype.vale.Is[lambda x: x in 'per_device_batch_size']], Annotated[int, beartype.vale.Is[lambda x: x > 0]]]) -> None
+   .. py:method:: load_state_dict(state_dict: dict[str_is_per_device_batch_size, int_is_gt0]) -> None
 
       Sets the instance's batch size from a dictionary value.
 
       :param state_dict: .
 
 
-   .. py:method:: state_dict() -> dict[Annotated[str, beartype.vale.Is[lambda x: x in 'per_device_batch_size']], Annotated[int, beartype.vale.Is[lambda x: x > 0]]]
+   .. py:method:: state_dict() -> dict[str_is_per_device_batch_size, int_is_gt0]
 
       .
 

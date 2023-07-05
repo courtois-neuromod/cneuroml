@@ -1,0 +1,49 @@
+:py:mod:`cneuromax.deeplearning.experiment.mnist_classification.datamodule_test`
+================================================================================
+
+.. py:module:: cneuromax.deeplearning.experiment.mnist_classification.datamodule_test
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule_test.datamodule
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule_test.test_setup_fit
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule_test.test_setup_test
+
+
+
+.. py:function:: datamodule(tmp_path: pathlib.Path) -> cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule
+
+   .
+
+   :param tmp_path: .
+
+   :returns: A generic ``MNISTDataModule`` instance.
+
+
+.. py:function:: test_setup_fit(datamodule: cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule) -> None
+
+   .
+
+   :param datamodule: .
+
+
+.. py:function:: test_setup_test(datamodule: cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule) -> None
+
+   .
+
+   :param datamodule: .
+
+

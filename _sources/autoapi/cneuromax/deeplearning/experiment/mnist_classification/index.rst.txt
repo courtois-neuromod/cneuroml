@@ -15,6 +15,102 @@ Submodules
    :titlesonly:
    :maxdepth: 1
 
+   datamodule/index.rst
+   datamodule_test/index.rst
    litmodule/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule
+   cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModuleConfig
+
+
+
+
+.. py:class:: MNISTDataModule(config: MNISTDataModuleConfig)
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModule`
+
+   .
+
+   .. attribute:: train_val_split
+
+      The train/validation
+      split (sums to ``1``).
+
+      :type: ``tuple[float, float]``
+
+   .. attribute:: transform
+
+      The ``torchvision`` dataset
+      transformations.
+
+      :type: ``transforms.Compose``
+
+   .
+
+   Calls parent constructor, type-hints the config, sets the
+   train/val split and creates the dataset transform.
+
+   :param config: .
+
+   .. py:method:: prepare_data() -> None
+
+      Downloads the MNIST dataset.
+
+
+   .. py:method:: setup(stage: str_is_fit_or_test) -> None
+
+      Creates the train/val/test datasets.
+
+      :param stage: .
+
+
+
+.. py:class:: MNISTDataModuleConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig`
+
+   .
+
+   .. attribute:: val_percentage
+
+      Percentage of the training dataset to use
+      for validation.
+
+   .. attribute:: fit_dataset_mean
+
+      .
+
+   .. attribute:: fit_dataset_std
+
+      .
+
+   .. py:attribute:: val_percentage
+      :type: float_is_gt0_lt1
+      :value: 0.1
+
+      
+
+   .. py:attribute:: fit_dataset_mean
+      :type: tuple[float]
+      :value: (0.1307,)
+
+      
+
+   .. py:attribute:: fit_dataset_std
+      :type: tuple[float]
+      :value: (0.3081,)
+
+      
 
 
