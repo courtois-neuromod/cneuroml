@@ -1,0 +1,41 @@
+:py:mod:`cneuromax.deeplearning.common.trainer.cpu`
+===================================================
+
+.. py:module:: cneuromax.deeplearning.common.trainer.cpu
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.trainer.cpu.CPUTrainer
+
+
+
+
+.. py:class:: CPUTrainer
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.trainer.base.BaseTrainerConfig`
+
+   .
+
+   .. attribute:: accelerator
+
+      Accelerator type.
+
+   .. py:attribute:: accelerator
+      :value: 'cpu'
+
+      
+
+

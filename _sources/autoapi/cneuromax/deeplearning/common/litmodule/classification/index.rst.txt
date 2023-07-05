@@ -26,12 +26,12 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.common.litmodule.classification.BaseClasssificationLitModule
+   cneuromax.deeplearning.common.litmodule.classification.BaseClassificationLitModule
 
 
 
 
-.. py:class:: BaseClasssificationLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler], num_classes: int)
+.. py:class:: BaseClassificationLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler], num_classes: int)
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.BaseLitModule`

@@ -16,13 +16,9 @@ Submodules
    :maxdepth: 1
 
    adam/index.rst
-   adam_test/index.rst
    adamw/index.rst
    base/index.rst
-   base_test/index.rst
    sgd/index.rst
-   sgd_test/index.rst
-   w_test/index.rst
 
 
 Package Contents
@@ -35,7 +31,6 @@ Classes
 
    cneuromax.deeplearning.common.optimizer.AdamConfig
    cneuromax.deeplearning.common.optimizer.AdamWConfig
-   cneuromax.deeplearning.common.optimizer.SGDConfig
 
 
 
@@ -50,18 +45,6 @@ Classes
    .. attribute:: _target_
 
       Optimizer class.
-
-   .. attribute:: _partial_
-
-      (Need model parameters for instantiation).
-
-   .. attribute:: lr
-
-      Learning rate.
-
-   .. attribute:: weight_decay
-
-      L2 penalty.
 
    .. attribute:: betas
 
@@ -79,8 +62,8 @@ Classes
       
 
    .. py:attribute:: betas
-      :type: ClassVar[list[float]]
-      :value: [0.9, 0.999]
+      :type: tuple[float, float]
+      :value: (0.9, 0.999)
 
       
 
@@ -94,7 +77,7 @@ Classes
 .. py:class:: AdamWConfig
 
 
-   Bases: :py:obj:`cneuromax.deeplearning.common.optimizer.AdamConfig`
+   Bases: :py:obj:`cneuromax.deeplearning.common.optimizer.adam.AdamConfig`
 
    https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html.
 
@@ -102,70 +85,9 @@ Classes
 
       Optimizer class.
 
-   .. attribute:: _partial_
-
-      (Need model parameters for instantiation).
-
-   .. attribute:: lr
-
-      Learning rate.
-
-   .. attribute:: weight_decay
-
-      L2 penalty.
-
-   .. attribute:: betas
-
-      Exponential decay rate for the 1st & 2nd moment
-      estimates.
-
-   .. attribute:: eps
-
-      Small constant for numerical stability.
-
    .. py:attribute:: _target_
       :type: str
       :value: 'torch.optim.AdamW'
-
-      
-
-
-.. py:class:: SGDConfig
-
-
-   Bases: :py:obj:`cneuromax.deeplearning.common.optimizer.base.BaseOptimizerConfig`
-
-   https://pytorch.org/docs/stable/generated/torch.optim.SGD.html.
-
-   .. attribute:: _target_
-
-      Optimizer class.
-
-   .. attribute:: _partial_
-
-      (Need model parameters for instantiation).
-
-   .. attribute:: lr
-
-      Learning rate.
-
-   .. attribute:: weight_decay
-
-      L2 penalty.
-
-   .. attribute:: momentum
-
-      .
-
-   .. py:attribute:: _target_
-      :type: str
-      :value: 'torch.optim.SGD'
-
-      
-
-   .. py:attribute:: momentum
-      :type: float
-      :value: 0
 
       
 

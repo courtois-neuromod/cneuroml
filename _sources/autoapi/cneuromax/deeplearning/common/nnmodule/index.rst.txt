@@ -16,7 +16,6 @@ Submodules
    :maxdepth: 1
 
    mlp/index.rst
-   mlp_test/index.rst
 
 
 Package Contents

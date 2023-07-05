@@ -33,7 +33,7 @@ Classes
 
    .. attribute:: _partial_
 
-      (Need model parameters for instantiation).
+      NNModule parameters required for instantiation.
 
    .. attribute:: lr
 

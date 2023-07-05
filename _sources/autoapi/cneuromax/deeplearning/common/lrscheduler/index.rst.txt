@@ -16,7 +16,71 @@ Submodules
    :maxdepth: 1
 
    base/index.rst
-   base_test/index.rst
-   none_test/index.rst
+   constant/index.rst
+   linear_warmup/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.lrscheduler.ConstantConfig
+   cneuromax.deeplearning.common.lrscheduler.LinearWarmupConfig
+
+
+
+
+.. py:class:: ConstantConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.lrscheduler.base.BaseLRSchedulerConfig`
+
+   https://huggingface.co/docs/transformers/main_classes/optimizer_schedules#transformers.get_constant_schedule.
+
+   .. attribute:: _target_
+
+      .
+
+   .. attribute:: num_warmup_steps
+
+      .
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'transformers.get_constant_schedule'
+
+      
+
+
+.. py:class:: LinearWarmupConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.lrscheduler.base.BaseLRSchedulerConfig`
+
+   https://huggingface.co/docs/transformers/main_classes/optimizer_schedules#transformers.get_constant_schedule_with_warmup.
+
+   .. attribute:: _target_
+
+      .
+
+   .. attribute:: num_warmup_steps
+
+      .
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'transformers.get_constant_schedule_with_warmup'
+
+      
+
+   .. py:attribute:: num_warmup_steps
+      :type: int
+      :value: 0
+
+      
 
 

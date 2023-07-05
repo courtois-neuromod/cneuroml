@@ -1,0 +1,52 @@
+:py:mod:`cneuromax.deeplearning.common.lrscheduler.linear_warmup`
+=================================================================
+
+.. py:module:: cneuromax.deeplearning.common.lrscheduler.linear_warmup
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.lrscheduler.linear_warmup.LinearWarmupConfig
+
+
+
+
+.. py:class:: LinearWarmupConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.lrscheduler.base.BaseLRSchedulerConfig`
+
+   https://huggingface.co/docs/transformers/main_classes/optimizer_schedules#transformers.get_constant_schedule_with_warmup.
+
+   .. attribute:: _target_
+
+      .
+
+   .. attribute:: num_warmup_steps
+
+      .
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'transformers.get_constant_schedule_with_warmup'
+
+      
+
+   .. py:attribute:: num_warmup_steps
+      :type: int
+      :value: 0
+
+      
+
+

@@ -17,12 +17,12 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.common.optimizer.sgd.SGDConfig
+   cneuromax.deeplearning.common.optimizer.sgd.AdamConfig
 
 
 
 
-.. py:class:: SGDConfig
+.. py:class:: AdamConfig
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.optimizer.base.BaseOptimizerConfig`
@@ -32,18 +32,6 @@ Classes
    .. attribute:: _target_
 
       Optimizer class.
-
-   .. attribute:: _partial_
-
-      (Need model parameters for instantiation).
-
-   .. attribute:: lr
-
-      Learning rate.
-
-   .. attribute:: weight_decay
-
-      L2 penalty.
 
    .. attribute:: momentum
 

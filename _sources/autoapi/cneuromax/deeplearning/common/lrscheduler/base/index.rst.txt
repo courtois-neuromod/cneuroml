@@ -27,14 +27,24 @@ Classes
 
    .
 
+   .. attribute:: _target_
+
+      LRScheduler class needs to be specified in child
+      class.
+
    .. attribute:: _partial_
 
-      Partial instantiation. Optimizer object required for
-      full instantiation.
+      Optimizer object required for full instantiation.
 
    .. attribute:: last_epoch
 
       Index of the last epoch when resuming training.
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: '???'
+
+      
 
    .. py:attribute:: _partial_
       :type: bool

@@ -1,0 +1,119 @@
+:py:mod:`cneuromax.deeplearning.common.trainer.base`
+====================================================
+
+.. py:module:: cneuromax.deeplearning.common.trainer.base
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.common.trainer.base.BaseTrainerConfig
+
+
+
+
+.. py:class:: BaseTrainerConfig
+
+
+   .
+
+   .. attribute:: _target_
+
+      Lightning Trainer.
+
+   .. attribute:: accelerator
+
+      Accelerator type.
+
+   .. attribute:: strategy
+
+      Training strategy.
+
+   .. attribute:: devices
+
+      Number of devices per node.
+
+   .. attribute:: num_nodes
+
+      .
+
+   .. attribute:: precision
+
+      Training precision.
+
+   .. attribute:: max_steps
+
+      Number of gradient updates.
+
+   .. attribute:: val_check_interval
+
+      How many gradient updates between validation
+      checks.
+
+   .. attribute:: log_every_n_steps
+
+      How many gradient updates between logging
+      actions.
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'lightning.pytorch.trainer.Trainer'
+
+      
+
+   .. py:attribute:: accelerator
+      :type: Annotated[str, beartype.vale.Is[lambda x: x in ('cpu', 'gpu')]]
+      :value: 'gpu'
+
+      
+
+   .. py:attribute:: strategy
+      :type: Annotated[str, beartype.vale.Is[lambda x: x in ('auto', 'ddp', 'deepspeed')]]
+      :value: 'auto'
+
+      
+
+   .. py:attribute:: devices
+      :type: Annotated[int, beartype.vale.Is[lambda x: x >= 1]] | Annotated[int, beartype.vale.Is[lambda x: x == -1]]
+      :value: 1
+
+      
+
+   .. py:attribute:: num_nodes
+      :type: Annotated[int, beartype.vale.Is[lambda x: x >= 1]]
+      :value: 1
+
+      
+
+   .. py:attribute:: precision
+      :type: Annotated[str, beartype.vale.Is[lambda x: x in ('32', '16', 'bf16')]]
+      :value: '32'
+
+      
+
+   .. py:attribute:: max_steps
+      :type: Annotated[int, beartype.vale.Is[lambda x: x >= 1]]
+
+      
+
+   .. py:attribute:: val_check_interval
+      :type: Annotated[int, beartype.vale.Is[lambda x: x >= 1]]
+
+      
+
+   .. py:attribute:: log_every_n_steps
+      :type: Annotated[int, beartype.vale.Is[lambda x: x >= 1]]
+
+      
+
+

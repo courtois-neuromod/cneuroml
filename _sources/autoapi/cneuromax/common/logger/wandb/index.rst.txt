@@ -27,6 +27,24 @@ Classes
 
    .
 
+   .. attribute:: target_
+
+      Logger class.
+
+   .. attribute:: name
+
+      The name of the run.
+
+   .. attribute:: project
+
+      The name of the project to which this run will belong.
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'lightning.pytorch.loggers.wandb.WandbLogger'
+
+      
+
    .. py:attribute:: name
       :type: str | None
 

@@ -24,6 +24,7 @@ Subpackages
    lrscheduler/index.rst
    nnmodule/index.rst
    optimizer/index.rst
+   trainer/index.rst
    utils/index.rst
 
 

@@ -25,7 +25,7 @@ Classes
 .. py:class:: MNISTClassificationLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
 
 
-   Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.classification.BaseClasssificationLitModule`
+   Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.classification.BaseClassificationLitModule`
 
    .
 
