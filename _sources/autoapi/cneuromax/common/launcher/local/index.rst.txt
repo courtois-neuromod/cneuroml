@@ -1,0 +1,114 @@
+:py:mod:`cneuromax.common.launcher.local`
+=========================================
+
+.. py:module:: cneuromax.common.launcher.local
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.common.launcher.local.LocalLauncherConfig
+
+
+
+
+.. py:class:: LocalLauncherConfig
+
+
+   .
+
+   .. attribute:: _target_
+
+      .
+
+   .. attribute:: cpus_per_task
+
+      .
+
+   .. attribute:: num_gpus_per_node
+
+      .
+
+   .. attribute:: num_mem_gb
+
+      .
+
+   .. attribute:: name
+
+      .
+
+   .. attribute:: num_nodes
+
+      .
+
+   .. attribute:: submitit_folder
+
+      .
+
+   .. attribute:: tasks_per_node
+
+      .
+
+   .. attribute:: timeout_min
+
+      Job length in minutes.
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'hydra_plugins.hydra_submitit_launcher.submitit_launcher.LocalLauncher'
+
+      
+
+   .. py:attribute:: cpus_per_task
+      :type: int
+
+      
+
+   .. py:attribute:: gpus_per_node
+      :type: int
+
+      
+
+   .. py:attribute:: mem_gb
+      :type: int
+
+      
+
+   .. py:attribute:: name
+      :type: str
+      :value: '${hydra.job.name}'
+
+      
+
+   .. py:attribute:: nodes
+      :type: int
+
+      
+
+   .. py:attribute:: submitit_folder
+      :type: str
+      :value: '${hydra.sweep.dir}/.submitit/%j'
+
+      
+
+   .. py:attribute:: tasks_per_node
+      :type: int
+
+      
+
+   .. py:attribute:: timeout_min
+      :type: int
+
+      
+
+

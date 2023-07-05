@@ -1,0 +1,62 @@
+:py:mod:`cneuromax.common.launcher.slurm`
+=========================================
+
+.. py:module:: cneuromax.common.launcher.slurm
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.common.launcher.slurm.BaseSlurmLauncherConfig
+
+
+
+
+.. py:class:: BaseSlurmLauncherConfig
+
+
+   Bases: :py:obj:`cneuromax.common.launcher.local.LocalLauncherConfig`
+
+   .
+
+   .. attribute:: target_
+
+      .
+
+   .. attribute:: account
+
+      .
+
+   .. attribute:: setup
+
+      Setup steps to run before the job (load the container)
+
+   .. py:attribute:: _target_
+      :type: str
+      :value: 'hydra_plugins.hydra_submitit_launcher.submitit_launcher.SlurmLauncher'
+
+      
+
+   .. py:attribute:: account
+      :type: str
+      :value: 'rrg-pbellec'
+
+      
+
+   .. py:attribute:: setup
+      :type: ClassVar[list[str]]
+      :value: ['module load podman/4.5.0', 'nvidia-ctk cdi generate --output=/var/tmp/cdi/nvidia.yaml', 'cp...
+
+      
+
+

@@ -38,7 +38,7 @@ Functions
    This functionality makes the following, not always correct, but
    generally reasonable assumptions:
    - As long as the ``batch_size / dataset_size`` ratio remains small
-   (e.g. < 0.01 so as to benefit from the stochasticity of gradient
+   (e.g. ``< 0.01`` so as to benefit from the stochasticity of gradient
    updates), running the same number of gradient updates with a larger
    batch size will yield faster training than running the same number
    of gradient updates with a smaller batch size.
@@ -47,9 +47,9 @@ Functions
    - If you are training on multiple GPUs, each GPU has roughly the
    same amount of VRAM.
 
-   :param config: Task configuration.
+   :param config: The global Hydra configuration.
 
-   :returns: An estimated proper batch size.
+   :returns: The estimated proper batch size.
    :rtype: batch_size
 
 
@@ -57,7 +57,7 @@ Functions
 
    Finds an appropriate `num_workers` parameter.
 
-   :param config: The task configuration.
+   :param config: The global Hydra configuration.
    :param batch_size: The estimated appropriate batch size.
    :param max_num_data_passes: Maximum number of data passes to iterate
                                through.
@@ -76,10 +76,6 @@ Functions
    Makes use of the newly initialized optimizers' parameters rather
    than the saved parameters. Useful for resuming training with
    different optimizer parameters (e.g. with the PBT Hydra sweeper).
-
-   .. attribute:: trainer
-
-      The Lightning Trainer.
 
    .. py:method:: restore_optimizers() -> None
 

@@ -1,0 +1,21 @@
+:py:mod:`cneuromax.common.launcher`
+===================================
+
+.. py:module:: cneuromax.common.launcher
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   local/index.rst
+   slurm/index.rst
+
+

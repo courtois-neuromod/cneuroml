@@ -1,0 +1,11 @@
+:py:mod:`cneuromax.deeplearning.experiment.mnist_classification.config`
+=======================================================================
+
+.. py:module:: cneuromax.deeplearning.experiment.mnist_classification.config
+
+.. autoapi-nested-parse::
+
+   .
+
+
+

@@ -49,7 +49,7 @@ Attributes
 
    .. attribute:: config
 
-      The Hydra configuration.
+      The Global Hydra configuration.
 
       :type: ``DictConfig``
 

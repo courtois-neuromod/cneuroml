@@ -15,6 +15,7 @@ Subpackages
    :titlesonly:
    :maxdepth: 3
 
+   launcher/index.rst
    logger/index.rst
 
 

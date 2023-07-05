@@ -15,6 +15,7 @@ Submodules
    :titlesonly:
    :maxdepth: 1
 
+   config/index.rst
    datamodule/index.rst
    datamodule_test/index.rst
    litmodule/index.rst
