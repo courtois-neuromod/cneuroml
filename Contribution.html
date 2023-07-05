@@ -284,7 +284,7 @@ this section.</p>
 <h2>Developping locally<a class="headerlink" href="#developping-locally" title="Permalink to this heading">#</a></h2>
 <p>In order to develop locally, you will need to install the development
 dependencies. This can be done by running the following commands:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>
 <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 <span class="gp">$ </span>.<span class="w"> </span>venv/bin/activate
 <span class="gp">$ </span><span class="c1"># Install OpenMPI if it&#39;s not already installed</span>
@@ -343,7 +343,7 @@ them is through pre-commit hooks. We use the
 <a class="reference external" href="https://pre-commit.com/#quick-start">pre-commit</a> library, which after being
 installed runs formatting and linting tests upon each <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command,
 preventing the commit from going through if the tests fail.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>
 <span class="gp">$ </span>.<span class="w"> </span>venv/bin/activate
 <span class="gp">$ </span>pre-commit<span class="w"> </span>install
 </pre></div>
@@ -360,7 +360,7 @@ you can instead run <code class="docutils literal notranslate"><span class="pre"
 <p>Unit-tests and typecheck tests are slower, hence not suitable to run upon each
 commit. However they are pretty useful to save time right before merging your
 branch. To run those tests, you can use the following commands:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>
 <span class="gp">$ </span>.<span class="w"> </span>venv/bin/activate
 <span class="gp">$ </span>pytest<span class="w"> </span>cneuromax
 <span class="gp">$ </span>mypy<span class="w"> </span>--strict<span class="w"> </span>cneuromax
@@ -430,7 +430,7 @@ has other useful features like syntax highlighting.</p>
 <section id="git-github-workflow-for-contributing">
 <h2>Git/GitHub workflow for contributing<a class="headerlink" href="#git-github-workflow-for-contributing" title="Permalink to this heading">#</a></h2>
 <p>In a terminal window, change directory to the cneuromax repository.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>
 </pre></div>
 </div>
 <p>Create a new branch for your contribution.</p>

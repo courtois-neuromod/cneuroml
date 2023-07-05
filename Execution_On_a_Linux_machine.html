@@ -277,10 +277,10 @@
 <section id="run-a-python-script">
 <h2>Run a python script<a class="headerlink" href="#run-a-python-script" title="Permalink to this heading">#</a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="c1"># Example of a simple MNIST training run</span>
-<span class="gp">$ </span>podman<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">cneuromax_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">             </span>-e<span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">             </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">             </span>-w<span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span>cneuromax:deps_only-all_deps-latest<span class="w"> </span><span class="se">\</span>
+<span class="gp">$ </span>podman<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">CNEUROMAX_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>-e<span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>-w<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span>cneuromax:deps_only-all_deps-latest<span class="w"> </span><span class="se">\</span>
 <span class="w">             </span>python3<span class="w"> </span>-m<span class="w"> </span>cneuromax.dl<span class="w"> </span><span class="nv">task</span><span class="o">=</span>visual/tabular/classification/mnist/mlp
 </pre></div>
 </div>
@@ -293,10 +293,10 @@
 </pre></div>
 </div>
 <p>Run the lab.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>podman<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">cneuromax_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">             </span>-e<span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">             </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
-<span class="w">             </span>-w<span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="w"> </span>cneuromax:deps_only-all_deps-latest<span class="w"> </span><span class="se">\</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>podman<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">CNEUROMAX_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>-e<span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>:<span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>-w<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="w"> </span>cneuromax:deps_only-all_deps-latest<span class="w"> </span><span class="se">\</span>
 <span class="w">             </span>jupyter-lab<span class="w"> </span>--allow-root<span class="w"> </span>--ip<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8888</span>
 </pre></div>
 </div>

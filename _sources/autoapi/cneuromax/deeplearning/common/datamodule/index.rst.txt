@@ -59,9 +59,19 @@ Classes
 
       :type: ``BaseDataModuleConfig``
 
-   .. attribute:: dataset (``dict[Literal["train", "val", "test", "predict"],
+   .. attribute:: dataset
 
-      Dataset]``): .
+      .
+
+      :type: ``dict[Literal["train", "val", "test", "predict"],            Dataset]``
+
+   .. attribute:: pin_memory
+
+      Whether to copy tensors into device
+      pinned memory before returning them (is set to ``True`` by
+      default if using GPUs).
+
+      :type: ``bool``
 
    Calls parent constructor.
 
@@ -150,12 +160,6 @@ Classes
       The compute device type to use (``cpu`` or
       ``gpu``).
 
-   .. attribute:: pin_memory
-
-      Whether to copy tensors into device pinned
-      memory before returning them (is set to ``True`` by default
-      if using GPUs).
-
    .. py:attribute:: data_dir
       :type: str
       :value: '${data_dir}'
@@ -177,11 +181,6 @@ Classes
    .. py:attribute:: device_type
       :type: Annotated[str, beartype.vale.Is[lambda x: x in ('cpu', 'gpu')]]
       :value: 'gpu'
-
-      
-
-   .. py:attribute:: pin_memory
-      :type: bool
 
       
 

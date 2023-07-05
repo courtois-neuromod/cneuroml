@@ -66,7 +66,7 @@ Classes
       Downloads the MNIST dataset.
 
 
-   .. py:method:: setup(stage: Annotated[str, beartype.vale.Is[lambda x: x in ('fit', 'test')]]) -> None
+   .. py:method:: setup(stage: Annotated[str, beartype.vale.Is[lambda x: x in ['fit', 'test']]]) -> None
 
       Creates the train/val/test datasets.
 
@@ -84,11 +84,7 @@ Classes
    .. attribute:: val_percentage
 
       Percentage of the training dataset to use
-      for validation (value in ``]0, 1[``).
-
-   .. attribute:: train_val_split
-
-      The train/validation split (sums to ``1``).
+      for validation (float in ``]0, 1[``).
 
    .. attribute:: fit_dataset_mean
 
@@ -101,12 +97,6 @@ Classes
    .. py:attribute:: val_percentage
       :type: Annotated[float, beartype.vale.Is[lambda x: 0 < x < 1]]
       :value: 0.1
-
-      
-
-   .. py:attribute:: train_val_split
-      :type: tuple[float, float]
-      :value: ()
 
       
 

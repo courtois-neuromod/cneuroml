@@ -277,8 +277,8 @@
 <section id="run-a-python-script">
 <h2>Run a python script<a class="headerlink" href="#run-a-python-script" title="Permalink to this heading">#</a></h2>
 <p>Activate the previously installed virtual environment.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>
-<span class="gp">$ </span>.<span class="w"> </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span>/venv/bin/activate
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>
+<span class="gp">$ </span>.<span class="w"> </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span>/venv/bin/activate
 </pre></div>
 </div>
 <p>Run the library.</p>
@@ -301,7 +301,7 @@
 <span class="s2">    mkdir -p </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">; \</span>
 <span class="s2">    cp </span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/containers.tar </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/.; \</span>
 <span class="s2">    tar -xf </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/containers.tar -C </span><span class="si">${</span><span class="nv">SLURM_TMPDIR</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SCRATCH</span><span class="si">}</span><span class="s2">/.; \</span>
-<span class="s2">    podman run -w </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="s2"> -v </span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">cneuromax_PATH</span><span class="si">}</span><span class="s2"> \</span>
+<span class="s2">    podman run -w </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="s2"> -v </span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">CNEUROMAX_PATH</span><span class="si">}</span><span class="s2"> \</span>
 <span class="s2">    cneuromax:deps_only-all_deps-latest jupyter-lab --allow-root --ip </span><span class="k">$(</span>hostname<span class="w"> </span>-f<span class="k">)</span><span class="s2"> --port 8888&quot;</span>
 </pre></div>
 </div>

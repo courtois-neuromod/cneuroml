@@ -5,7 +5,7 @@
 
 .. autoapi-nested-parse::
 
-   Application component of the cneuromax library.
+   Application component of the CNeuroMax library.
 
 
 

@@ -301,8 +301,8 @@ a <code class="docutils literal notranslate"><span class="pre">-u</span> <span c
 <span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git
 </pre></div>
 </div>
-<p>Define a persisting <code class="docutils literal notranslate"><span class="pre">cneuromax_PATH</span></code> user-variable on your system.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\nexport cneuromax_PATH=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="s2">/cneuromax&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<p>Define a persisting <code class="docutils literal notranslate"><span class="pre">CNEUROMAX_PATH</span></code> user-variable on your system.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\nexport CNEUROMAX_PATH=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="s2">/cneuromax&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
 <p>You can now move on to either the Linux or Slurm specific steps.</p>

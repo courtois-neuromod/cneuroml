@@ -302,13 +302,7 @@
 <dt class="sig sig-object py" id="cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.val_percentage">
 <span class="sig-name descname"><span class="pre">val_percentage</span></span><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.val_percentage" title="Permalink to this definition">#</a></dt>
 <dd><p>Percentage of the training dataset to use
-for validation (value in <code class="docutils literal notranslate"><span class="pre">]0,</span> <span class="pre">1[</span></code>).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.train_val_split">
-<span class="sig-name descname"><span class="pre">train_val_split</span></span><a class="headerlink" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.train_val_split" title="Permalink to this definition">#</a></dt>
-<dd><p>The train/validation split (sums to <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
+for validation (float in <code class="docutils literal notranslate"><span class="pre">]0,</span> <span class="pre">1[</span></code>).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -330,17 +324,12 @@ for validation (value in <code class="docutils literal notranslate"><span class=
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id1">
-<span class="sig-name descname"><span class="pre">train_val_split</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#id1" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">fit_dataset_mean</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0.1307,)</span></em><a class="headerlink" href="#id1" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id2">
-<span class="sig-name descname"><span class="pre">fit_dataset_mean</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0.1307,)</span></em><a class="headerlink" href="#id2" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id3">
-<span class="sig-name descname"><span class="pre">fit_dataset_std</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0.3081,)</span></em><a class="headerlink" href="#id3" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">fit_dataset_std</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0.3081,)</span></em><a class="headerlink" href="#id2" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -466,13 +455,11 @@ train/validation split and creates the dataset transform.</p>
 <li><a class="reference internal" href="#classes">Classes</a><ul>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig</span></code></a><ul>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.val_percentage"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.val_percentage</span></code></a></li>
-<li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.train_val_split"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.train_val_split</span></code></a></li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.fit_dataset_mean"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_mean</span></code></a></li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModuleConfig.fit_dataset_std"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_std</span></code></a></li>
 <li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.val_percentage</span></code></a></li>
-<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.train_val_split</span></code></a></li>
-<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_mean</span></code></a></li>
-<li><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_std</span></code></a></li>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_mean</span></code></a></li>
+<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">MNISTDataModuleConfig.fit_dataset_std</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#cneuromax.deeplearning.common.datamodule.vision.mnist.MNISTDataModule"><code class="docutils literal notranslate"><span class="pre">MNISTDataModule</span></code></a><ul>
