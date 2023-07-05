@@ -35,12 +35,12 @@ Attributes
 .. py:data:: float_gt0_lt1
    :type: TypeAlias
 
-   
+   ``TypeAlias`` for a float in ``]0, 1[``.
 
 .. py:data:: str_is_fit_or_test
    :type: TypeAlias
 
-   
+   ``TypeAlias`` for a string in ``("fit", "test")``.
 
 .. py:class:: MNISTDataModuleConfig
 
