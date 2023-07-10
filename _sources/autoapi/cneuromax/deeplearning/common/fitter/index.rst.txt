@@ -17,7 +17,7 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.common.fitter.Fitter
+   cneuromax.deeplearning.common.fitter.DeepLearningFitter
 
 
 
@@ -35,7 +35,7 @@ Attributes
 
    
 
-.. py:class:: Fitter(config: omegaconf.DictConfig)
+.. py:class:: DeepLearningFitter(config: omegaconf.DictConfig)
 
 
    Deep Learning Fitter.
@@ -49,9 +49,9 @@ Attributes
 
    .. attribute:: config
 
-      The Global Hydra configuration.
+      .
 
-      :type: ``DictConfig``
+      :type: ``DeepLearningFitterConfig``
 
    .. attribute:: logger
 

@@ -1,0 +1,11 @@
+:py:mod:`cneuromax.common.fitter`
+=================================
+
+.. py:module:: cneuromax.common.fitter
+
+.. autoapi-nested-parse::
+
+   .
+
+
+

@@ -1,0 +1,49 @@
+:py:mod:`cneuromax.common.utils.annotations`
+============================================
+
+.. py:module:: cneuromax.common.utils.annotations
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Module Contents
+---------------
+
+.. py:data:: non_empty_str
+   :type: TypeAlias
+
+   
+
+.. py:data:: str_is_per_device_batch_size
+   :type: TypeAlias
+
+   String ``is "per_device_batch_size"``.
+
+.. py:data:: str_is_fit_or_test
+   :type: TypeAlias
+
+   String ``in ("fit", "test")``.
+
+.. py:data:: str_is_cpu_or_gpu
+   :type: TypeAlias
+
+   String ``in ("cpu", "gpu")``.
+
+.. py:data:: int_is_gt0
+   :type: TypeAlias
+
+   Integer ``> 0``.
+
+.. py:data:: int_is_ge0
+   :type: TypeAlias
+
+   Integer ``>= 0``.
+
+.. py:data:: float_is_ge0_le1
+   :type: TypeAlias
+
+   Float ``>= 0`` and ``<= 1``.
+

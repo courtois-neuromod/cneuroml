@@ -15,7 +15,15 @@ Subpackages
    :titlesonly:
    :maxdepth: 3
 
-   launcher/index.rst
-   logger/index.rst
+   utils/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   fitter/index.rst
 
 

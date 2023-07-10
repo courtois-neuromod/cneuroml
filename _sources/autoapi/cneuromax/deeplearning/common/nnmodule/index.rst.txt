@@ -32,7 +32,7 @@ Classes
 
 
 
-.. py:class:: MLP(config: MLPConfig)
+.. py:class:: MLP(config: MLPConfig, activation_fn: torch.nn.Module)
 
 
    Bases: :py:obj:`torch.nn.Module`
@@ -42,17 +42,14 @@ Classes
    Allows for a variable number of layers, activation functions, and
    dropout probability.
 
-   .. attribute:: config
-
-      The `MLPConfig` instance.
-
    .. attribute:: model
 
       The MLP model.
 
-   Calls parent constructor, stores config & initializes model.
+   Calls parent constructor, initializes model.
 
    :param config: .
+   :param activation_fn: .
 
    .. py:method:: forward(x: jaxtyping.Float[torch.Tensor,  batch_size *d_input]) -> jaxtyping.Float[torch.Tensor,  batch_size output_size]
 
@@ -78,27 +75,17 @@ Classes
 
       List of dimensions for each layer.
 
-   .. attribute:: activation_fn
-
-      Activation function.
-
    .. attribute:: p_dropout
 
       Dropout probability.
 
    .. py:attribute:: dims
-      :type: list[int]
-
-      
-
-   .. py:attribute:: activation_fn
-      :type: type[torch.nn.Module]
+      :type: list[cneuromax.common.utils.annotations.int_is_gt0] | tuple[cneuromax.common.utils.annotations.int_is_gt0]
 
       
 
    .. py:attribute:: p_dropout
-      :type: float
-      :value: 0.0
+      :type: cneuromax.common.utils.annotations.float_is_ge0_le1
 
       
 

@@ -17,54 +17,21 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModuleConfig
-   cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTDataModule
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTClassificationDataModuleConfig
+   cneuromax.deeplearning.experiment.mnist_classification.datamodule.MNISTClassificationDataModule
 
 
 
 
-Attributes
-~~~~~~~~~~
-
-.. autoapisummary::
-
-   cneuromax.deeplearning.experiment.mnist_classification.datamodule.float_is_gt0_lt1
-   cneuromax.deeplearning.experiment.mnist_classification.datamodule.str_is_fit_or_test
-
-
-.. py:data:: float_is_gt0_lt1
-   :type: TypeAlias
-
-   Runtime typing annotation for a float in ``]0, 1[``.
-
-.. py:data:: str_is_fit_or_test
-   :type: TypeAlias
-
-   Runtime typing annotation for a string in ``("fit", "test")``.
-
-.. py:class:: MNISTDataModuleConfig
+.. py:class:: MNISTClassificationDataModuleConfig
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig`
 
    .
 
-   .. attribute:: val_percentage
-
-      Percentage of the training dataset to use
-      for validation.
-
-   .. attribute:: fit_dataset_mean
-
-      .
-
-   .. attribute:: fit_dataset_std
-
-      .
-
    .. py:attribute:: val_percentage
-      :type: float_is_gt0_lt1
-      :value: 0.1
+      :type: cneuromax.common.utils.annotations.float_is_ge0_le1
 
       
 
@@ -81,7 +48,7 @@ Attributes
       
 
 
-.. py:class:: MNISTDataModule(config: MNISTDataModuleConfig)
+.. py:class:: MNISTClassificationDataModule(config: MNISTClassificationDataModuleConfig)
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModule`
@@ -114,7 +81,7 @@ Attributes
       Downloads the MNIST dataset.
 
 
-   .. py:method:: setup(stage: str_is_fit_or_test) -> None
+   .. py:method:: setup(stage: cneuromax.common.utils.annotations.str_is_fit_or_test) -> None
 
       Creates the train/val/test datasets.
 

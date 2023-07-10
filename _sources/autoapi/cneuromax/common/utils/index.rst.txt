@@ -1,0 +1,20 @@
+:py:mod:`cneuromax.common.utils`
+================================
+
+.. py:module:: cneuromax.common.utils
+
+.. autoapi-nested-parse::
+
+   .
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   annotations/index.rst
+
+

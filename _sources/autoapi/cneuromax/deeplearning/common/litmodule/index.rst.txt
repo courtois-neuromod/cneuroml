@@ -5,7 +5,7 @@
 
 .. autoapi-nested-parse::
 
-   Lightning Modules.
+   .
 
 
 
@@ -40,7 +40,7 @@ Classes
 
 
 
-.. py:class:: BaseLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+.. py:class:: BaseLitModule(nnmodule: torch.nn.Module, optimizer: functools.partial[torch.optim.Optimizer], lrscheduler: functools.partial[torch.optim.lr_scheduler.LRScheduler])
 
 
    Bases: :py:obj:`lightning.pytorch.LightningModule`
@@ -61,7 +61,7 @@ Classes
 
       :type: ``Optimizer``
 
-   .. attribute:: scheduler
+   .. attribute:: lrscheduler
 
       .
 
@@ -73,23 +73,11 @@ Classes
    from partial functions.
 
    :param nnmodule: A PyTorch ``nn.Module`` instance.
-   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
-   :param scheduler_partial: A PyTorch ``LRScheduler`` partial
-                             function.
+   :param optimizer: A PyTorch ``Optimizer`` partial function.
+   :param lrscheduler: A PyTorch ``LRScheduler`` partial
+                       function.
 
-   .. py:method:: training_step(batch: jaxtyping.Float[torch.Tensor,  ...] | tuple[jaxtyping.Float[torch.Tensor,  ...], Ellipsis]) -> jaxtyping.Float[torch.Tensor,  ...]
-
-      .
-
-      :param batch: .
-
-      :returns: The loss value(s).
-
-      :raises AttributeError: If the ``step`` instance method is not
-          callable.
-
-
-   .. py:method:: validation_step(batch: jaxtyping.Float[torch.Tensor,  ...] | tuple[jaxtyping.Float[torch.Tensor,  ...], Ellipsis]) -> jaxtyping.Float[torch.Tensor,  ...]
+   .. py:method:: training_step(batch: jaxtyping.Num[torch.Tensor,  ...] | tuple[jaxtyping.Num[torch.Tensor,  ...], Ellipsis] | list[jaxtyping.Num[torch.Tensor,  ...]]) -> jaxtyping.Num[torch.Tensor,  ...]
 
       .
 
@@ -101,7 +89,21 @@ Classes
           callable.
 
 
-   .. py:method:: test_step(batch: jaxtyping.Float[torch.Tensor,  ...] | tuple[jaxtyping.Float[torch.Tensor,  ...], Ellipsis]) -> jaxtyping.Float[torch.Tensor,  ...]
+   .. py:method:: validation_step(batch: jaxtyping.Num[torch.Tensor,  ...] | tuple[jaxtyping.Num[torch.Tensor,  ...], Ellipsis] | list[jaxtyping.Num[torch.Tensor,  ...]], *args: Any, **kwargs: Any) -> jaxtyping.Num[torch.Tensor,  ...]
+
+      .
+
+      :param batch: .
+      :param \*args: .
+      :param \*\*kwargs: .
+
+      :returns: The loss value(s).
+
+      :raises AttributeError: If the ``step`` instance method is not
+          callable.
+
+
+   .. py:method:: test_step(batch: jaxtyping.Num[torch.Tensor,  ...] | tuple[jaxtyping.Num[torch.Tensor,  ...], Ellipsis] | list[jaxtyping.Num[torch.Tensor,  ...]]) -> jaxtyping.Num[torch.Tensor,  ...]
 
       .
 
@@ -113,7 +115,7 @@ Classes
           callable.
 
 
-   .. py:method:: configure_optimizers() -> tuple[list[torch.optim.Optimizer], list[torch.optim.lr_scheduler.LRScheduler]]
+   .. py:method:: configure_optimizers() -> tuple[list[torch.optim.Optimizer], list[dict[str, torch.optim.lr_scheduler.LRScheduler | str | int]]]
 
       .
 

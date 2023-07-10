@@ -17,12 +17,31 @@ Classes
 
 .. autoapisummary::
 
+   cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModuleConfig
    cneuromax.deeplearning.experiment.mnist_classification.litmodule.MNISTClassificationLitModule
 
 
 
 
-.. py:class:: MNISTClassificationLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+.. py:class:: MNISTClassificationLitModuleConfig
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.classification.BaseClassificationLitModuleConfig`
+
+   .
+
+   .. attribute:: num_classes
+
+      .
+
+   .. py:attribute:: num_classes
+      :type: int
+      :value: 10
+
+      
+
+
+.. py:class:: MNISTClassificationLitModule(nnmodule: torch.nn.Module, optimizer: functools.partial[torch.optim.Optimizer], lrscheduler: functools.partial[torch.optim.lr_scheduler.LRScheduler])
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.classification.BaseClassificationLitModule`
@@ -56,9 +75,9 @@ Classes
    Calls parent constructor.
 
    :param nnmodule: A PyTorch ``nn.Module`` instance.
-   :param optimizer_partial: A PyTorch ``Optimizer`` partial function.
-   :param scheduler_partial: A PyTorch ``LRScheduler`` partial
-                             function.
+   :param optimizer: A PyTorch ``Optimizer`` partial function.
+   :param lrscheduler: A PyTorch ``LRScheduler`` partial
+                       function.
 
    .. py:method:: forward(x: jaxtyping.Float[torch.Tensor,  batch_size 1 28 28]) -> jaxtyping.Float[torch.Tensor,  batch_size 10]
 

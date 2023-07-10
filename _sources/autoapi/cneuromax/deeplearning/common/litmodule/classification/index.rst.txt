@@ -27,11 +27,12 @@ Classes
 .. autoapisummary::
 
    cneuromax.deeplearning.common.litmodule.classification.BaseClassificationLitModule
+   cneuromax.deeplearning.common.litmodule.classification.BaseClassificationLitModuleConfig
 
 
 
 
-.. py:class:: BaseClassificationLitModule(nnmodule: torch.nn.Module, optimizer_partial: functools.partial[torch.optim.Optimizer], scheduler_partial: functools.partial[torch.optim.lr_scheduler.LRScheduler], num_classes: int)
+.. py:class:: BaseClassificationLitModule(nnmodule: torch.nn.Module, optimizer: functools.partial[torch.optim.Optimizer], lrscheduler: functools.partial[torch.optim.lr_scheduler.LRScheduler], config: BaseClassificationLitModuleConfig)
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.BaseLitModule`
@@ -44,30 +45,18 @@ Classes
 
       :type: ``torchmetrics.Accuracy``
 
-   .. attribute:: nnmodule
+   .. attribute:: config
 
       .
 
-      :type: ``nn.Module``
-
-   .. attribute:: optimizer
-
-      .
-
-      :type: ``Optimizer``
-
-   .. attribute:: scheduler
-
-      .
-
-      :type: ``LRScheduler``
+      :type: ``BaseClassificationLitModuleConfig``
 
    Calls parent constructor and creates an accuracy metric.
 
    :param nnmodule: .
-   :param optimizer_partial: .
-   :param scheduler_partial: .
-   :param num_classes: .
+   :param optimizer: .
+   :param lrscheduler: .
+   :param config: .
 
    .. py:method:: step(batch: tuple[jaxtyping.Float[torch.Tensor,  batch_size *x_shape], jaxtyping.Int[torch.Tensor,  batch_size]], stage: Literal[train, val, test]) -> jaxtyping.Float[torch.Tensor,  ]
 
@@ -78,5 +67,20 @@ Classes
 
       :returns: The cross entropy loss.
 
+
+
+.. py:class:: BaseClassificationLitModuleConfig
+
+
+   .
+
+   .. attribute:: num_classes
+
+      .
+
+   .. py:attribute:: num_classes
+      :type: int
+
+      
 
 

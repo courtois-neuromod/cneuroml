@@ -9,3 +9,38 @@
 
 
 
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.__main__.run
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   cneuromax.deeplearning.__main__.key
+
+
+.. py:function:: run(config: omegaconf.DictConfig) -> float
+
+   .
+
+   :param config: .
+   :type config: DictConfig
+
+   :returns: The validation loss.
+
+
+.. py:data:: key
+
+   
+

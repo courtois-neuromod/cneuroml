@@ -24,7 +24,7 @@ Functions
 
 
 
-.. py:function:: datamodule(tmp_path: pathlib.Path) -> cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule
+.. py:function:: datamodule(tmp_path: pathlib.Path) -> cneuromax.deeplearning.experiment.mnist_classification.MNISTClassificationDataModule
 
    .
 
@@ -33,14 +33,14 @@ Functions
    :returns: A generic ``MNISTDataModule`` instance.
 
 
-.. py:function:: test_setup_fit(datamodule: cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule) -> None
+.. py:function:: test_setup_fit(datamodule: cneuromax.deeplearning.experiment.mnist_classification.MNISTClassificationDataModule) -> None
 
    .
 
    :param datamodule: .
 
 
-.. py:function:: test_setup_test(datamodule: cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule) -> None
+.. py:function:: test_setup_test(datamodule: cneuromax.deeplearning.experiment.mnist_classification.MNISTClassificationDataModule) -> None
 
    .
 

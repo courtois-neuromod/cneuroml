@@ -5,7 +5,7 @@
 
 .. autoapi-nested-parse::
 
-   Lightning Data Modules.
+   .
 
 
 
@@ -68,14 +68,14 @@ Classes
 
    :param config: .
 
-   .. py:method:: load_state_dict(state_dict: dict[str_is_per_device_batch_size, int_is_gt0]) -> None
+   .. py:method:: load_state_dict(state_dict: dict[cneuromax.common.utils.annotations.str_is_per_device_batch_size, cneuromax.common.utils.annotations.int_is_gt0]) -> None
 
       Sets the instance's batch size from a dictionary value.
 
       :param state_dict: .
 
 
-   .. py:method:: state_dict() -> dict[str_is_per_device_batch_size, int_is_gt0]
+   .. py:method:: state_dict() -> dict[cneuromax.common.utils.annotations.str_is_per_device_batch_size, cneuromax.common.utils.annotations.int_is_gt0]
 
       .
 
@@ -151,26 +151,22 @@ Classes
       The compute device type to use.
 
    .. py:attribute:: data_dir
-      :type: str
-      :value: '${data_dir}'
+      :type: cneuromax.common.utils.annotations.non_empty_str
 
       
 
    .. py:attribute:: per_device_batch_size
-      :type: Annotated[int, beartype.vale.Is[lambda x: x > 0]]
-      :value: 1
+      :type: cneuromax.common.utils.annotations.int_is_gt0
 
       
 
    .. py:attribute:: per_device_num_workers
-      :type: Annotated[int, beartype.vale.Is[lambda x: x >= 0]]
-      :value: 0
+      :type: cneuromax.common.utils.annotations.int_is_ge0
 
       
 
    .. py:attribute:: device_type
-      :type: Annotated[str, beartype.vale.Is[lambda x: x in ('cpu', 'gpu')]]
-      :value: 'gpu'
+      :type: cneuromax.common.utils.annotations.str_is_cpu_or_gpu
 
       
 

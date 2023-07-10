@@ -15,7 +15,6 @@ Submodules
    :titlesonly:
    :maxdepth: 1
 
-   config/index.rst
    datamodule/index.rst
    datamodule_test/index.rst
    litmodule/index.rst
@@ -29,13 +28,14 @@ Classes
 
 .. autoapisummary::
 
-   cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModule
-   cneuromax.deeplearning.experiment.mnist_classification.MNISTDataModuleConfig
+   cneuromax.deeplearning.experiment.mnist_classification.MNISTClassificationDataModule
+   cneuromax.deeplearning.experiment.mnist_classification.MNISTClassificationDataModuleConfig
+   cneuromax.deeplearning.experiment.mnist_classification.MNISTClassificationLitModule
 
 
 
 
-.. py:class:: MNISTDataModule(config: MNISTDataModuleConfig)
+.. py:class:: MNISTClassificationDataModule(config: MNISTClassificationDataModuleConfig)
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModule`
@@ -68,7 +68,7 @@ Classes
       Downloads the MNIST dataset.
 
 
-   .. py:method:: setup(stage: str_is_fit_or_test) -> None
+   .. py:method:: setup(stage: cneuromax.common.utils.annotations.str_is_fit_or_test) -> None
 
       Creates the train/val/test datasets.
 
@@ -76,29 +76,15 @@ Classes
 
 
 
-.. py:class:: MNISTDataModuleConfig
+.. py:class:: MNISTClassificationDataModuleConfig
 
 
    Bases: :py:obj:`cneuromax.deeplearning.common.datamodule.BaseDataModuleConfig`
 
    .
 
-   .. attribute:: val_percentage
-
-      Percentage of the training dataset to use
-      for validation.
-
-   .. attribute:: fit_dataset_mean
-
-      .
-
-   .. attribute:: fit_dataset_std
-
-      .
-
    .. py:attribute:: val_percentage
-      :type: float_is_gt0_lt1
-      :value: 0.1
+      :type: cneuromax.common.utils.annotations.float_is_ge0_le1
 
       
 
@@ -113,5 +99,53 @@ Classes
       :value: (0.3081,)
 
       
+
+
+.. py:class:: MNISTClassificationLitModule(nnmodule: torch.nn.Module, optimizer: functools.partial[torch.optim.Optimizer], lrscheduler: functools.partial[torch.optim.lr_scheduler.LRScheduler])
+
+
+   Bases: :py:obj:`cneuromax.deeplearning.common.litmodule.classification.BaseClassificationLitModule`
+
+   .
+
+   .. attribute:: accuracy
+
+      The accuracy metric.
+
+      :type: ``torchmetrics.Accuracy``
+
+   .. attribute:: nnmodule
+
+      .
+
+      :type: ``nn.Module``
+
+   .. attribute:: optimizer
+
+      .
+
+      :type: ``Optimizer``
+
+   .. attribute:: scheduler
+
+      .
+
+      :type: ``LRScheduler``
+
+   Calls parent constructor.
+
+   :param nnmodule: A PyTorch ``nn.Module`` instance.
+   :param optimizer: A PyTorch ``Optimizer`` partial function.
+   :param lrscheduler: A PyTorch ``LRScheduler`` partial
+                       function.
+
+   .. py:method:: forward(x: jaxtyping.Float[torch.Tensor,  batch_size 1 28 28]) -> jaxtyping.Float[torch.Tensor,  batch_size 10]
+
+      Simple pass through the PyTorch ``nn.Module``.
+
+      :param x: The batched MNIST images.
+
+      :returns: The batched output logits.
+
 
 

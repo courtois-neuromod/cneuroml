@@ -5,7 +5,7 @@
 
 .. autoapi-nested-parse::
 
-   Neuroevolution component of the cneuromax library.
+   .
 
 
 
